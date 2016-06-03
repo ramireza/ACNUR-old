@@ -1,0 +1,96 @@
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\bin\Debug\Acnur.App.Aplication.xml
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\bin\Debug\Acnur.App.Aplication.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\bin\Debug\Acnur.App.Aplication.pdb
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\bin\Debug\Acnur.App.Entities.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\bin\Debug\PostSharp.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\bin\Debug\Acnur.App.Entities.pdb
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\bin\Debug\PostSharp.xml
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\bin\Debug\Acnur.App.Aplication.pssym
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\obj\Debug\Acnur.App.Aplication.csprojResolveAssemblyReference.cache
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\obj\Debug\Acnur.App.Aplication.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\obj\Debug\Acnur.App.Aplication.pdb
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\obj\Debug\Acnur.App.Aplication.dll.postsharp
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\I.Gestion y planeación\Backup\ACNUR-2015-12-05\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.xml
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\I.Gestion y planeación\Backup\ACNUR-2015-12-05\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\I.Gestion y planeación\Backup\ACNUR-2015-12-05\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.pdb
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\I.Gestion y planeación\Backup\ACNUR-2015-12-05\Acnur.App.Aplication\bin\Debug\Acnur.App.Entities.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\I.Gestion y planeación\Backup\ACNUR-2015-12-05\Acnur.App.Aplication\bin\Debug\PostSharp.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\I.Gestion y planeación\Backup\ACNUR-2015-12-05\Acnur.App.Aplication\bin\Debug\Acnur.App.Entities.pdb
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\I.Gestion y planeación\Backup\ACNUR-2015-12-05\Acnur.App.Aplication\bin\Debug\PostSharp.xml
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\I.Gestion y planeación\Backup\ACNUR-2015-12-05\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.pssym
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\I.Gestion y planeación\Backup\ACNUR-2015-12-05\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.csprojResolveAssemblyReference.cache
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\I.Gestion y planeación\Backup\ACNUR-2015-12-05\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\I.Gestion y planeación\Backup\ACNUR-2015-12-05\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.pdb
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\I.Gestion y planeación\Backup\ACNUR-2015-12-05\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.dll.postsharp
+C:\ACNUR\trunk\V.Construccion\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.xml
+C:\ACNUR\trunk\V.Construccion\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.dll
+C:\ACNUR\trunk\V.Construccion\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.pdb
+C:\ACNUR\trunk\V.Construccion\Acnur.App.Aplication\bin\Debug\Acnur.App.Entities.dll
+C:\ACNUR\trunk\V.Construccion\Acnur.App.Aplication\bin\Debug\PostSharp.dll
+C:\ACNUR\trunk\V.Construccion\Acnur.App.Aplication\bin\Debug\Acnur.App.Entities.pdb
+C:\ACNUR\trunk\V.Construccion\Acnur.App.Aplication\bin\Debug\PostSharp.xml
+C:\ACNUR\trunk\V.Construccion\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.pssym
+C:\ACNUR\trunk\V.Construccion\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.csprojResolveAssemblyReference.cache
+C:\ACNUR\trunk\V.Construccion\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.dll
+C:\ACNUR\trunk\V.Construccion\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.pdb
+C:\ACNUR\trunk\V.Construccion\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.dll.postsharp
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.xml
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.pdb
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplication\bin\Debug\Acnur.App.Entities.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplication\bin\Debug\PostSharp.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplication\bin\Debug\Acnur.App.Entities.pdb
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplication\bin\Debug\PostSharp.xml
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.pssym
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.csprojResolveAssemblyReference.cache
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.pdb
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.dll.postsharp
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.xml
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.pdb
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Entities.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\PostSharp.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Entities.pdb
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\PostSharp.xml
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.pssym
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.csprojResolveAssemblyReference.cache
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.dll.postsharp
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.pdb
+D:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.xml
+D:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Entities.dll
+D:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\PostSharp.dll
+D:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Entities.pdb
+D:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\PostSharp.xml
+D:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.csprojResolveAssemblyReference.cache
+D:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.dll
+D:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.pdb
+D:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.pssym
+D:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.dll.postsharp
+D:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.dll
+D:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.pdb
+F:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.xml
+F:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.dll
+F:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.pdb
+F:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Entities.dll
+F:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\PostSharp.dll
+F:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Entities.pdb
+F:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\PostSharp.xml
+F:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.pssym
+F:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.csprojResolveAssemblyReference.cache
+F:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.dll.postsharp
+F:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.dll
+F:\ACNUR\trunk\V.Construccion\AcnurData\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.pdb
+D:\ACNUR\trunk\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.xml
+D:\ACNUR\trunk\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.dll
+D:\ACNUR\trunk\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.pdb
+D:\ACNUR\trunk\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Entities.dll
+D:\ACNUR\trunk\AcnurData\Acnur.App.Aplication\bin\Debug\PostSharp.dll
+D:\ACNUR\trunk\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Entities.pdb
+D:\ACNUR\trunk\AcnurData\Acnur.App.Aplication\bin\Debug\PostSharp.xml
+D:\ACNUR\trunk\AcnurData\Acnur.App.Aplication\bin\Debug\Acnur.App.Aplication.pssym
+D:\ACNUR\trunk\AcnurData\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.csprojResolveAssemblyReference.cache
+D:\ACNUR\trunk\AcnurData\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.dll.postsharp
+D:\ACNUR\trunk\AcnurData\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.dll
+D:\ACNUR\trunk\AcnurData\Acnur.App.Aplication\obj\Debug\Acnur.App.Aplication.pdb

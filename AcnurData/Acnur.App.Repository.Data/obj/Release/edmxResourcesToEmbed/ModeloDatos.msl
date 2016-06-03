@@ -1,0 +1,688 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ACNURModelStoreContainer" CdmEntityContainer="ACNUREntities">
+    <FunctionImportMapping FunctionImportName="ObtainMailText" FunctionName="ACNURModel.Store.ObtainMailText" />
+    <EntitySetMapping Name="GeneralInformationAction">
+      <EntityTypeMapping TypeName="ACNURModel.GeneralInformationAction">
+        <MappingFragment StoreEntitySet="GeneralInformationAction">
+          <ScalarProperty Name="AdditionalGeographicLocation" ColumnName="AdditionalGeographicLocation" />
+          <ScalarProperty Name="IdCity" ColumnName="IdCity" />
+          <ScalarProperty Name="TotalPeople" ColumnName="TotalPeople" />
+          <ScalarProperty Name="TotalFamilies" ColumnName="TotalFamilies" />
+          <ScalarProperty Name="MenBetween60AndMore" ColumnName="MenBetween60AndMore" />
+          <ScalarProperty Name="MenBetween18And59" ColumnName="MenBetween18And59" />
+          <ScalarProperty Name="MenBetween12And17" ColumnName="MenBetween12And17" />
+          <ScalarProperty Name="MenBetween5And11" ColumnName="MenBetween5And11" />
+          <ScalarProperty Name="MenBetween0And4" ColumnName="MenBetween0And4" />
+          <ScalarProperty Name="WomenBetween60AndMore" ColumnName="WomenBetween60AndMore" />
+          <ScalarProperty Name="WomenBetween18And59" ColumnName="WomenBetween18And59" />
+          <ScalarProperty Name="WomenBetween12And17" ColumnName="WomenBetween12And17" />
+          <ScalarProperty Name="WomenBetween5And11" ColumnName="WomenBetween5And11" />
+          <ScalarProperty Name="WomenBetween0And4" ColumnName="WomenBetween0And4" />
+          <ScalarProperty Name="ReferenceData" ColumnName="ReferenceData" />
+          <ScalarProperty Name="ComunityOrganization" ColumnName="ComunityOrganization" />
+          <ScalarProperty Name="IdInstitution" ColumnName="IdInstitution" />
+          <ScalarProperty Name="IdBeneficiary" ColumnName="IdBeneficiary" />
+          <ScalarProperty Name="IdSpaceAction" ColumnName="IdSpaceAction" />
+          <ScalarProperty Name="IdActionType" ColumnName="IdActionType" />
+          <ScalarProperty Name="StrategyObjetive" ColumnName="StrategyObjetive" />
+          <ScalarProperty Name="FinalDate" ColumnName="FinalDate" />
+          <ScalarProperty Name="InitialDate" ColumnName="InitialDate" />
+          <ScalarProperty Name="IdSubCategory" ColumnName="IdSubCategory" />
+          <ScalarProperty Name="IdAssociatedAction" ColumnName="IdAssociatedAction" />
+          <ScalarProperty Name="IdActionFrame" ColumnName="IdActionFrame" />
+          <ScalarProperty Name="DateAction" ColumnName="DateAction" />
+          <ScalarProperty Name="IdUnit" ColumnName="IdUnit" />
+          <ScalarProperty Name="IdOffice" ColumnName="IdOffice" />
+          <ScalarProperty Name="IdAuthor" ColumnName="IdAuthor" />
+          <ScalarProperty Name="IdGeneralInformationAction" ColumnName="IdGeneralInformationAction" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneralInformationActionUsers">
+      <EntityTypeMapping TypeName="ACNURModel.GeneralInformationActionUsers">
+        <MappingFragment StoreEntitySet="GeneralInformationActionUsers">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdGeneralInformationAction" ColumnName="IdGeneralInformationAction" />
+          <ScalarProperty Name="IdGeneralInformationActionUser" ColumnName="IdGeneralInformationActionUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Audit">
+      <EntityTypeMapping TypeName="ACNURModel.Audit">
+        <MappingFragment StoreEntitySet="Audit">
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="IdProcessEntity" ColumnName="IdProcessEntity" />
+          <ScalarProperty Name="IPAdress" ColumnName="IPAdress" />
+          <ScalarProperty Name="IdKeyConsult" ColumnName="IdKeyConsult" />
+          <ScalarProperty Name="IdKeyEntity" ColumnName="IdKeyEntity" />
+          <ScalarProperty Name="EntityAfter" ColumnName="EntityAfter" />
+          <ScalarProperty Name="EntityBefore" ColumnName="EntityBefore" />
+          <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdAudit" ColumnName="IdAudit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComponentsByModule">
+      <EntityTypeMapping TypeName="ACNURModel.ComponentsByModule">
+        <MappingFragment StoreEntitySet="ComponentsByModule">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IdModule" ColumnName="IdModule" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdComponentByModule" ColumnName="IdComponentByModule" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modules">
+      <EntityTypeMapping TypeName="ACNURModel.Modules">
+        <MappingFragment StoreEntitySet="Modules">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="IdModule" ColumnName="IdModule" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModuleUser">
+      <EntityTypeMapping TypeName="ACNURModel.ModuleUser">
+        <MappingFragment StoreEntitySet="ModuleUser">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdModule" ColumnName="IdModule" />
+          <ScalarProperty Name="IdModuleUser" ColumnName="IdModuleUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operations">
+      <EntityTypeMapping TypeName="ACNURModel.Operations">
+        <MappingFragment StoreEntitySet="Operations">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdOperation" ColumnName="IdOperation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperationsModule">
+      <EntityTypeMapping TypeName="ACNURModel.OperationsModule">
+        <MappingFragment StoreEntitySet="OperationsModule">
+          <ScalarProperty Name="IdModule" ColumnName="IdModule" />
+          <ScalarProperty Name="IdOperation" ColumnName="IdOperation" />
+          <ScalarProperty Name="IdOperationModule" ColumnName="IdOperationModule" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperationsModuleUser">
+      <EntityTypeMapping TypeName="ACNURModel.OperationsModuleUser">
+        <MappingFragment StoreEntitySet="OperationsModuleUser">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdOperationModule" ColumnName="IdOperationModule" />
+          <ScalarProperty Name="IdOperationModuleUser" ColumnName="IdOperationModuleUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parameter">
+      <EntityTypeMapping TypeName="ACNURModel.Parameter">
+        <MappingFragment StoreEntitySet="Parameter">
+          <ScalarProperty Name="IdParameterFather" ColumnName="IdParameterFather" />
+          <ScalarProperty Name="Removable" ColumnName="Removable" />
+          <ScalarProperty Name="Insertable" ColumnName="Insertable" />
+          <ScalarProperty Name="Editable" ColumnName="Editable" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdParameter" ColumnName="IdParameter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParameterDetail">
+      <EntityTypeMapping TypeName="ACNURModel.ParameterDetail">
+        <MappingFragment StoreEntitySet="ParameterDetail">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Ordinal" ColumnName="Ordinal" />
+          <ScalarProperty Name="Value2" ColumnName="Value2" />
+          <ScalarProperty Name="Value1" ColumnName="Value1" />
+          <ScalarProperty Name="Definition" ColumnName="Definition" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdParameterDetailFather" ColumnName="IdParameterDetailFather" />
+          <ScalarProperty Name="IdParameter" ColumnName="IdParameter" />
+          <ScalarProperty Name="IdParameterDetail" ColumnName="IdParameterDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StepsFlow">
+      <EntityTypeMapping TypeName="ACNURModel.StepsFlow">
+        <MappingFragment StoreEntitySet="StepsFlow">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdStepFlow" ColumnName="IdStepFlow" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StepsFlowModule">
+      <EntityTypeMapping TypeName="ACNURModel.StepsFlowModule">
+        <MappingFragment StoreEntitySet="StepsFlowModule">
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="IdModule" ColumnName="IdModule" />
+          <ScalarProperty Name="IdStepFlow" ColumnName="IdStepFlow" />
+          <ScalarProperty Name="IdStepFlowModule" ColumnName="IdStepFlowModule" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StepsFlowModuleUser">
+      <EntityTypeMapping TypeName="ACNURModel.StepsFlowModuleUser">
+        <MappingFragment StoreEntitySet="StepsFlowModuleUser">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdStepFlowModule" ColumnName="IdStepFlowModule" />
+          <ScalarProperty Name="IdStepFlowModuleUser" ColumnName="IdStepFlowModuleUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ACNURModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CostApproval">
+      <EntityTypeMapping TypeName="ACNURModel.CostApproval">
+        <MappingFragment StoreEntitySet="CostApproval">
+          <ScalarProperty Name="RegisterAdded" ColumnName="RegisterAdded" />
+          <ScalarProperty Name="IdLegalization" ColumnName="IdLegalization" />
+          <ScalarProperty Name="IdCanceled" ColumnName="IdCanceled" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="VoucherNumber" ColumnName="VoucherNumber" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="AssignedAccount" ColumnName="AssignedAccount" />
+          <ScalarProperty Name="IdTitle" ColumnName="IdTitle" />
+          <ScalarProperty Name="IdCertifyingOffice" ColumnName="IdCertifyingOffice" />
+          <ScalarProperty Name="IdItineraryInformation" ColumnName="IdItineraryInformation" />
+          <ScalarProperty Name="IdCostApproval" ColumnName="IdCostApproval" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItineraryInformation">
+      <EntityTypeMapping TypeName="ACNURModel.ItineraryInformation">
+        <MappingFragment StoreEntitySet="ItineraryInformation">
+          <ScalarProperty Name="RegisterAdded" ColumnName="RegisterAdded" />
+          <ScalarProperty Name="HouseHold" ColumnName="HouseHold" />
+          <ScalarProperty Name="ExcessBagg" ColumnName="ExcessBagg" />
+          <ScalarProperty Name="RegTravelerEnd" ColumnName="RegTravelerEnd" />
+          <ScalarProperty Name="ReqTravelerBegin" ColumnName="ReqTravelerBegin" />
+          <ScalarProperty Name="DateOfficialEnd" ColumnName="DateOfficialEnd" />
+          <ScalarProperty Name="DateOfficialBegin" ColumnName="DateOfficialBegin" />
+          <ScalarProperty Name="IdCityTo" ColumnName="IdCityTo" />
+          <ScalarProperty Name="IdCityFrom" ColumnName="IdCityFrom" />
+          <ScalarProperty Name="IdStaffInformation" ColumnName="IdStaffInformation" />
+          <ScalarProperty Name="IdItineraryInformation" ColumnName="IdItineraryInformation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PT8">
+      <EntityTypeMapping TypeName="ACNURModel.PT8">
+        <MappingFragment StoreEntitySet="PT8">
+          <ScalarProperty Name="RegisterAdded" ColumnName="RegisterAdded" />
+          <ScalarProperty Name="PreparedBy" ColumnName="PreparedBy" />
+          <ScalarProperty Name="AditionalDate" ColumnName="AditionalDate" />
+          <ScalarProperty Name="PT8Id" ColumnName="PT8Id" />
+          <ScalarProperty Name="DatePT8" ColumnName="DatePT8" />
+          <ScalarProperty Name="IdUnit" ColumnName="IdUnit" />
+          <ScalarProperty Name="IdOffice" ColumnName="IdOffice" />
+          <ScalarProperty Name="IdAuthor" ColumnName="IdAuthor" />
+          <ScalarProperty Name="IdPT8" ColumnName="IdPT8" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SatffInformation">
+      <EntityTypeMapping TypeName="ACNURModel.SatffInformation">
+        <MappingFragment StoreEntitySet="SatffInformation">
+          <ScalarProperty Name="RegisterAdded" ColumnName="RegisterAdded" />
+          <ScalarProperty Name="SpecialInstruction" ColumnName="SpecialInstruction" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="IdTravelAgency" ColumnName="IdTravelAgency" />
+          <ScalarProperty Name="ExchangeRate" ColumnName="ExchangeRate" />
+          <ScalarProperty Name="IdUnit" ColumnName="IdUnit" />
+          <ScalarProperty Name="OfficeDuty" ColumnName="OfficeDuty" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="TitleGrade" ColumnName="TitleGrade" />
+          <ScalarProperty Name="SatffMemberIndexNumber" ColumnName="SatffMemberIndexNumber" />
+          <ScalarProperty Name="SatffMemberName" ColumnName="SatffMemberName" />
+          <ScalarProperty Name="IdPT8" ColumnName="IdPT8" />
+          <ScalarProperty Name="IdStaffInformation" ColumnName="IdStaffInformation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneralInformationEmergency">
+      <EntityTypeMapping TypeName="ACNURModel.GeneralInformationEmergency">
+        <MappingFragment StoreEntitySet="GeneralInformationEmergency">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TotalPeople" ColumnName="TotalPeople" />
+          <ScalarProperty Name="TotalFamilies" ColumnName="TotalFamilies" />
+          <ScalarProperty Name="MenBetween60AndMore" ColumnName="MenBetween60AndMore" />
+          <ScalarProperty Name="MenBetween18And59" ColumnName="MenBetween18And59" />
+          <ScalarProperty Name="MenBetween12And17" ColumnName="MenBetween12And17" />
+          <ScalarProperty Name="MenBetween5And11" ColumnName="MenBetween5And11" />
+          <ScalarProperty Name="MenBetween0And4" ColumnName="MenBetween0And4" />
+          <ScalarProperty Name="WomenBetween60AndMore" ColumnName="WomenBetween60AndMore" />
+          <ScalarProperty Name="WomenBetween18And59" ColumnName="WomenBetween18And59" />
+          <ScalarProperty Name="WomenBetween12And17" ColumnName="WomenBetween12And17" />
+          <ScalarProperty Name="WomenBetween5And11" ColumnName="WomenBetween5And11" />
+          <ScalarProperty Name="WomenBetween0And4" ColumnName="WomenBetween0And4" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+          <ScalarProperty Name="ReportDate" ColumnName="ReportDate" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="IdUnit" ColumnName="IdUnit" />
+          <ScalarProperty Name="IdEventType" ColumnName="IdEventType" />
+          <ScalarProperty Name="IdEmergencyType" ColumnName="IdEmergencyType" />
+          <ScalarProperty Name="IdOffice" ColumnName="IdOffice" />
+          <ScalarProperty Name="IdCityReception" ColumnName="IdCityReception" />
+          <ScalarProperty Name="IdCityExpulsion" ColumnName="IdCityExpulsion" />
+          <ScalarProperty Name="IdEventStatus" ColumnName="IdEventStatus" />
+          <ScalarProperty Name="IdEthnicComunity" ColumnName="IdEthnicComunity" />
+          <ScalarProperty Name="IdEmergencyCause" ColumnName="IdEmergencyCause" />
+          <ScalarProperty Name="IdVictimizerActor" ColumnName="IdVictimizerActor" />
+          <ScalarProperty Name="IdGeneralInformationEmergency" ColumnName="IdGeneralInformationEmergency" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneralInformationEmergencyUsers">
+      <EntityTypeMapping TypeName="ACNURModel.GeneralInformationEmergencyUsers">
+        <MappingFragment StoreEntitySet="GeneralInformationEmergencyUsers">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdGeneralInformationEmergency" ColumnName="IdGeneralInformationEmergency" />
+          <ScalarProperty Name="IdGeneralInformationEmergencyUser" ColumnName="IdGeneralInformationEmergencyUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneralInformationEvent">
+      <EntityTypeMapping TypeName="ACNURModel.GeneralInformationEvent">
+        <MappingFragment StoreEntitySet="GeneralInformationEvent">
+          <ScalarProperty Name="AdditionalGeographicLocation" ColumnName="AdditionalGeographicLocation" />
+          <ScalarProperty Name="IdCity" ColumnName="IdCity" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="IdInformationSource" ColumnName="IdInformationSource" />
+          <ScalarProperty Name="IdSubCategory" ColumnName="IdSubCategory" />
+          <ScalarProperty Name="IdCategory" ColumnName="IdCategory" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+          <ScalarProperty Name="IdUnit" ColumnName="IdUnit" />
+          <ScalarProperty Name="IdOffice" ColumnName="IdOffice" />
+          <ScalarProperty Name="IdAuthor" ColumnName="IdAuthor" />
+          <ScalarProperty Name="IdGeneralInformationEvent" ColumnName="IdGeneralInformationEvent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneralInformationEventUsers">
+      <EntityTypeMapping TypeName="ACNURModel.GeneralInformationEventUsers">
+        <MappingFragment StoreEntitySet="GeneralInformationEventUsers">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdGeneralInformationEvent" ColumnName="IdGeneralInformationEvent" />
+          <ScalarProperty Name="IdGeneralInformationEventUser" ColumnName="IdGeneralInformationEventUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PressData">
+      <EntityTypeMapping TypeName="ACNURModel.PressData">
+        <MappingFragment StoreEntitySet="PressData">
+          <ScalarProperty Name="IdUnit" ColumnName="IdUnit" />
+          <ScalarProperty Name="IdOffice" ColumnName="IdOffice" />
+          <ScalarProperty Name="IdAuthor" ColumnName="IdAuthor" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="EventData" ColumnName="EventData" />
+          <ScalarProperty Name="EventLocationCommunityOrOtherData" ColumnName="EventLocationCommunityOrOtherData" />
+          <ScalarProperty Name="IdEventLocationSubMunicipality" ColumnName="IdEventLocationSubMunicipality" />
+          <ScalarProperty Name="IdEventLocationMunicipality" ColumnName="IdEventLocationMunicipality" />
+          <ScalarProperty Name="IdEventLocationDepartament" ColumnName="IdEventLocationDepartament" />
+          <ScalarProperty Name="MediaName" ColumnName="MediaName" />
+          <ScalarProperty Name="WebLink" ColumnName="WebLink" />
+          <ScalarProperty Name="IdSubcategoryPress" ColumnName="IdSubcategoryPress" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="IdCategoryPress" ColumnName="IdCategoryPress" />
+          <ScalarProperty Name="IdPressData" ColumnName="IdPressData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnnexC">
+      <EntityTypeMapping TypeName="ACNURModel.AnnexC">
+        <MappingFragment StoreEntitySet="AnnexC">
+          <ScalarProperty Name="Donor" ColumnName="Donor" />
+          <ScalarProperty Name="USD" ColumnName="USD" />
+          <ScalarProperty Name="Budget" ColumnName="Budget" />
+          <ScalarProperty Name="IdCurrency" ColumnName="IdCurrency" />
+          <ScalarProperty Name="IdUNIT" ColumnName="IdUNIT" />
+          <ScalarProperty Name="ProjectLocationComunityName" ColumnName="ProjectLocationComunityName" />
+          <ScalarProperty Name="IdProjectLocationSubMunicipality" ColumnName="IdProjectLocationSubMunicipality" />
+          <ScalarProperty Name="IdProjectLocationMunicipality" ColumnName="IdProjectLocationMunicipality" />
+          <ScalarProperty Name="IdProjectLocationDepartament" ColumnName="IdProjectLocationDepartament" />
+          <ScalarProperty Name="IdCostCentre" ColumnName="IdCostCentre" />
+          <ScalarProperty Name="IdSite" ColumnName="IdSite" />
+          <ScalarProperty Name="IdOfficeRisponsible" ColumnName="IdOfficeRisponsible" />
+          <ScalarProperty Name="IdImplementationMechanism" ColumnName="IdImplementationMechanism" />
+          <ScalarProperty Name="IdImplementerCode" ColumnName="IdImplementerCode" />
+          <ScalarProperty Name="SubAgreement" ColumnName="SubAgreement" />
+          <ScalarProperty Name="ProjectTitle" ColumnName="ProjectTitle" />
+          <ScalarProperty Name="IdMSRPOutput" ColumnName="IdMSRPOutput" />
+          <ScalarProperty Name="IdFocusImpactIndicatorOutput" ColumnName="IdFocusImpactIndicatorOutput" />
+          <ScalarProperty Name="IdMSRPObjective" ColumnName="IdMSRPObjective" />
+          <ScalarProperty Name="IdFocusObjective" ColumnName="IdFocusObjective" />
+          <ScalarProperty Name="IdMSRPRightsGroup" ColumnName="IdMSRPRightsGroup" />
+          <ScalarProperty Name="IdFocusRightsGroup" ColumnName="IdFocusRightsGroup" />
+          <ScalarProperty Name="IdStrategy" ColumnName="IdStrategy" />
+          <ScalarProperty Name="IdPriority" ColumnName="IdPriority" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="DateRegister" ColumnName="DateRegister" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="IdProgramCycle" ColumnName="IdProgramCycle" />
+          <ScalarProperty Name="IdAnnexC" ColumnName="IdAnnexC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataProject">
+      <EntityTypeMapping TypeName="ACNURModel.DataProject">
+        <MappingFragment StoreEntitySet="DataProject">
+          <ScalarProperty Name="AmountExecutedToDate" ColumnName="AmountExecutedToDate" />
+          <ScalarProperty Name="UNHCRRrequiredValue" ColumnName="UNHCRRrequiredValue" />
+          <ScalarProperty Name="TotalProjectValue" ColumnName="TotalProjectValue" />
+          <ScalarProperty Name="IdImplementationModality" ColumnName="IdImplementationModality" />
+          <ScalarProperty Name="ProjectDuration" ColumnName="ProjectDuration" />
+          <ScalarProperty Name="IDUnitTimeProjectDuration" ColumnName="IDUnitTimeProjectDuration" />
+          <ScalarProperty Name="SubAgreement" ColumnName="SubAgreement" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="IdOffice" ColumnName="IdOffice" />
+          <ScalarProperty Name="PeriodCoveredFinalReport" ColumnName="PeriodCoveredFinalReport" />
+          <ScalarProperty Name="PeriodCoveredInitialReport" ColumnName="PeriodCoveredInitialReport" />
+          <ScalarProperty Name="FollowUpReportNumber" ColumnName="FollowUpReportNumber" />
+          <ScalarProperty Name="ImplementationPartners" ColumnName="ImplementationPartners" />
+          <ScalarProperty Name="IdProjectlocationSubMunicipality" ColumnName="IdProjectlocationSubMunicipality" />
+          <ScalarProperty Name="IdProjectlocationMunicipality" ColumnName="IdProjectlocationMunicipality" />
+          <ScalarProperty Name="IdProjectlocationDepartament" ColumnName="IdProjectlocationDepartament" />
+          <ScalarProperty Name="ProjectTitle" ColumnName="ProjectTitle" />
+          <ScalarProperty Name="IdDataProject" ColumnName="IdDataProject" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DescriptionOfTheTargetPopulation">
+      <EntityTypeMapping TypeName="ACNURModel.DescriptionOfTheTargetPopulation">
+        <MappingFragment StoreEntitySet="DescriptionOfTheTargetPopulation">
+          <ScalarProperty Name="NarrativeDescriptionOfTheDirectBeneficiaries" ColumnName="NarrativeDescriptionOfTheDirectBeneficiaries" />
+          <ScalarProperty Name="TotalCivilServant" ColumnName="TotalCivilServant" />
+          <ScalarProperty Name="TotalPeople" ColumnName="TotalPeople" />
+          <ScalarProperty Name="TotalFamilies" ColumnName="TotalFamilies" />
+          <ScalarProperty Name="MenBetween60AndMore" ColumnName="MenBetween60AndMore" />
+          <ScalarProperty Name="MenBetween18And59" ColumnName="MenBetween18And59" />
+          <ScalarProperty Name="MenBetween12And17" ColumnName="MenBetween12And17" />
+          <ScalarProperty Name="MenBetween5And11" ColumnName="MenBetween5And11" />
+          <ScalarProperty Name="MenBetween0And4" ColumnName="MenBetween0And4" />
+          <ScalarProperty Name="WomenBetween60AndMore" ColumnName="WomenBetween60AndMore" />
+          <ScalarProperty Name="WomenBetween18And59" ColumnName="WomenBetween18And59" />
+          <ScalarProperty Name="WomenBetween12And17" ColumnName="WomenBetween12And17" />
+          <ScalarProperty Name="WomenBetween5And11" ColumnName="WomenBetween5And11" />
+          <ScalarProperty Name="WomenBetween0And4" ColumnName="WomenBetween0And4" />
+          <ScalarProperty Name="IdTypePopulation" ColumnName="IdTypePopulation" />
+          <ScalarProperty Name="IdTypeBeneficiaries" ColumnName="IdTypeBeneficiaries" />
+          <ScalarProperty Name="IdDataProject" ColumnName="IdDataProject" />
+          <ScalarProperty Name="IdDescriptionOfTheTargetPopulation" ColumnName="IdDescriptionOfTheTargetPopulation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NationalPriorities">
+      <EntityTypeMapping TypeName="ACNURModel.NationalPriorities">
+        <MappingFragment StoreEntitySet="NationalPriorities">
+          <ScalarProperty Name="RelatedContributions" ColumnName="RelatedContributions" />
+          <ScalarProperty Name="ProceduresForImplementation" ColumnName="ProceduresForImplementation" />
+          <ScalarProperty Name="UpdatingtheContextoftheCurrentSituationandDevelopmentProject" ColumnName="UpdatingtheContextoftheCurrentSituationandDevelopmentProject" />
+          <ScalarProperty Name="UpdateDateContextoftheCurrentSituationandDevelopmentProject" ColumnName="UpdateDateContextoftheCurrentSituationandDevelopmentProject" />
+          <ScalarProperty Name="TransversalPriority" ColumnName="TransversalPriority" />
+          <ScalarProperty Name="ThematicPriority" ColumnName="ThematicPriority" />
+          <ScalarProperty Name="IdDataProject" ColumnName="IdDataProject" />
+          <ScalarProperty Name="IdNationalPriorities" ColumnName="IdNationalPriorities" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Weekly">
+      <EntityTypeMapping TypeName="ACNURModel.Weekly">
+        <MappingFragment StoreEntitySet="Weekly">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SubMunicipality" ColumnName="SubMunicipality" />
+          <ScalarProperty Name="IdMunicipality" ColumnName="IdMunicipality" />
+          <ScalarProperty Name="IdDepartament" ColumnName="IdDepartament" />
+          <ScalarProperty Name="IdSubCharacteristic" ColumnName="IdSubCharacteristic" />
+          <ScalarProperty Name="IdCharacteristic" ColumnName="IdCharacteristic" />
+          <ScalarProperty Name="IdWeeklyRequest" ColumnName="IdWeeklyRequest" />
+          <ScalarProperty Name="IdWeekly" ColumnName="IdWeekly" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WeeklyRequest">
+      <EntityTypeMapping TypeName="ACNURModel.WeeklyRequest">
+        <MappingFragment StoreEntitySet="WeeklyRequest">
+          <ScalarProperty Name="Responsible" ColumnName="Responsible" />
+          <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+          <ScalarProperty Name="DutyStation" ColumnName="DutyStation" />
+          <ScalarProperty Name="RequesterPerson" ColumnName="RequesterPerson" />
+          <ScalarProperty Name="IdRequestUnit" ColumnName="IdRequestUnit" />
+          <ScalarProperty Name="IdWeeklyRequest" ColumnName="IdWeeklyRequest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="ACNURModel.Events">
+        <MappingFragment StoreEntitySet="Events">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Dinner" ColumnName="Dinner" />
+          <ScalarProperty Name="CoffeBreakPM" ColumnName="CoffeBreakPM" />
+          <ScalarProperty Name="Lunch" ColumnName="Lunch" />
+          <ScalarProperty Name="CoffeBreakAM" ColumnName="CoffeBreakAM" />
+          <ScalarProperty Name="Breakfast" ColumnName="Breakfast" />
+          <ScalarProperty Name="NumberRooms" ColumnName="NumberRooms" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="Origin" ColumnName="Origin" />
+          <ScalarProperty Name="NumberPassengers" ColumnName="NumberPassengers" />
+          <ScalarProperty Name="OtherResources" ColumnName="OtherResources" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="SimultaneusTranslation" ColumnName="SimultaneusTranslation" />
+          <ScalarProperty Name="MicrophoneSpecifications" ColumnName="MicrophoneSpecifications" />
+          <ScalarProperty Name="MicrophoneAmplification" ColumnName="MicrophoneAmplification" />
+          <ScalarProperty Name="ComputerSpecifications" ColumnName="ComputerSpecifications" />
+          <ScalarProperty Name="NumberComputers" ColumnName="NumberComputers" />
+          <ScalarProperty Name="RentedComputerQuantity" ColumnName="RentedComputerQuantity" />
+          <ScalarProperty Name="RentedComputers" ColumnName="RentedComputers" />
+          <ScalarProperty Name="MinimumBandwith" ColumnName="MinimumBandwith" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="FlipchartQuantity" ColumnName="FlipchartQuantity" />
+          <ScalarProperty Name="Flipchart" ColumnName="Flipchart" />
+          <ScalarProperty Name="VideoBeam" ColumnName="VideoBeam" />
+          <ScalarProperty Name="NumberParticipants" ColumnName="NumberParticipants" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="IdAccommodationType" ColumnName="IdAccommodationType" />
+          <ScalarProperty Name="IdRequest" ColumnName="IdRequest" />
+          <ScalarProperty Name="IdEvent" ColumnName="IdEvent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Goods">
+      <EntityTypeMapping TypeName="ACNURModel.Goods">
+        <MappingFragment StoreEntitySet="Goods">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Observations" ColumnName="Observations" />
+          <ScalarProperty Name="ExpectedDeliveryDate" ColumnName="ExpectedDeliveryDate" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="PlaceDelivery" ColumnName="PlaceDelivery" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="Power" ColumnName="Power" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ManufacturerBrand" ColumnName="ManufacturerBrand" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="IdUnitMeasure" ColumnName="IdUnitMeasure" />
+          <ScalarProperty Name="IdRequest" ColumnName="IdRequest" />
+          <ScalarProperty Name="IdGoods" ColumnName="IdGoods" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Request">
+      <EntityTypeMapping TypeName="ACNURModel.Request">
+        <MappingFragment StoreEntitySet="Request">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="EstimatedDeliveryDate" ColumnName="EstimatedDeliveryDate" />
+          <ScalarProperty Name="DeliveryLocation" ColumnName="DeliveryLocation" />
+          <ScalarProperty Name="BackgroundRationale" ColumnName="BackgroundRationale" />
+          <ScalarProperty Name="Responsible" ColumnName="Responsible" />
+          <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+          <ScalarProperty Name="DutyStation" ColumnName="DutyStation" />
+          <ScalarProperty Name="RequesterPerson" ColumnName="RequesterPerson" />
+          <ScalarProperty Name="IdRequestUnit" ColumnName="IdRequestUnit" />
+          <ScalarProperty Name="IdRequest" ColumnName="IdRequest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="ACNURModel.Services">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Observations" ColumnName="Observations" />
+          <ScalarProperty Name="AlternativeDeliveryDate" ColumnName="AlternativeDeliveryDate" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="DeliveryPlace" ColumnName="DeliveryPlace" />
+          <ScalarProperty Name="PriorDeliveryDate" ColumnName="PriorDeliveryDate" />
+          <ScalarProperty Name="ExpectedDeliveryDate" ColumnName="ExpectedDeliveryDate" />
+          <ScalarProperty Name="ServiceResult" ColumnName="ServiceResult" />
+          <ScalarProperty Name="Specifications" ColumnName="Specifications" />
+          <ScalarProperty Name="ServiceLocation" ColumnName="ServiceLocation" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="HoursDay" ColumnName="HoursDay" />
+          <ScalarProperty Name="NumberDays" ColumnName="NumberDays" />
+          <ScalarProperty Name="Context" ColumnName="Context" />
+          <ScalarProperty Name="IdRequest" ColumnName="IdRequest" />
+          <ScalarProperty Name="IdServiceType" ColumnName="IdServiceType" />
+          <ScalarProperty Name="IdService" ColumnName="IdService" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneralInformationRiskProfile">
+      <EntityTypeMapping TypeName="ACNURModel.GeneralInformationRiskProfile">
+        <MappingFragment StoreEntitySet="GeneralInformationRiskProfile">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IdActor" ColumnName="IdActor" />
+          <ScalarProperty Name="IdVictimizerGroup" ColumnName="IdVictimizerGroup" />
+          <ScalarProperty Name="AdditionalGeographicLocationResidence" ColumnName="AdditionalGeographicLocationResidence" />
+          <ScalarProperty Name="IdResidenceCity" ColumnName="IdResidenceCity" />
+          <ScalarProperty Name="AdditionalGeographicLocationEvent" ColumnName="AdditionalGeographicLocationEvent" />
+          <ScalarProperty Name="IdCityEvent" ColumnName="IdCityEvent" />
+          <ScalarProperty Name="OrganizationActivity" ColumnName="OrganizationActivity" />
+          <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+          <ScalarProperty Name="FamilyNucleus" ColumnName="FamilyNucleus" />
+          <ScalarProperty Name="IdActivity" ColumnName="IdActivity" />
+          <ScalarProperty Name="IdProfile" ColumnName="IdProfile" />
+          <ScalarProperty Name="VictimAge" ColumnName="VictimAge" />
+          <ScalarProperty Name="IdFamilyType" ColumnName="IdFamilyType" />
+          <ScalarProperty Name="IdEthnicComunity" ColumnName="IdEthnicComunity" />
+          <ScalarProperty Name="IdPopulationType" ColumnName="IdPopulationType" />
+          <ScalarProperty Name="IdGender" ColumnName="IdGender" />
+          <ScalarProperty Name="VictimSecondLastName" ColumnName="VictimSecondLastName" />
+          <ScalarProperty Name="VictimFirstLastName" ColumnName="VictimFirstLastName" />
+          <ScalarProperty Name="VictimSecondName" ColumnName="VictimSecondName" />
+          <ScalarProperty Name="VictimFirstName" ColumnName="VictimFirstName" />
+          <ScalarProperty Name="IdEventStatus" ColumnName="IdEventStatus" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+          <ScalarProperty Name="IdEventClassification" ColumnName="IdEventClassification" />
+          <ScalarProperty Name="IdAssociateEvent" ColumnName="IdAssociateEvent" />
+          <ScalarProperty Name="IdEventMedia" ColumnName="IdEventMedia" />
+          <ScalarProperty Name="IdEventType" ColumnName="IdEventType" />
+          <ScalarProperty Name="GeneralInformationDate" ColumnName="GeneralInformationDate" />
+          <ScalarProperty Name="IdUnit" ColumnName="IdUnit" />
+          <ScalarProperty Name="IdOffice" ColumnName="IdOffice" />
+          <ScalarProperty Name="IdAuthor" ColumnName="IdAuthor" />
+          <ScalarProperty Name="IdGeneralInformationRiskProfile" ColumnName="IdGeneralInformationRiskProfile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneralInformationRiskProfileUsers">
+      <EntityTypeMapping TypeName="ACNURModel.GeneralInformationRiskProfileUsers">
+        <MappingFragment StoreEntitySet="GeneralInformationRiskProfileUsers">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdGeneralInformationRiskProfile" ColumnName="IdGeneralInformationRiskProfile" />
+          <ScalarProperty Name="IdGeneralInformationRiskProfileUser" ColumnName="IdGeneralInformationRiskProfileUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OtherObjects">
+      <EntityTypeMapping TypeName="ACNURModel.OtherObjects">
+        <MappingFragment StoreEntitySet="OtherObjects">
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdInformation" ColumnName="IdInformation" />
+          <ScalarProperty Name="IdComponentByModule" ColumnName="IdComponentByModule" />
+          <ScalarProperty Name="IdOtherObjects" ColumnName="IdOtherObjects" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SessionComponentsByModule">
+      <EntityTypeMapping TypeName="ACNURModel.SessionComponentsByModule">
+        <MappingFragment StoreEntitySet="SessionComponentsByModule">
+          <ScalarProperty Name="IdInformation" ColumnName="IdInformation" />
+          <ScalarProperty Name="IdComponentByModule" ColumnName="IdComponentByModule" />
+          <ScalarProperty Name="IdSession" ColumnName="IdSession" />
+          <ScalarProperty Name="IdSessionComponentByModule" ColumnName="IdSessionComponentByModule" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sessions">
+      <EntityTypeMapping TypeName="ACNURModel.Sessions">
+        <MappingFragment StoreEntitySet="Sessions">
+          <ScalarProperty Name="IdProcessGroup" ColumnName="IdProcessGroup" />
+          <ScalarProperty Name="Send" ColumnName="Send" />
+          <ScalarProperty Name="BodyMail" ColumnName="BodyMail" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="SourceEmail" ColumnName="SourceEmail" />
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="IdSession" ColumnName="IdSession" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SessionTargetMailProcessed">
+      <EntityTypeMapping TypeName="ACNURModel.SessionTargetMailProcessed">
+        <MappingFragment StoreEntitySet="SessionTargetMailProcessed">
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="IdSessionTargetMail" ColumnName="IdSessionTargetMail" />
+          <ScalarProperty Name="IdSessionTargetMailProcessed" ColumnName="IdSessionTargetMailProcessed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SessionTargetMails">
+      <EntityTypeMapping TypeName="ACNURModel.SessionTargetMails">
+        <MappingFragment StoreEntitySet="SessionTargetMails">
+          <ScalarProperty Name="IdSession" ColumnName="IdSession" />
+          <ScalarProperty Name="TargetMail" ColumnName="TargetMail" />
+          <ScalarProperty Name="IdSessionTargetMail" ColumnName="IdSessionTargetMail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attachments">
+      <EntityTypeMapping TypeName="ACNURModel.Attachments">
+        <MappingFragment StoreEntitySet="Attachments">
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="IdAttachmentCondition" ColumnName="IdAttachmentCondition" />
+          <ScalarProperty Name="IdAttachmentType" ColumnName="IdAttachmentType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AttachmentName" ColumnName="AttachmentName" />
+          <ScalarProperty Name="IdInformation" ColumnName="IdInformation" />
+          <ScalarProperty Name="IdComponentByModule" ColumnName="IdComponentByModule" />
+          <ScalarProperty Name="IdAttachment" ColumnName="IdAttachment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

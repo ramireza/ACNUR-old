@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6194E5B3-2A4B-4498-A7B0-014FE0A8A687}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Acnur.App.Implementation</RootNamespace>
+    <AssemblyName>Acnur.App.Implementation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrator\FacadeComponentsByModule.cs" />
+    <Compile Include="Administrator\FacadeModules.cs" />
+    <Compile Include="Emergency\FacadeEmergency.cs" />
+    <Compile Include="FacadeGeneric.cs" />
+    <Compile Include="General\FacadeAttachments.cs" />
+    <Compile Include="General\FacadeParameterDetail.cs" />
+    <Compile Include="General\FacadeParameter.cs" />
+    <Compile Include="General\FacadeUsers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase\FacadeEvents.cs" />
+    <Compile Include="Purchase\FacadeGoods.cs" />
+    <Compile Include="Purchase\FacadeRequest.cs" />
+    <Compile Include="Purchase\FacadeServices.cs" />
+    <Compile Include="Session\FacadeSession.cs" />
+    <Compile Include="Session\FacadeSessionComponentsByModule.cs" />
+    <Compile Include="Session\FacadeSessionTargetMails.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Acnur.App.Aplication\Acnur.App.Aplication.csproj">
+      <Project>{99d25534-8e14-4e67-b9ff-a8ebb2f56376}</Project>
+      <Name>Acnur.App.Aplication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Acnur.App.Entities\Acnur.App.Entities.csproj">
+      <Project>{cf6acec6-0de4-47eb-b63e-79e632509f78}</Project>
+      <Name>Acnur.App.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Acnur.App.Interfaces\Acnur.App.Interfaces.csproj">
+      <Project>{b5fb2339-4bbe-407b-80e9-26ad85c8c16c}</Project>
+      <Name>Acnur.App.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Acnur.App.Repository\Acnur.App.Repository.csproj">
+      <Project>{373f2394-5981-48d1-84dd-17797eb5a8ed}</Project>
+      <Name>Acnur.App.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7b02d54b3b454889b4b4a920b8fad4c7" Name="Diagram1" ZoomLevel="10">
+        <EntityTypeShape EntityType="ACNURModel.GeneralInformationAction" Width="1.5" PointX="5.25" PointY="32.375" />
+        <EntityTypeShape EntityType="ACNURModel.GeneralInformationActionUsers" Width="1.5" PointX="7.5" PointY="44.25" />
+        <EntityTypeShape EntityType="ACNURModel.Audit" Width="1.5" PointX="7.5" PointY="57.25" />
+        <EntityTypeShape EntityType="ACNURModel.ComponentsByModule" Width="1.5" PointX="3" PointY="51" />
+        <EntityTypeShape EntityType="ACNURModel.Modules" Width="1.5" PointX="6" PointY="78" />
+        <EntityTypeShape EntityType="ACNURModel.ModuleUser" Width="1.5" PointX="10.5" PointY="55" />
+        <EntityTypeShape EntityType="ACNURModel.Operations" Width="1.5" PointX="6" PointY="75.75" />
+        <EntityTypeShape EntityType="ACNURModel.OperationsModule" Width="1.5" PointX="8.25" PointY="77" />
+        <EntityTypeShape EntityType="ACNURModel.OperationsModuleUser" Width="1.5" PointX="10.5" PointY="52" />
+        <EntityTypeShape EntityType="ACNURModel.Parameter" Width="1.5" PointX="0.75" PointY="64.875" />
+        <EntityTypeShape EntityType="ACNURModel.ParameterDetail" Width="1.5" PointX="3" PointY="54.875" />
+        <EntityTypeShape EntityType="ACNURModel.StepsFlow" Width="1.5" PointX="6" PointY="25.25" />
+        <EntityTypeShape EntityType="ACNURModel.StepsFlowModule" Width="1.5" PointX="8.25" PointY="24.875" />
+        <EntityTypeShape EntityType="ACNURModel.StepsFlowModuleUser" Width="1.5" PointX="10.5" PointY="58" />
+        <EntityTypeShape EntityType="ACNURModel.Users" Width="1.5" PointX="5.25" PointY="54" />
+        <EntityTypeShape EntityType="ACNURModel.CostApproval" Width="1.5" PointX="12" PointY="64.125" />
+        <EntityTypeShape EntityType="ACNURModel.ItineraryInformation" Width="1.5" PointX="9.75" PointY="62.125" />
+        <EntityTypeShape EntityType="ACNURModel.PT8" Width="1.5" PointX="5.25" PointY="28.125" />
+        <EntityTypeShape EntityType="ACNURModel.SatffInformation" Width="1.5" PointX="7.5" PointY="50.625" />
+        <EntityTypeShape EntityType="ACNURModel.GeneralInformationEmergency" Width="1.5" PointX="5.25" PointY="117.625" />
+        <EntityTypeShape EntityType="ACNURModel.GeneralInformationEmergencyUsers" Width="1.5" PointX="7.5" PointY="89" />
+        <EntityTypeShape EntityType="ACNURModel.GeneralInformationEvent" Width="1.5" PointX="5.25" PointY="126.75" />
+        <EntityTypeShape EntityType="ACNURModel.GeneralInformationEventUsers" Width="1.5" PointX="10.5" PointY="91.875" />
+        <EntityTypeShape EntityType="ACNURModel.PressData" Width="1.5" PointX="5.25" PointY="83.125" />
+        <EntityTypeShape EntityType="ACNURModel.AnnexC" Width="1.5" PointX="5.25" PointY="89.125" />
+        <EntityTypeShape EntityType="ACNURModel.DataProject" Width="1.5" PointX="5.25" PointY="68.375" />
+        <EntityTypeShape EntityType="ACNURModel.DescriptionOfTheTargetPopulation" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ACNURModel.NationalPriorities" Width="1.5" PointX="7.5" PointY="69.875" />
+        <EntityTypeShape EntityType="ACNURModel.Weekly" Width="1.5" PointX="10.25" PointY="69.5" />
+        <EntityTypeShape EntityType="ACNURModel.WeeklyRequest" Width="1.5" PointX="8" PointY="82" />
+        <EntityTypeShape EntityType="ACNURModel.Events" Width="1.5" PointX="10.5" PointY="94.625" />
+        <EntityTypeShape EntityType="ACNURModel.Goods" Width="1.5" PointX="7.5" PointY="93.125" />
+        <EntityTypeShape EntityType="ACNURModel.Request" Width="1.5" PointX="5.25" PointY="132.375" />
+        <EntityTypeShape EntityType="ACNURModel.Services" Width="1.5" PointX="13.5" PointY="97.125" />
+        <EntityTypeShape EntityType="ACNURModel.GeneralInformationRiskProfile" Width="1.5" PointX="5.25" PointY="42.375" />
+        <EntityTypeShape EntityType="ACNURModel.GeneralInformationRiskProfileUsers" Width="1.5" PointX="7.5" PointY="47.25" />
+        <EntityTypeShape EntityType="ACNURModel.OtherObjects" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ACNURModel.SessionComponentsByModule" Width="1.5" PointX="7.5" PointY="100.25" />
+        <EntityTypeShape EntityType="ACNURModel.Sessions" Width="1.5" PointX="5.25" PointY="99.875" />
+        <EntityTypeShape EntityType="ACNURModel.SessionTargetMailProcessed" Width="1.5" PointX="9.75" PointY="103.25" />
+        <EntityTypeShape EntityType="ACNURModel.SessionTargetMails" Width="1.5" PointX="7.5" PointY="103.25" />
+        <EntityTypeShape EntityType="ACNURModel.Attachments" Width="1.5" PointX="5.25" PointY="63.625" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionAction_ParameterDetail_ActionFrame" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionAction_ParameterDetail_ActionType" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionAction_ParameterDetail_AssociatedAction" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionAction_ParameterDetail_Author" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionAction_ParameterDetail_Beneficiary" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionAction_ParameterDetail_City" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionAction_ParameterDetail_Institution" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionAction_ParameterDetail_Office" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionAction_ParameterDetail_SpaceAction" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionAction_ParameterDetail_SubCategory" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionAction_ParameterDetail_Unit" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformationActionUsers_GeneralInformationAction" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformationActionUsers_Users" />
+        <AssociationConnector Association="ACNURModel.FK_Audit_User" />
+        <AssociationConnector Association="ACNURModel.FK_Attachments_ComponentsByModule" />
+        <AssociationConnector Association="ACNURModel.FK_ComponentsByModule_Modules" />
+        <AssociationConnector Association="ACNURModel.FK_SessionComponentesByModule_ComponentesByModule" />
+        <AssociationConnector Association="ACNURModel.FK_ModuleUser_Module" />
+        <AssociationConnector Association="ACNURModel.FK_OperationsModule_Module" />
+        <AssociationConnector Association="ACNURModel.FK_StepsFlowModule_Module" />
+        <AssociationConnector Association="ACNURModel.FK_ModuleUser_User" />
+        <AssociationConnector Association="ACNURModel.FK_OperationsModule_Operations" />
+        <AssociationConnector Association="ACNURModel.FK_OperationsModuleUser_OperationsModule" />
+        <AssociationConnector Association="ACNURModel.FK_OperationsModuleUser_User" />
+        <AssociationConnector Association="ACNURModel.FK_ParameterDetail_Parameter" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParamerteDetail_ProjectLocationSubMunicipality" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_CostCentre" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_Currency" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_FocusImpacIndicatorOutput" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_FocusObjetive" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_FocusRightsGrup" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_IdUNIT" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_ImplementationMechanism" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_ImplementerCode" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_MSRPObjective" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_MSRPOutput" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_MSRPRightsGroup" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_OfficeRisponsible" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_Priority" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_ProjectLocationDepartament" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_ProjectLocationMunicipality" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_Site" />
+        <AssociationConnector Association="ACNURModel.FK_AnnexC_ParameterDetail_Strategy" />
+        <AssociationConnector Association="ACNURModel.FK_Attachments_ParameterDetail_AttachmentCondition" />
+        <AssociationConnector Association="ACNURModel.FK_Attachments_ParameterDetail_AttachmentType" />
+        <AssociationConnector Association="ACNURModel.FK_CostApproval_ParameterDetail_Canceled" />
+        <AssociationConnector Association="ACNURModel.FK_CostApproval_ParameterDetail_CertifyingOffice" />
+        <AssociationConnector Association="ACNURModel.FK_CostApproval_ParameterDetail_Legalization" />
+        <AssociationConnector Association="ACNURModel.FK_CostApproval_ParameterDetail_Title" />
+        <AssociationConnector Association="ACNURModel.FK_DataProject_ParameterDetail_Departament" />
+        <AssociationConnector Association="ACNURModel.FK_DataProject_ParameterDetail_ImplementationModality" />
+        <AssociationConnector Association="ACNURModel.FK_DataProject_ParameterDetail_Municipality" />
+        <AssociationConnector Association="ACNURModel.FK_DataProject_ParameterDetail_Office" />
+        <AssociationConnector Association="ACNURModel.FK_DataProject_ParameterDetail_SubMunicipality" />
+        <AssociationConnector Association="ACNURModel.FK_DataProject_ParameterDetail_UnitTimeProjectDuration" />
+        <AssociationConnector Association="ACNURModel.FK_Events_ParameterDetail_AccomodationType" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_Activity" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_Actor" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_AssociateEvent" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_Author" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_CityEvent" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_EthnicComunity" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_EventClassification" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_EventMedia" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_EventStatus" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_EventType" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_FamilyType" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_Gender" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_Office" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_PopulationType" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_Profile" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_ResidenceCity" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_Unit" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformacionRiskProfile_ParameterDetail_VictimizerGroup" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformation_ParameterDetail_CityExpulsion" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformation_ParameterDetail_CityReception" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformation_ParameterDetail_EmergencyCause" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformation_ParameterDetail_EmergencyType" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformation_ParameterDetail_EthnicComunity" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformation_ParameterDetail_EventStatus" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformation_ParameterDetail_EventType" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformation_ParameterDetail_Office" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformation_ParameterDetail_Unit" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformation_ParameterDetail_VictimizerActor" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformationEvent_ParameterDetail_Author" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformationEvent_ParameterDetail_Category" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformationEvent_ParameterDetail_City" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformationEvent_ParameterDetail_InformationSource" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformationEvent_ParameterDetail_Office" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformationEvent_ParameterDetail_SubCategory" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformationEvent_ParameterDetail_Unit" />
+        <AssociationConnector Association="ACNURModel.FK_Goods_ParameterDetail_UnitMeasure" />
+        <AssociationConnector Association="ACNURModel.FK_ItineraryInformation_ParameterDetail_CityFrom" />
+        <AssociationConnector Association="ACNURModel.FK_ItineraryInformation_ParameterDetail_CityTo" />
+        <AssociationConnector Association="ACNURModel.FK_ParameterDetail_ParameterDetail" />
+        <AssociationConnector Association="ACNURModel.FK_PressData_ParameterDetail_CategoryPress" />
+        <AssociationConnector Association="ACNURModel.FK_PressData_ParameterDetail_Departament" />
+        <AssociationConnector Association="ACNURModel.FK_PressData_ParameterDetail_Municipality" />
+        <AssociationConnector Association="ACNURModel.FK_PressData_ParameterDetail_Office" />
+        <AssociationConnector Association="ACNURModel.FK_PressData_ParameterDetail_SubCategoryPress" />
+        <AssociationConnector Association="ACNURModel.FK_PressData_ParameterDetail_SubMunicipality" />
+        <AssociationConnector Association="ACNURModel.FK_PressData_ParameterDetail_Unit" />
+        <AssociationConnector Association="ACNURModel.FK_PT8_ParameterDetail_Author" />
+        <AssociationConnector Association="ACNURModel.FK_PT8_ParameterDetail_Office" />
+        <AssociationConnector Association="ACNURModel.FK_PT8_ParameterDetail_Unit" />
+        <AssociationConnector Association="ACNURModel.FK_Request_ParameterDetail_RequestUnit" />
+        <AssociationConnector Association="ACNURModel.FK_SatffInformation_ParameterDetail_TravelAgency" />
+        <AssociationConnector Association="ACNURModel.FK_SatffInformation_ParameterDetail_Unit" />
+        <AssociationConnector Association="ACNURModel.FK_Services_ParameterDetail_ServiceType" />
+        <AssociationConnector Association="ACNURModel.FK_Sessions_ParameterDetail_ProcessGroup" />
+        <AssociationConnector Association="ACNURModel.FK_Users_ParameterDetail_Rol" />
+        <AssociationConnector Association="ACNURModel.FK_Weekly_ParameterDetail_Departament" />
+        <AssociationConnector Association="ACNURModel.FK_Weekly_ParameterDetail_Municipality" />
+        <AssociationConnector Association="ACNURModel.FK_Weekly_ParameterDetail_WeeklyCharacteristic" />
+        <AssociationConnector Association="ACNURModel.FK_Weekly_ParameterDetail_WeeklySubcharacteristic" />
+        <AssociationConnector Association="ACNURModel.FK_StepsFlowModule_StepsFlow" />
+        <AssociationConnector Association="ACNURModel.FK_StepsFlowModuleUser_StepsFlowModule" />
+        <AssociationConnector Association="ACNURModel.FK_StepsFlowModuleUser_User" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformationEventUsers_Users" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformationRiskProfileUsers_Users" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformationUsers_Users" />
+        <AssociationConnector Association="ACNURModel.FK_CostApproval_ItineraryInformation" />
+        <AssociationConnector Association="ACNURModel.FK_ItineraryInformation_StaffInformation" />
+        <AssociationConnector Association="ACNURModel.FK_SatffInformation_PT8" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformationUsers_GeneralInformation" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformationEventUsers_GeneralInformationEvent" />
+        <AssociationConnector Association="ACNURModel.FK_NationalPriorities_DataProject" />
+        <AssociationConnector Association="ACNURModel.FK_Weekly_WeeklyRequest" />
+        <AssociationConnector Association="ACNURModel.FK_Events_Request" />
+        <AssociationConnector Association="ACNURModel.FK_Goods_Request" />
+        <AssociationConnector Association="ACNURModel.FK_Services_Request" />
+        <AssociationConnector Association="ACNURModel.FK_GeneralInformationRiskProfileUsers_GeneralInformationRiskProfile" />
+        <AssociationConnector Association="ACNURModel.FK_SessionComponentesByModule_Session" />
+        <AssociationConnector Association="ACNURModel.FK_SessionTargetMails_Session" />
+        <AssociationConnector Association="ACNURModel.FK_SessionTargetMailProcessed_SessionTargetMail" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

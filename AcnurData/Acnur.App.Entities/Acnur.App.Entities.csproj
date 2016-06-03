@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF6ACEC6-0DE4-47EB-B63E-79E632509F78}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Acnur.App.Entities</RootNamespace>
+    <AssemblyName>Acnur.App.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnnexC.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Attachments.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Audit.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentsByModule.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CostApproval.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataProject.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DescriptionOfTheTargetPopulation.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Events.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Extension\Events.cs" />
+    <Compile Include="Extension\Goods.cs" />
+    <Compile Include="Extension\Modules.cs" />
+    <Compile Include="Extension\ParameterDetail.cs" />
+    <Compile Include="Extension\Request.cs" />
+    <Compile Include="Extension\Services.cs" />
+    <Compile Include="Extension\Users.cs" />
+    <Compile Include="Common\DetailError.cs" />
+    <Compile Include="ContextoModelo.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="GeneralInformationAction.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralInformationActionUsers.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralInformationEmergency.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralInformationEmergencyUsers.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralInformationEvent.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralInformationEventUsers.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralInformationRiskProfile.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralInformationRiskProfileUsers.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generic\ListRequest.cs" />
+    <Compile Include="Goods.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItineraryInformation.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modules.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleUser.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NationalPriorities.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Operations.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OperationsModule.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OperationsModuleUser.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OtherObjects.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterDetail.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PressData.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PT8.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Request.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SatffInformation.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Services.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SessionComponentsByModule.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sessions.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SessionTargetMailProcessed.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SessionTargetMails.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StepsFlow.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StepsFlowModule.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StepsFlowModuleUser.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Weekly.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WeeklyRequest.cs">
+      <DependentUpon>ContextoModelo.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ContextoModelo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ContextoModelo.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

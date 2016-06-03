@@ -1,0 +1,2851 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ACNURModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="GeneralInformationAction">
+    <Key>
+      <PropertyRef Name="IdGeneralInformationAction" />
+    </Key>
+    <Property Name="IdGeneralInformationAction" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAuthor" Type="int" Nullable="false" />
+    <Property Name="IdOffice" Type="int" Nullable="false" />
+    <Property Name="IdUnit" Type="int" Nullable="false" />
+    <Property Name="DateAction" Type="date" Nullable="false" />
+    <Property Name="IdActionFrame" Type="int" Nullable="false" />
+    <Property Name="IdAssociatedAction" Type="int" Nullable="false" />
+    <Property Name="IdSubCategory" Type="int" Nullable="false" />
+    <Property Name="InitialDate" Type="date" Nullable="false" />
+    <Property Name="FinalDate" Type="date" Nullable="false" />
+    <Property Name="StrategyObjetive" Type="varchar" MaxLength="1024" Nullable="false" />
+    <Property Name="IdActionType" Type="int" Nullable="false" />
+    <Property Name="IdSpaceAction" Type="int" Nullable="false" />
+    <Property Name="IdBeneficiary" Type="int" Nullable="false" />
+    <Property Name="IdInstitution" Type="int" Nullable="false" />
+    <Property Name="ComunityOrganization" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ReferenceData" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="WomenBetween0And4" Type="int" />
+    <Property Name="WomenBetween5And11" Type="int" />
+    <Property Name="WomenBetween12And17" Type="int" />
+    <Property Name="WomenBetween18And59" Type="int" />
+    <Property Name="WomenBetween60AndMore" Type="int" />
+    <Property Name="MenBetween0And4" Type="int" />
+    <Property Name="MenBetween5And11" Type="int" />
+    <Property Name="MenBetween12And17" Type="int" />
+    <Property Name="MenBetween18And59" Type="int" />
+    <Property Name="MenBetween60AndMore" Type="int" />
+    <Property Name="TotalFamilies" Type="int" />
+    <Property Name="TotalPeople" Type="int" />
+    <Property Name="IdCity" Type="int" Nullable="false" />
+    <Property Name="AdditionalGeographicLocation" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GeneralInformationActionUsers">
+    <Key>
+      <PropertyRef Name="IdGeneralInformationActionUser" />
+    </Key>
+    <Property Name="IdGeneralInformationActionUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdGeneralInformationAction" Type="int" Nullable="false" />
+    <Property Name="IdUser" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Audit">
+    <Key>
+      <PropertyRef Name="IdAudit" />
+    </Key>
+    <Property Name="IdAudit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUser" Type="int" Nullable="false" />
+    <Property Name="ModificationDate" Type="datetime" Nullable="false" />
+    <Property Name="EntityBefore" Type="varbinary(max)" Nullable="false" />
+    <Property Name="EntityAfter" Type="varbinary(max)" Nullable="false" />
+    <Property Name="IdKeyEntity" Type="int" Nullable="false" />
+    <Property Name="IdKeyConsult" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="IPAdress" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="IdProcessEntity" Type="int" Nullable="false" />
+    <Property Name="Operation" Type="varchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ComponentsByModule">
+    <Key>
+      <PropertyRef Name="IdComponentByModule" />
+    </Key>
+    <Property Name="IdComponentByModule" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IdModule" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Modules">
+    <Key>
+      <PropertyRef Name="IdModule" />
+    </Key>
+    <Property Name="IdModule" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModuleName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ModuleUser">
+    <Key>
+      <PropertyRef Name="IdModuleUser" />
+    </Key>
+    <Property Name="IdModuleUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdModule" Type="int" Nullable="false" />
+    <Property Name="IdUser" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Operations">
+    <Key>
+      <PropertyRef Name="IdOperation" />
+    </Key>
+    <Property Name="IdOperation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OperationsModule">
+    <Key>
+      <PropertyRef Name="IdOperationModule" />
+    </Key>
+    <Property Name="IdOperationModule" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdOperation" Type="int" Nullable="false" />
+    <Property Name="IdModule" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OperationsModuleUser">
+    <Key>
+      <PropertyRef Name="IdOperationModuleUser" />
+    </Key>
+    <Property Name="IdOperationModuleUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdOperationModule" Type="int" Nullable="false" />
+    <Property Name="IdUser" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Parameter">
+    <Key>
+      <PropertyRef Name="IdParameter" />
+    </Key>
+    <Property Name="IdParameter" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Editable" Type="bit" Nullable="false" />
+    <Property Name="Insertable" Type="bit" Nullable="false" />
+    <Property Name="Removable" Type="bit" Nullable="false" />
+    <Property Name="IdParameterFather" Type="int" />
+  </EntityType>
+  <EntityType Name="ParameterDetail">
+    <Key>
+      <PropertyRef Name="IdParameterDetail" />
+    </Key>
+    <Property Name="IdParameterDetail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdParameter" Type="int" Nullable="false" />
+    <Property Name="IdParameterDetailFather" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="Definition" Type="varchar" MaxLength="1000" />
+    <Property Name="Value1" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Value2" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Ordinal" Type="tinyint" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StepsFlow">
+    <Key>
+      <PropertyRef Name="IdStepFlow" />
+    </Key>
+    <Property Name="IdStepFlow" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StepsFlowModule">
+    <Key>
+      <PropertyRef Name="IdStepFlowModule" />
+    </Key>
+    <Property Name="IdStepFlowModule" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdStepFlow" Type="int" Nullable="false" />
+    <Property Name="IdModule" Type="int" Nullable="false" />
+    <Property Name="Sequence" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StepsFlowModuleUser">
+    <Key>
+      <PropertyRef Name="IdStepFlowModuleUser" />
+    </Key>
+    <Property Name="IdStepFlowModuleUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdStepFlowModule" Type="int" Nullable="false" />
+    <Property Name="IdUser" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="IdUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Mail" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="IdRol" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CostApproval">
+    <Key>
+      <PropertyRef Name="IdCostApproval" />
+    </Key>
+    <Property Name="IdCostApproval" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdItineraryInformation" Type="int" Nullable="false" />
+    <Property Name="IdCertifyingOffice" Type="int" Nullable="false" />
+    <Property Name="IdTitle" Type="int" Nullable="false" />
+    <Property Name="AssignedAccount" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Account" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VoucherNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Value" Type="float" Nullable="false" />
+    <Property Name="IdCanceled" Type="int" Nullable="false" />
+    <Property Name="IdLegalization" Type="int" Nullable="false" />
+    <Property Name="RegisterAdded" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ItineraryInformation">
+    <Key>
+      <PropertyRef Name="IdItineraryInformation" />
+    </Key>
+    <Property Name="IdItineraryInformation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdStaffInformation" Type="int" Nullable="false" />
+    <Property Name="IdCityFrom" Type="int" Nullable="false" />
+    <Property Name="IdCityTo" Type="int" Nullable="false" />
+    <Property Name="DateOfficialBegin" Type="date" Nullable="false" />
+    <Property Name="DateOfficialEnd" Type="date" Nullable="false" />
+    <Property Name="ReqTravelerBegin" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RegTravelerEnd" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ExcessBagg" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="HouseHold" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RegisterAdded" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PT8">
+    <Key>
+      <PropertyRef Name="IdPT8" />
+    </Key>
+    <Property Name="IdPT8" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAuthor" Type="int" Nullable="false" />
+    <Property Name="IdOffice" Type="int" Nullable="false" />
+    <Property Name="IdUnit" Type="int" Nullable="false" />
+    <Property Name="DatePT8" Type="date" Nullable="false" />
+    <Property Name="PT8Id" Type="int" Nullable="false" />
+    <Property Name="AditionalDate" Type="date" Nullable="false" />
+    <Property Name="PreparedBy" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="RegisterAdded" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SatffInformation">
+    <Key>
+      <PropertyRef Name="IdStaffInformation" />
+    </Key>
+    <Property Name="IdStaffInformation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPT8" Type="int" Nullable="false" />
+    <Property Name="SatffMemberName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="SatffMemberIndexNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TitleGrade" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Nationality" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OfficeDuty" Type="varchar" MaxLength="75" Nullable="false" />
+    <Property Name="IdUnit" Type="int" Nullable="false" />
+    <Property Name="ExchangeRate" Type="float" Nullable="false" />
+    <Property Name="IdTravelAgency" Type="int" Nullable="false" />
+    <Property Name="Purpose" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="SpecialInstruction" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="RegisterAdded" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GeneralInformationEmergency">
+    <Key>
+      <PropertyRef Name="IdGeneralInformationEmergency" />
+    </Key>
+    <Property Name="IdGeneralInformationEmergency" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdVictimizerActor" Type="int" Nullable="false" />
+    <Property Name="IdEmergencyCause" Type="int" Nullable="false" />
+    <Property Name="IdEthnicComunity" Type="int" Nullable="false" />
+    <Property Name="IdEventStatus" Type="int" Nullable="false" />
+    <Property Name="IdCityExpulsion" Type="int" Nullable="false" />
+    <Property Name="IdCityReception" Type="int" Nullable="false" />
+    <Property Name="IdOffice" Type="int" Nullable="false" />
+    <Property Name="IdEmergencyType" Type="int" Nullable="false" />
+    <Property Name="IdEventType" Type="int" Nullable="false" />
+    <Property Name="IdUnit" Type="int" Nullable="false" />
+    <Property Name="Author" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="ReportDate" Type="date" Nullable="false" />
+    <Property Name="EventDate" Type="date" Nullable="false" />
+    <Property Name="WomenBetween0And4" Type="int" />
+    <Property Name="WomenBetween5And11" Type="int" />
+    <Property Name="WomenBetween12And17" Type="int" />
+    <Property Name="WomenBetween18And59" Type="int" />
+    <Property Name="WomenBetween60AndMore" Type="int" />
+    <Property Name="MenBetween0And4" Type="int" />
+    <Property Name="MenBetween5And11" Type="int" />
+    <Property Name="MenBetween12And17" Type="int" />
+    <Property Name="MenBetween18And59" Type="int" />
+    <Property Name="MenBetween60AndMore" Type="int" />
+    <Property Name="TotalFamilies" Type="int" />
+    <Property Name="TotalPeople" Type="int" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="GeneralInformationEmergencyUsers">
+    <Key>
+      <PropertyRef Name="IdGeneralInformationEmergencyUser" />
+    </Key>
+    <Property Name="IdGeneralInformationEmergencyUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdGeneralInformationEmergency" Type="int" Nullable="false" />
+    <Property Name="IdUser" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GeneralInformationEvent">
+    <Key>
+      <PropertyRef Name="IdGeneralInformationEvent" />
+    </Key>
+    <Property Name="IdGeneralInformationEvent" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAuthor" Type="int" Nullable="false" />
+    <Property Name="IdOffice" Type="int" Nullable="false" />
+    <Property Name="IdUnit" Type="int" Nullable="false" />
+    <Property Name="EventDate" Type="date" Nullable="false" />
+    <Property Name="IdCategory" Type="int" Nullable="false" />
+    <Property Name="IdSubCategory" Type="int" Nullable="false" />
+    <Property Name="IdInformationSource" Type="int" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="IdCity" Type="int" Nullable="false" />
+    <Property Name="AdditionalGeographicLocation" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GeneralInformationEventUsers">
+    <Key>
+      <PropertyRef Name="IdGeneralInformationEventUser" />
+    </Key>
+    <Property Name="IdGeneralInformationEventUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdGeneralInformationEvent" Type="int" Nullable="false" />
+    <Property Name="IdUser" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PressData">
+    <Key>
+      <PropertyRef Name="IdPressData" />
+    </Key>
+    <Property Name="IdPressData" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCategoryPress" Type="int" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="IdSubcategoryPress" Type="int" Nullable="false" />
+    <Property Name="WebLink" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="MediaName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="IdEventLocationDepartament" Type="int" Nullable="false" />
+    <Property Name="IdEventLocationMunicipality" Type="int" Nullable="false" />
+    <Property Name="IdEventLocationSubMunicipality" Type="int" Nullable="false" />
+    <Property Name="EventLocationCommunityOrOtherData" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="EventData" Type="date" Nullable="false" />
+    <Property Name="Description" Type="varchar(max)" Nullable="false" />
+    <Property Name="IdAuthor" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdOffice" Type="int" Nullable="false" />
+    <Property Name="IdUnit" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AnnexC">
+    <Key>
+      <PropertyRef Name="IdAnnexC" />
+    </Key>
+    <Property Name="IdAnnexC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdProgramCycle" Type="int" Nullable="false" />
+    <Property Name="Author" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="DateRegister" Type="date" Nullable="false" />
+    <Property Name="Project" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="IdPriority" Type="int" Nullable="false" />
+    <Property Name="IdStrategy" Type="int" Nullable="false" />
+    <Property Name="IdFocusRightsGroup" Type="int" Nullable="false" />
+    <Property Name="IdMSRPRightsGroup" Type="int" Nullable="false" />
+    <Property Name="IdFocusObjective" Type="int" Nullable="false" />
+    <Property Name="IdMSRPObjective" Type="int" Nullable="false" />
+    <Property Name="IdFocusImpactIndicatorOutput" Type="int" Nullable="false" />
+    <Property Name="IdMSRPOutput" Type="int" Nullable="false" />
+    <Property Name="ProjectTitle" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="SubAgreement" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="IdImplementerCode" Type="int" Nullable="false" />
+    <Property Name="IdImplementationMechanism" Type="int" Nullable="false" />
+    <Property Name="IdOfficeRisponsible" Type="int" Nullable="false" />
+    <Property Name="IdSite" Type="int" Nullable="false" />
+    <Property Name="IdCostCentre" Type="int" Nullable="false" />
+    <Property Name="IdProjectLocationDepartament" Type="int" Nullable="false" />
+    <Property Name="IdProjectLocationMunicipality" Type="int" Nullable="false" />
+    <Property Name="IdProjectLocationSubMunicipality" Type="int" Nullable="false" />
+    <Property Name="ProjectLocationComunityName" Type="int" Nullable="false" />
+    <Property Name="IdUNIT" Type="int" Nullable="false" />
+    <Property Name="IdCurrency" Type="int" Nullable="false" />
+    <Property Name="Budget" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="USD" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Donor" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DataProject">
+    <Key>
+      <PropertyRef Name="IdDataProject" />
+    </Key>
+    <Property Name="IdDataProject" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectTitle" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdProjectlocationDepartament" Type="int" Nullable="false" />
+    <Property Name="IdProjectlocationMunicipality" Type="int" Nullable="false" />
+    <Property Name="IdProjectlocationSubMunicipality" Type="int" Nullable="false" />
+    <Property Name="ImplementationPartners" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FollowUpReportNumber" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PeriodCoveredInitialReport" Type="date" Nullable="false" />
+    <Property Name="PeriodCoveredFinalReport" Type="date" Nullable="false" />
+    <Property Name="IdOffice" Type="int" Nullable="false" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SubAgreement" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IDUnitTimeProjectDuration" Type="int" Nullable="false" />
+    <Property Name="ProjectDuration" Type="int" Nullable="false" />
+    <Property Name="IdImplementationModality" Type="int" Nullable="false" />
+    <Property Name="TotalProjectValue" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="UNHCRRrequiredValue" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="AmountExecutedToDate" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DescriptionOfTheTargetPopulation">
+    <Key>
+      <PropertyRef Name="IdDescriptionOfTheTargetPopulation" />
+    </Key>
+    <Property Name="IdDescriptionOfTheTargetPopulation" Type="int" Nullable="false" />
+    <Property Name="IdDataProject" Type="int" Nullable="false" />
+    <Property Name="IdTypeBeneficiaries" Type="int" Nullable="false" />
+    <Property Name="IdTypePopulation" Type="int" Nullable="false" />
+    <Property Name="WomenBetween0And4" Type="int" Nullable="false" />
+    <Property Name="WomenBetween5And11" Type="int" Nullable="false" />
+    <Property Name="WomenBetween12And17" Type="int" Nullable="false" />
+    <Property Name="WomenBetween18And59" Type="int" Nullable="false" />
+    <Property Name="WomenBetween60AndMore" Type="int" Nullable="false" />
+    <Property Name="MenBetween0And4" Type="int" Nullable="false" />
+    <Property Name="MenBetween5And11" Type="int" Nullable="false" />
+    <Property Name="MenBetween12And17" Type="int" Nullable="false" />
+    <Property Name="MenBetween18And59" Type="int" Nullable="false" />
+    <Property Name="MenBetween60AndMore" Type="int" Nullable="false" />
+    <Property Name="TotalFamilies" Type="int" Nullable="false" />
+    <Property Name="TotalPeople" Type="int" Nullable="false" />
+    <Property Name="TotalCivilServant" Type="int" />
+    <Property Name="NarrativeDescriptionOfTheDirectBeneficiaries" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NationalPriorities">
+    <Key>
+      <PropertyRef Name="IdNationalPriorities" />
+    </Key>
+    <Property Name="IdNationalPriorities" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdDataProject" Type="int" Nullable="false" />
+    <Property Name="ThematicPriority" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="TransversalPriority" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="UpdateDateContextoftheCurrentSituationandDevelopmentProject" Type="date" Nullable="false" />
+    <Property Name="UpdatingtheContextoftheCurrentSituationandDevelopmentProject" Type="varchar(max)" Nullable="false" />
+    <Property Name="ProceduresForImplementation" Type="varchar(max)" Nullable="false" />
+    <Property Name="RelatedContributions" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Weekly">
+    <Key>
+      <PropertyRef Name="IdWeekly" />
+    </Key>
+    <Property Name="IdWeekly" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdWeeklyRequest" Type="int" Nullable="false" />
+    <Property Name="IdCharacteristic" Type="int" Nullable="false" />
+    <Property Name="IdSubCharacteristic" Type="int" Nullable="false" />
+    <Property Name="IdDepartament" Type="int" Nullable="false" />
+    <Property Name="IdMunicipality" Type="int" Nullable="false" />
+    <Property Name="SubMunicipality" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="4000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WeeklyRequest">
+    <Key>
+      <PropertyRef Name="IdWeeklyRequest" />
+    </Key>
+    <Property Name="IdWeeklyRequest" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRequestUnit" Type="int" Nullable="false" />
+    <Property Name="RequesterPerson" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="DutyStation" Type="varchar" MaxLength="75" Nullable="false" />
+    <Property Name="RequestDate" Type="date" Nullable="false" />
+    <Property Name="Responsible" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events">
+    <Key>
+      <PropertyRef Name="IdEvent" />
+    </Key>
+    <Property Name="IdEvent" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRequest" Type="int" Nullable="false" />
+    <Property Name="IdAccommodationType" Type="int" Nullable="false" />
+    <Property Name="EventName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="StartDate" Type="date" Nullable="false" />
+    <Property Name="EndDate" Type="date" Nullable="false" />
+    <Property Name="StartTime" Type="time" Precision="7" Nullable="false" />
+    <Property Name="EndTime" Type="time" Precision="7" Nullable="false" />
+    <Property Name="NumberParticipants" Type="int" Nullable="false" />
+    <Property Name="VideoBeam" Type="bit" Nullable="false" />
+    <Property Name="Flipchart" Type="bit" Nullable="false" />
+    <Property Name="FlipchartQuantity" Type="int" Nullable="false" />
+    <Property Name="Internet" Type="bit" Nullable="false" />
+    <Property Name="MinimumBandwith" Type="int" Nullable="false" />
+    <Property Name="RentedComputers" Type="bit" Nullable="false" />
+    <Property Name="RentedComputerQuantity" Type="int" Nullable="false" />
+    <Property Name="NumberComputers" Type="int" Nullable="false" />
+    <Property Name="ComputerSpecifications" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="MicrophoneAmplification" Type="bit" Nullable="false" />
+    <Property Name="MicrophoneSpecifications" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="SimultaneusTranslation" Type="bit" Nullable="false" />
+    <Property Name="Language" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OtherResources" Type="varchar" MaxLength="1024" Nullable="false" />
+    <Property Name="NumberPassengers" Type="int" Nullable="false" />
+    <Property Name="Origin" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Destination" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NumberRooms" Type="int" Nullable="false" />
+    <Property Name="Breakfast" Type="bit" Nullable="false" />
+    <Property Name="CoffeBreakAM" Type="bit" Nullable="false" />
+    <Property Name="Lunch" Type="bit" Nullable="false" />
+    <Property Name="CoffeBreakPM" Type="bit" Nullable="false" />
+    <Property Name="Dinner" Type="bit" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Goods">
+    <Key>
+      <PropertyRef Name="IdGoods" />
+    </Key>
+    <Property Name="IdGoods" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRequest" Type="int" Nullable="false" />
+    <Property Name="IdUnitMeasure" Type="int" />
+    <Property Name="Quantity" Type="float" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ManufacturerBrand" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Model" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Reference" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Dimensions" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Color" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Capacity" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Power" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Other" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="PlaceDelivery" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ExpectedDeliveryDate" Type="date" Nullable="false" />
+    <Property Name="Observations" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Request">
+    <Key>
+      <PropertyRef Name="IdRequest" />
+    </Key>
+    <Property Name="IdRequest" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRequestUnit" Type="int" Nullable="false" />
+    <Property Name="RequesterPerson" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="DutyStation" Type="varchar" MaxLength="75" Nullable="false" />
+    <Property Name="RequestDate" Type="date" Nullable="false" />
+    <Property Name="Responsible" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="BackgroundRationale" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="DeliveryLocation" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="EstimatedDeliveryDate" Type="date" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="IdService" />
+    </Key>
+    <Property Name="IdService" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdServiceType" Type="int" Nullable="false" />
+    <Property Name="IdRequest" Type="int" Nullable="false" />
+    <Property Name="Context" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="NumberDays" Type="int" Nullable="false" />
+    <Property Name="HoursDay" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ServiceLocation" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Specifications" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="ServiceResult" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="ExpectedDeliveryDate" Type="date" Nullable="false" />
+    <Property Name="PriorDeliveryDate" Type="date" Nullable="false" />
+    <Property Name="DeliveryPlace" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="AlternativeDeliveryDate" Type="date" Nullable="false" />
+    <Property Name="Observations" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GeneralInformationRiskProfile">
+    <Key>
+      <PropertyRef Name="IdGeneralInformationRiskProfile" />
+    </Key>
+    <Property Name="IdGeneralInformationRiskProfile" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAuthor" Type="int" Nullable="false" />
+    <Property Name="IdOffice" Type="int" Nullable="false" />
+    <Property Name="IdUnit" Type="int" Nullable="false" />
+    <Property Name="GeneralInformationDate" Type="date" Nullable="false" />
+    <Property Name="IdEventType" Type="int" Nullable="false" />
+    <Property Name="IdEventMedia" Type="int" Nullable="false" />
+    <Property Name="IdAssociateEvent" Type="int" Nullable="false" />
+    <Property Name="IdEventClassification" Type="int" Nullable="false" />
+    <Property Name="EventDate" Type="date" Nullable="false" />
+    <Property Name="IdEventStatus" Type="int" Nullable="false" />
+    <Property Name="VictimFirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VictimSecondName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VictimFirstLastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VictimSecondLastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdGender" Type="int" Nullable="false" />
+    <Property Name="IdPopulationType" Type="int" Nullable="false" />
+    <Property Name="IdEthnicComunity" Type="int" Nullable="false" />
+    <Property Name="IdFamilyType" Type="int" Nullable="false" />
+    <Property Name="VictimAge" Type="int" Nullable="false" />
+    <Property Name="IdProfile" Type="int" Nullable="false" />
+    <Property Name="IdActivity" Type="int" Nullable="false" />
+    <Property Name="FamilyNucleus" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="OrganizationName" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="OrganizationActivity" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="IdCityEvent" Type="int" Nullable="false" />
+    <Property Name="AdditionalGeographicLocationEvent" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdResidenceCity" Type="int" Nullable="false" />
+    <Property Name="AdditionalGeographicLocationResidence" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdVictimizerGroup" Type="int" Nullable="false" />
+    <Property Name="IdActor" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="4000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GeneralInformationRiskProfileUsers">
+    <Key>
+      <PropertyRef Name="IdGeneralInformationRiskProfileUser" />
+    </Key>
+    <Property Name="IdGeneralInformationRiskProfileUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdGeneralInformationRiskProfile" Type="int" Nullable="false" />
+    <Property Name="IdUser" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OtherObjects">
+    <Key>
+      <PropertyRef Name="IdOtherObjects" />
+    </Key>
+    <Property Name="IdOtherObjects" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdComponentByModule" Type="int" Nullable="false" />
+    <Property Name="IdInformation" Type="int" Nullable="false" />
+    <Property Name="IdUser" Type="int" Nullable="false" />
+    <Property Name="Processed" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SessionComponentsByModule">
+    <Key>
+      <PropertyRef Name="IdSessionComponentByModule" />
+    </Key>
+    <Property Name="IdSessionComponentByModule" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdSession" Type="int" Nullable="false" />
+    <Property Name="IdComponentByModule" Type="int" Nullable="false" />
+    <Property Name="IdInformation" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sessions">
+    <Key>
+      <PropertyRef Name="IdSession" />
+    </Key>
+    <Property Name="IdSession" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GUID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SourceEmail" Type="varchar" MaxLength="250" />
+    <Property Name="Subject" Type="varchar" MaxLength="500" />
+    <Property Name="BodyMail" Type="varchar" MaxLength="4000" />
+    <Property Name="Send" Type="bit" Nullable="false" />
+    <Property Name="IdProcessGroup" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SessionTargetMailProcessed">
+    <Key>
+      <PropertyRef Name="IdSessionTargetMailProcessed" />
+    </Key>
+    <Property Name="IdSessionTargetMailProcessed" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdSessionTargetMail" Type="int" Nullable="false" />
+    <Property Name="ProcessedDate" Type="datetime" Nullable="false" />
+    <Property Name="Processed" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SessionTargetMails">
+    <Key>
+      <PropertyRef Name="IdSessionTargetMail" />
+    </Key>
+    <Property Name="IdSessionTargetMail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TargetMail" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="IdSession" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Attachments">
+    <Key>
+      <PropertyRef Name="IdAttachment" />
+    </Key>
+    <Property Name="IdAttachment" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdComponentByModule" Type="int" Nullable="false" />
+    <Property Name="IdInformation" Type="int" Nullable="false" />
+    <Property Name="AttachmentName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="IdAttachmentType" Type="int" Nullable="false" />
+    <Property Name="IdAttachmentCondition" Type="int" Nullable="false" />
+    <Property Name="Attachment" Type="varbinary(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AnnexC_ParamerteDetail_ProjectLocationSubMunicipality">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdProjectLocationSubMunicipality" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_CostCentre">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdCostCentre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_Currency">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdCurrency" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_FocusImpacIndicatorOutput">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdFocusImpactIndicatorOutput" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_FocusObjetive">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdFocusObjective" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_FocusRightsGrup">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdFocusRightsGroup" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_IdUNIT">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdUNIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_ImplementationMechanism">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdImplementationMechanism" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_ImplementerCode">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdImplementerCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_MSRPObjective">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdMSRPObjective" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_MSRPOutput">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdMSRPOutput" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_MSRPRightsGroup">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdMSRPRightsGroup" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_OfficeRisponsible">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdOfficeRisponsible" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_Priority">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdPriority" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_ProjectLocationDepartament">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdProjectLocationDepartament" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_ProjectLocationMunicipality">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdProjectLocationMunicipality" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_Site">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdSite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnnexC_ParameterDetail_Strategy">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="AnnexC" Type="Self.AnnexC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="AnnexC">
+        <PropertyRef Name="IdStrategy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Attachments_ComponentsByModule">
+    <End Role="ComponentsByModule" Type="Self.ComponentsByModule" Multiplicity="1" />
+    <End Role="Attachments" Type="Self.Attachments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComponentsByModule">
+        <PropertyRef Name="IdComponentByModule" />
+      </Principal>
+      <Dependent Role="Attachments">
+        <PropertyRef Name="IdComponentByModule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Attachments_ParameterDetail_AttachmentCondition">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="Attachments" Type="Self.Attachments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="Attachments">
+        <PropertyRef Name="IdAttachmentCondition" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Attachments_ParameterDetail_AttachmentType">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="Attachments" Type="Self.Attachments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="Attachments">
+        <PropertyRef Name="IdAttachmentType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Audit_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Audit" Type="Self.Audit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="Audit">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComponentsByModule_Modules">
+    <End Role="Modules" Type="Self.Modules" Multiplicity="1" />
+    <End Role="ComponentsByModule" Type="Self.ComponentsByModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modules">
+        <PropertyRef Name="IdModule" />
+      </Principal>
+      <Dependent Role="ComponentsByModule">
+        <PropertyRef Name="IdModule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CostApproval_ItineraryInformation">
+    <End Role="ItineraryInformation" Type="Self.ItineraryInformation" Multiplicity="1" />
+    <End Role="CostApproval" Type="Self.CostApproval" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItineraryInformation">
+        <PropertyRef Name="IdItineraryInformation" />
+      </Principal>
+      <Dependent Role="CostApproval">
+        <PropertyRef Name="IdItineraryInformation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CostApproval_ParameterDetail_Canceled">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="CostApproval" Type="Self.CostApproval" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="CostApproval">
+        <PropertyRef Name="IdCanceled" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CostApproval_ParameterDetail_CertifyingOffice">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="CostApproval" Type="Self.CostApproval" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="CostApproval">
+        <PropertyRef Name="IdCertifyingOffice" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CostApproval_ParameterDetail_Legalization">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="CostApproval" Type="Self.CostApproval" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="CostApproval">
+        <PropertyRef Name="IdLegalization" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CostApproval_ParameterDetail_Title">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="CostApproval" Type="Self.CostApproval" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="CostApproval">
+        <PropertyRef Name="IdTitle" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DataProject_ParameterDetail_Departament">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="DataProject" Type="Self.DataProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="DataProject">
+        <PropertyRef Name="IdProjectlocationDepartament" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DataProject_ParameterDetail_ImplementationModality">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="DataProject" Type="Self.DataProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="DataProject">
+        <PropertyRef Name="IdImplementationModality" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DataProject_ParameterDetail_Municipality">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="DataProject" Type="Self.DataProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="DataProject">
+        <PropertyRef Name="IdProjectlocationMunicipality" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DataProject_ParameterDetail_Office">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="DataProject" Type="Self.DataProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="DataProject">
+        <PropertyRef Name="IdOffice" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DataProject_ParameterDetail_SubMunicipality">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="DataProject" Type="Self.DataProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="DataProject">
+        <PropertyRef Name="IdProjectlocationSubMunicipality" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DataProject_ParameterDetail_UnitTimeProjectDuration">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="DataProject" Type="Self.DataProject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="DataProject">
+        <PropertyRef Name="IDUnitTimeProjectDuration" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Events_ParameterDetail_AccomodationType">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="Events" Type="Self.Events" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="Events">
+        <PropertyRef Name="IdAccommodationType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Events_Request">
+    <End Role="Request" Type="Self.Request" Multiplicity="1" />
+    <End Role="Events" Type="Self.Events" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Request">
+        <PropertyRef Name="IdRequest" />
+      </Principal>
+      <Dependent Role="Events">
+        <PropertyRef Name="IdRequest" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionAction_ParameterDetail_ActionFrame">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationAction" Type="Self.GeneralInformationAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationAction">
+        <PropertyRef Name="IdActionFrame" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionAction_ParameterDetail_ActionType">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationAction" Type="Self.GeneralInformationAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationAction">
+        <PropertyRef Name="IdActionType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionAction_ParameterDetail_AssociatedAction">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationAction" Type="Self.GeneralInformationAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationAction">
+        <PropertyRef Name="IdAssociatedAction" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionAction_ParameterDetail_Author">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationAction" Type="Self.GeneralInformationAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationAction">
+        <PropertyRef Name="IdAuthor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionAction_ParameterDetail_Beneficiary">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationAction" Type="Self.GeneralInformationAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationAction">
+        <PropertyRef Name="IdBeneficiary" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionAction_ParameterDetail_City">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationAction" Type="Self.GeneralInformationAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationAction">
+        <PropertyRef Name="IdCity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionAction_ParameterDetail_Institution">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationAction" Type="Self.GeneralInformationAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationAction">
+        <PropertyRef Name="IdInstitution" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionAction_ParameterDetail_Office">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationAction" Type="Self.GeneralInformationAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationAction">
+        <PropertyRef Name="IdOffice" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionAction_ParameterDetail_SpaceAction">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationAction" Type="Self.GeneralInformationAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationAction">
+        <PropertyRef Name="IdSpaceAction" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionAction_ParameterDetail_SubCategory">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationAction" Type="Self.GeneralInformationAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationAction">
+        <PropertyRef Name="IdSubCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionAction_ParameterDetail_Unit">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationAction" Type="Self.GeneralInformationAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationAction">
+        <PropertyRef Name="IdUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_Activity">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdActivity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_Actor">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdActor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_AssociateEvent">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdAssociateEvent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_Author">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdAuthor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_CityEvent">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdCityEvent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_EthnicComunity">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdEthnicComunity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_EventClassification">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdEventClassification" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_EventMedia">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdEventMedia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_EventStatus">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdEventStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_EventType">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdEventType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_FamilyType">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdFamilyType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_Gender">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdGender" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_Office">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdOffice" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_PopulationType">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdPopulationType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_Profile">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdProfile" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_ResidenceCity">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdResidenceCity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_Unit">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformacionRiskProfile_ParameterDetail_VictimizerGroup">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdVictimizerGroup" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformation_ParameterDetail_CityExpulsion">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEmergency" Type="Self.GeneralInformationEmergency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEmergency">
+        <PropertyRef Name="IdCityExpulsion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformation_ParameterDetail_CityReception">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEmergency" Type="Self.GeneralInformationEmergency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEmergency">
+        <PropertyRef Name="IdCityReception" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformation_ParameterDetail_EmergencyCause">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEmergency" Type="Self.GeneralInformationEmergency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEmergency">
+        <PropertyRef Name="IdEmergencyCause" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformation_ParameterDetail_EmergencyType">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEmergency" Type="Self.GeneralInformationEmergency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEmergency">
+        <PropertyRef Name="IdEmergencyType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformation_ParameterDetail_EthnicComunity">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEmergency" Type="Self.GeneralInformationEmergency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEmergency">
+        <PropertyRef Name="IdEthnicComunity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformation_ParameterDetail_EventStatus">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEmergency" Type="Self.GeneralInformationEmergency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEmergency">
+        <PropertyRef Name="IdEventStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformation_ParameterDetail_EventType">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEmergency" Type="Self.GeneralInformationEmergency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEmergency">
+        <PropertyRef Name="IdEventType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformation_ParameterDetail_Office">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEmergency" Type="Self.GeneralInformationEmergency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEmergency">
+        <PropertyRef Name="IdOffice" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformation_ParameterDetail_Unit">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEmergency" Type="Self.GeneralInformationEmergency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEmergency">
+        <PropertyRef Name="IdUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformation_ParameterDetail_VictimizerActor">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEmergency" Type="Self.GeneralInformationEmergency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEmergency">
+        <PropertyRef Name="IdVictimizerActor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformationActionUsers_GeneralInformationAction">
+    <End Role="GeneralInformationAction" Type="Self.GeneralInformationAction" Multiplicity="1" />
+    <End Role="GeneralInformationActionUsers" Type="Self.GeneralInformationActionUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GeneralInformationAction">
+        <PropertyRef Name="IdGeneralInformationAction" />
+      </Principal>
+      <Dependent Role="GeneralInformationActionUsers">
+        <PropertyRef Name="IdGeneralInformationAction" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformationActionUsers_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="GeneralInformationActionUsers" Type="Self.GeneralInformationActionUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="GeneralInformationActionUsers">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformationEvent_ParameterDetail_Author">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEvent" Type="Self.GeneralInformationEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEvent">
+        <PropertyRef Name="IdAuthor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformationEvent_ParameterDetail_Category">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEvent" Type="Self.GeneralInformationEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEvent">
+        <PropertyRef Name="IdCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformationEvent_ParameterDetail_City">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEvent" Type="Self.GeneralInformationEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEvent">
+        <PropertyRef Name="IdCity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformationEvent_ParameterDetail_InformationSource">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEvent" Type="Self.GeneralInformationEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEvent">
+        <PropertyRef Name="IdInformationSource" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformationEvent_ParameterDetail_Office">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEvent" Type="Self.GeneralInformationEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEvent">
+        <PropertyRef Name="IdOffice" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformationEvent_ParameterDetail_SubCategory">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEvent" Type="Self.GeneralInformationEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEvent">
+        <PropertyRef Name="IdSubCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformationEvent_ParameterDetail_Unit">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="GeneralInformationEvent" Type="Self.GeneralInformationEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="GeneralInformationEvent">
+        <PropertyRef Name="IdUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformationEventUsers_GeneralInformationEvent">
+    <End Role="GeneralInformationEvent" Type="Self.GeneralInformationEvent" Multiplicity="1" />
+    <End Role="GeneralInformationEventUsers" Type="Self.GeneralInformationEventUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GeneralInformationEvent">
+        <PropertyRef Name="IdGeneralInformationEvent" />
+      </Principal>
+      <Dependent Role="GeneralInformationEventUsers">
+        <PropertyRef Name="IdGeneralInformationEvent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformationEventUsers_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="GeneralInformationEventUsers" Type="Self.GeneralInformationEventUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="GeneralInformationEventUsers">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformationRiskProfileUsers_GeneralInformationRiskProfile">
+    <End Role="GeneralInformationRiskProfile" Type="Self.GeneralInformationRiskProfile" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfileUsers" Type="Self.GeneralInformationRiskProfileUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GeneralInformationRiskProfile">
+        <PropertyRef Name="IdGeneralInformationRiskProfile" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfileUsers">
+        <PropertyRef Name="IdGeneralInformationRiskProfile" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformationRiskProfileUsers_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="GeneralInformationRiskProfileUsers" Type="Self.GeneralInformationRiskProfileUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="GeneralInformationRiskProfileUsers">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformationUsers_GeneralInformation">
+    <End Role="GeneralInformationEmergency" Type="Self.GeneralInformationEmergency" Multiplicity="1" />
+    <End Role="GeneralInformationEmergencyUsers" Type="Self.GeneralInformationEmergencyUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GeneralInformationEmergency">
+        <PropertyRef Name="IdGeneralInformationEmergency" />
+      </Principal>
+      <Dependent Role="GeneralInformationEmergencyUsers">
+        <PropertyRef Name="IdGeneralInformationEmergency" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeneralInformationUsers_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="GeneralInformationEmergencyUsers" Type="Self.GeneralInformationEmergencyUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="GeneralInformationEmergencyUsers">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Goods_ParameterDetail_UnitMeasure">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="0..1" />
+    <End Role="Goods" Type="Self.Goods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="Goods">
+        <PropertyRef Name="IdUnitMeasure" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Goods_Request">
+    <End Role="Request" Type="Self.Request" Multiplicity="1" />
+    <End Role="Goods" Type="Self.Goods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Request">
+        <PropertyRef Name="IdRequest" />
+      </Principal>
+      <Dependent Role="Goods">
+        <PropertyRef Name="IdRequest" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItineraryInformation_ParameterDetail_CityFrom">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="ItineraryInformation" Type="Self.ItineraryInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="ItineraryInformation">
+        <PropertyRef Name="IdCityFrom" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItineraryInformation_ParameterDetail_CityTo">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="ItineraryInformation" Type="Self.ItineraryInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="ItineraryInformation">
+        <PropertyRef Name="IdCityTo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItineraryInformation_StaffInformation">
+    <End Role="SatffInformation" Type="Self.SatffInformation" Multiplicity="1" />
+    <End Role="ItineraryInformation" Type="Self.ItineraryInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SatffInformation">
+        <PropertyRef Name="IdStaffInformation" />
+      </Principal>
+      <Dependent Role="ItineraryInformation">
+        <PropertyRef Name="IdStaffInformation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModuleUser_Module">
+    <End Role="Modules" Type="Self.Modules" Multiplicity="1" />
+    <End Role="ModuleUser" Type="Self.ModuleUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modules">
+        <PropertyRef Name="IdModule" />
+      </Principal>
+      <Dependent Role="ModuleUser">
+        <PropertyRef Name="IdModule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModuleUser_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="ModuleUser" Type="Self.ModuleUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="ModuleUser">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NationalPriorities_DataProject">
+    <End Role="DataProject" Type="Self.DataProject" Multiplicity="1" />
+    <End Role="NationalPriorities" Type="Self.NationalPriorities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DataProject">
+        <PropertyRef Name="IdDataProject" />
+      </Principal>
+      <Dependent Role="NationalPriorities">
+        <PropertyRef Name="IdDataProject" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperationsModule_Module">
+    <End Role="Modules" Type="Self.Modules" Multiplicity="1" />
+    <End Role="OperationsModule" Type="Self.OperationsModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modules">
+        <PropertyRef Name="IdModule" />
+      </Principal>
+      <Dependent Role="OperationsModule">
+        <PropertyRef Name="IdModule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperationsModule_Operations">
+    <End Role="Operations" Type="Self.Operations" Multiplicity="1" />
+    <End Role="OperationsModule" Type="Self.OperationsModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operations">
+        <PropertyRef Name="IdOperation" />
+      </Principal>
+      <Dependent Role="OperationsModule">
+        <PropertyRef Name="IdOperation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperationsModuleUser_OperationsModule">
+    <End Role="OperationsModule" Type="Self.OperationsModule" Multiplicity="1" />
+    <End Role="OperationsModuleUser" Type="Self.OperationsModuleUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperationsModule">
+        <PropertyRef Name="IdOperationModule" />
+      </Principal>
+      <Dependent Role="OperationsModuleUser">
+        <PropertyRef Name="IdOperationModule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperationsModuleUser_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="OperationsModuleUser" Type="Self.OperationsModuleUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="OperationsModuleUser">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParameterDetail_Parameter">
+    <End Role="Parameter" Type="Self.Parameter" Multiplicity="1" />
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parameter">
+        <PropertyRef Name="IdParameter" />
+      </Principal>
+      <Dependent Role="ParameterDetail">
+        <PropertyRef Name="IdParameter" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParameterDetail_ParameterDetail">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="0..1" />
+    <End Role="ParameterDetail1" Type="Self.ParameterDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="ParameterDetail1">
+        <PropertyRef Name="IdParameterDetailFather" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PressData_ParameterDetail_CategoryPress">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="PressData" Type="Self.PressData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="PressData">
+        <PropertyRef Name="IdCategoryPress" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PressData_ParameterDetail_Departament">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="PressData" Type="Self.PressData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="PressData">
+        <PropertyRef Name="IdEventLocationDepartament" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PressData_ParameterDetail_Municipality">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="PressData" Type="Self.PressData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="PressData">
+        <PropertyRef Name="IdEventLocationMunicipality" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PressData_ParameterDetail_Office">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="PressData" Type="Self.PressData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="PressData">
+        <PropertyRef Name="IdOffice" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PressData_ParameterDetail_SubCategoryPress">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="PressData" Type="Self.PressData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="PressData">
+        <PropertyRef Name="IdSubcategoryPress" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PressData_ParameterDetail_SubMunicipality">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="PressData" Type="Self.PressData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="PressData">
+        <PropertyRef Name="IdEventLocationSubMunicipality" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PressData_ParameterDetail_Unit">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="PressData" Type="Self.PressData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="PressData">
+        <PropertyRef Name="IdUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PT8_ParameterDetail_Author">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="PT8" Type="Self.PT8" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="PT8">
+        <PropertyRef Name="IdAuthor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PT8_ParameterDetail_Office">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="PT8" Type="Self.PT8" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="PT8">
+        <PropertyRef Name="IdOffice" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PT8_ParameterDetail_Unit">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="PT8" Type="Self.PT8" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="PT8">
+        <PropertyRef Name="IdUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Request_ParameterDetail_RequestUnit">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="Request" Type="Self.Request" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="Request">
+        <PropertyRef Name="IdRequestUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SatffInformation_ParameterDetail_TravelAgency">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="SatffInformation" Type="Self.SatffInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="SatffInformation">
+        <PropertyRef Name="IdTravelAgency" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SatffInformation_ParameterDetail_Unit">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="SatffInformation" Type="Self.SatffInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="SatffInformation">
+        <PropertyRef Name="IdUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SatffInformation_PT8">
+    <End Role="PT8" Type="Self.PT8" Multiplicity="1" />
+    <End Role="SatffInformation" Type="Self.SatffInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PT8">
+        <PropertyRef Name="IdPT8" />
+      </Principal>
+      <Dependent Role="SatffInformation">
+        <PropertyRef Name="IdPT8" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Services_ParameterDetail_ServiceType">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="Services" Type="Self.Services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="Services">
+        <PropertyRef Name="IdServiceType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Services_Request">
+    <End Role="Request" Type="Self.Request" Multiplicity="1" />
+    <End Role="Services" Type="Self.Services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Request">
+        <PropertyRef Name="IdRequest" />
+      </Principal>
+      <Dependent Role="Services">
+        <PropertyRef Name="IdRequest" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SessionComponentesByModule_ComponentesByModule">
+    <End Role="ComponentsByModule" Type="Self.ComponentsByModule" Multiplicity="1" />
+    <End Role="SessionComponentsByModule" Type="Self.SessionComponentsByModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComponentsByModule">
+        <PropertyRef Name="IdComponentByModule" />
+      </Principal>
+      <Dependent Role="SessionComponentsByModule">
+        <PropertyRef Name="IdComponentByModule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SessionComponentesByModule_Session">
+    <End Role="Sessions" Type="Self.Sessions" Multiplicity="1" />
+    <End Role="SessionComponentsByModule" Type="Self.SessionComponentsByModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sessions">
+        <PropertyRef Name="IdSession" />
+      </Principal>
+      <Dependent Role="SessionComponentsByModule">
+        <PropertyRef Name="IdSession" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sessions_ParameterDetail_ProcessGroup">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="Sessions" Type="Self.Sessions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="Sessions">
+        <PropertyRef Name="IdProcessGroup" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SessionTargetMailProcessed_SessionTargetMail">
+    <End Role="SessionTargetMails" Type="Self.SessionTargetMails" Multiplicity="1" />
+    <End Role="SessionTargetMailProcessed" Type="Self.SessionTargetMailProcessed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SessionTargetMails">
+        <PropertyRef Name="IdSessionTargetMail" />
+      </Principal>
+      <Dependent Role="SessionTargetMailProcessed">
+        <PropertyRef Name="IdSessionTargetMail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SessionTargetMails_Session">
+    <End Role="Sessions" Type="Self.Sessions" Multiplicity="1" />
+    <End Role="SessionTargetMails" Type="Self.SessionTargetMails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sessions">
+        <PropertyRef Name="IdSession" />
+      </Principal>
+      <Dependent Role="SessionTargetMails">
+        <PropertyRef Name="IdSession" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StepsFlowModule_Module">
+    <End Role="Modules" Type="Self.Modules" Multiplicity="1" />
+    <End Role="StepsFlowModule" Type="Self.StepsFlowModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modules">
+        <PropertyRef Name="IdModule" />
+      </Principal>
+      <Dependent Role="StepsFlowModule">
+        <PropertyRef Name="IdModule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StepsFlowModule_StepsFlow">
+    <End Role="StepsFlow" Type="Self.StepsFlow" Multiplicity="1" />
+    <End Role="StepsFlowModule" Type="Self.StepsFlowModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StepsFlow">
+        <PropertyRef Name="IdStepFlow" />
+      </Principal>
+      <Dependent Role="StepsFlowModule">
+        <PropertyRef Name="IdStepFlow" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StepsFlowModuleUser_StepsFlowModule">
+    <End Role="StepsFlowModule" Type="Self.StepsFlowModule" Multiplicity="1" />
+    <End Role="StepsFlowModuleUser" Type="Self.StepsFlowModuleUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StepsFlowModule">
+        <PropertyRef Name="IdStepFlowModule" />
+      </Principal>
+      <Dependent Role="StepsFlowModuleUser">
+        <PropertyRef Name="IdStepFlowModule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StepsFlowModuleUser_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="StepsFlowModuleUser" Type="Self.StepsFlowModuleUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="StepsFlowModuleUser">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_ParameterDetail_Rol">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Weekly_ParameterDetail_Departament">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="Weekly" Type="Self.Weekly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="Weekly">
+        <PropertyRef Name="IdDepartament" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Weekly_ParameterDetail_Municipality">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="Weekly" Type="Self.Weekly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="Weekly">
+        <PropertyRef Name="IdMunicipality" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Weekly_ParameterDetail_WeeklyCharacteristic">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="Weekly" Type="Self.Weekly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="Weekly">
+        <PropertyRef Name="IdCharacteristic" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Weekly_ParameterDetail_WeeklySubcharacteristic">
+    <End Role="ParameterDetail" Type="Self.ParameterDetail" Multiplicity="1" />
+    <End Role="Weekly" Type="Self.Weekly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParameterDetail">
+        <PropertyRef Name="IdParameterDetail" />
+      </Principal>
+      <Dependent Role="Weekly">
+        <PropertyRef Name="IdSubCharacteristic" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Weekly_WeeklyRequest">
+    <End Role="WeeklyRequest" Type="Self.WeeklyRequest" Multiplicity="1" />
+    <End Role="Weekly" Type="Self.Weekly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WeeklyRequest">
+        <PropertyRef Name="IdWeeklyRequest" />
+      </Principal>
+      <Dependent Role="Weekly">
+        <PropertyRef Name="IdWeeklyRequest" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="ObtainMailText" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Utility">
+    <Parameter Name="GUID" Type="varchar" Mode="In" />
+    <Parameter Name="MailText" Type="varchar" Mode="InOut" />
+  </Function>
+  <EntityContainer Name="ACNURModelStoreContainer">
+    <EntitySet Name="GeneralInformationAction" EntityType="Self.GeneralInformationAction" Schema="Action" store:Type="Tables" />
+    <EntitySet Name="GeneralInformationActionUsers" EntityType="Self.GeneralInformationActionUsers" Schema="Action" store:Type="Tables" />
+    <EntitySet Name="Audit" EntityType="Self.Audit" Schema="Administration" store:Type="Tables" />
+    <EntitySet Name="ComponentsByModule" EntityType="Self.ComponentsByModule" Schema="Administration" store:Type="Tables" />
+    <EntitySet Name="Modules" EntityType="Self.Modules" Schema="Administration" store:Type="Tables" />
+    <EntitySet Name="ModuleUser" EntityType="Self.ModuleUser" Schema="Administration" store:Type="Tables" />
+    <EntitySet Name="Operations" EntityType="Self.Operations" Schema="Administration" store:Type="Tables" />
+    <EntitySet Name="OperationsModule" EntityType="Self.OperationsModule" Schema="Administration" store:Type="Tables" />
+    <EntitySet Name="OperationsModuleUser" EntityType="Self.OperationsModuleUser" Schema="Administration" store:Type="Tables" />
+    <EntitySet Name="Parameter" EntityType="Self.Parameter" Schema="Administration" store:Type="Tables" />
+    <EntitySet Name="ParameterDetail" EntityType="Self.ParameterDetail" Schema="Administration" store:Type="Tables" />
+    <EntitySet Name="StepsFlow" EntityType="Self.StepsFlow" Schema="Administration" store:Type="Tables" />
+    <EntitySet Name="StepsFlowModule" EntityType="Self.StepsFlowModule" Schema="Administration" store:Type="Tables" />
+    <EntitySet Name="StepsFlowModuleUser" EntityType="Self.StepsFlowModuleUser" Schema="Administration" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="Administration" store:Type="Tables" />
+    <EntitySet Name="CostApproval" EntityType="Self.CostApproval" Schema="Cost" store:Type="Tables" />
+    <EntitySet Name="ItineraryInformation" EntityType="Self.ItineraryInformation" Schema="Cost" store:Type="Tables" />
+    <EntitySet Name="PT8" EntityType="Self.PT8" Schema="Cost" store:Type="Tables" />
+    <EntitySet Name="SatffInformation" EntityType="Self.SatffInformation" Schema="Cost" store:Type="Tables" />
+    <EntitySet Name="GeneralInformationEmergency" EntityType="Self.GeneralInformationEmergency" Schema="Emergency" store:Type="Tables" />
+    <EntitySet Name="GeneralInformationEmergencyUsers" EntityType="Self.GeneralInformationEmergencyUsers" Schema="Emergency" store:Type="Tables" />
+    <EntitySet Name="GeneralInformationEvent" EntityType="Self.GeneralInformationEvent" Schema="Event" store:Type="Tables" />
+    <EntitySet Name="GeneralInformationEventUsers" EntityType="Self.GeneralInformationEventUsers" Schema="Event" store:Type="Tables" />
+    <EntitySet Name="PressData" EntityType="Self.PressData" Schema="PressRelease" store:Type="Tables" />
+    <EntitySet Name="AnnexC" EntityType="Self.AnnexC" Schema="ProgramCycle" store:Type="Tables" />
+    <EntitySet Name="DataProject" EntityType="Self.DataProject" Schema="ProjectMonitoring" store:Type="Tables" />
+    <EntitySet Name="DescriptionOfTheTargetPopulation" EntityType="Self.DescriptionOfTheTargetPopulation" Schema="ProjectMonitoring" store:Type="Tables" />
+    <EntitySet Name="NationalPriorities" EntityType="Self.NationalPriorities" Schema="ProjectMonitoring" store:Type="Tables" />
+    <EntitySet Name="Weekly" EntityType="Self.Weekly" Schema="PublicInformation" store:Type="Tables" />
+    <EntitySet Name="WeeklyRequest" EntityType="Self.WeeklyRequest" Schema="PublicInformation" store:Type="Tables" />
+    <EntitySet Name="Events" EntityType="Self.Events" Schema="Purchase" store:Type="Tables" />
+    <EntitySet Name="Goods" EntityType="Self.Goods" Schema="Purchase" store:Type="Tables" />
+    <EntitySet Name="Request" EntityType="Self.Request" Schema="Purchase" store:Type="Tables" />
+    <EntitySet Name="Services" EntityType="Self.Services" Schema="Purchase" store:Type="Tables" />
+    <EntitySet Name="GeneralInformationRiskProfile" EntityType="Self.GeneralInformationRiskProfile" Schema="RiskProfile" store:Type="Tables" />
+    <EntitySet Name="GeneralInformationRiskProfileUsers" EntityType="Self.GeneralInformationRiskProfileUsers" Schema="RiskProfile" store:Type="Tables" />
+    <EntitySet Name="OtherObjects" EntityType="Self.OtherObjects" Schema="Session" store:Type="Tables" />
+    <EntitySet Name="SessionComponentsByModule" EntityType="Self.SessionComponentsByModule" Schema="Session" store:Type="Tables" />
+    <EntitySet Name="Sessions" EntityType="Self.Sessions" Schema="Session" store:Type="Tables" />
+    <EntitySet Name="SessionTargetMailProcessed" EntityType="Self.SessionTargetMailProcessed" Schema="Session" store:Type="Tables" />
+    <EntitySet Name="SessionTargetMails" EntityType="Self.SessionTargetMails" Schema="Session" store:Type="Tables" />
+    <EntitySet Name="Attachments" EntityType="Self.Attachments" Schema="Utility" store:Type="Tables" />
+    <AssociationSet Name="FK_AnnexC_ParamerteDetail_ProjectLocationSubMunicipality" Association="Self.FK_AnnexC_ParamerteDetail_ProjectLocationSubMunicipality">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_CostCentre" Association="Self.FK_AnnexC_ParameterDetail_CostCentre">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_Currency" Association="Self.FK_AnnexC_ParameterDetail_Currency">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_FocusImpacIndicatorOutput" Association="Self.FK_AnnexC_ParameterDetail_FocusImpacIndicatorOutput">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_FocusObjetive" Association="Self.FK_AnnexC_ParameterDetail_FocusObjetive">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_FocusRightsGrup" Association="Self.FK_AnnexC_ParameterDetail_FocusRightsGrup">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_IdUNIT" Association="Self.FK_AnnexC_ParameterDetail_IdUNIT">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_ImplementationMechanism" Association="Self.FK_AnnexC_ParameterDetail_ImplementationMechanism">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_ImplementerCode" Association="Self.FK_AnnexC_ParameterDetail_ImplementerCode">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_MSRPObjective" Association="Self.FK_AnnexC_ParameterDetail_MSRPObjective">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_MSRPOutput" Association="Self.FK_AnnexC_ParameterDetail_MSRPOutput">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_MSRPRightsGroup" Association="Self.FK_AnnexC_ParameterDetail_MSRPRightsGroup">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_OfficeRisponsible" Association="Self.FK_AnnexC_ParameterDetail_OfficeRisponsible">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_Priority" Association="Self.FK_AnnexC_ParameterDetail_Priority">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_ProjectLocationDepartament" Association="Self.FK_AnnexC_ParameterDetail_ProjectLocationDepartament">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_ProjectLocationMunicipality" Association="Self.FK_AnnexC_ParameterDetail_ProjectLocationMunicipality">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_Site" Association="Self.FK_AnnexC_ParameterDetail_Site">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnnexC_ParameterDetail_Strategy" Association="Self.FK_AnnexC_ParameterDetail_Strategy">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="AnnexC" EntitySet="AnnexC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Attachments_ComponentsByModule" Association="Self.FK_Attachments_ComponentsByModule">
+      <End Role="ComponentsByModule" EntitySet="ComponentsByModule" />
+      <End Role="Attachments" EntitySet="Attachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Attachments_ParameterDetail_AttachmentCondition" Association="Self.FK_Attachments_ParameterDetail_AttachmentCondition">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="Attachments" EntitySet="Attachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Attachments_ParameterDetail_AttachmentType" Association="Self.FK_Attachments_ParameterDetail_AttachmentType">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="Attachments" EntitySet="Attachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Audit_User" Association="Self.FK_Audit_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Audit" EntitySet="Audit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComponentsByModule_Modules" Association="Self.FK_ComponentsByModule_Modules">
+      <End Role="Modules" EntitySet="Modules" />
+      <End Role="ComponentsByModule" EntitySet="ComponentsByModule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CostApproval_ItineraryInformation" Association="Self.FK_CostApproval_ItineraryInformation">
+      <End Role="ItineraryInformation" EntitySet="ItineraryInformation" />
+      <End Role="CostApproval" EntitySet="CostApproval" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CostApproval_ParameterDetail_Canceled" Association="Self.FK_CostApproval_ParameterDetail_Canceled">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="CostApproval" EntitySet="CostApproval" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CostApproval_ParameterDetail_CertifyingOffice" Association="Self.FK_CostApproval_ParameterDetail_CertifyingOffice">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="CostApproval" EntitySet="CostApproval" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CostApproval_ParameterDetail_Legalization" Association="Self.FK_CostApproval_ParameterDetail_Legalization">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="CostApproval" EntitySet="CostApproval" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CostApproval_ParameterDetail_Title" Association="Self.FK_CostApproval_ParameterDetail_Title">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="CostApproval" EntitySet="CostApproval" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DataProject_ParameterDetail_Departament" Association="Self.FK_DataProject_ParameterDetail_Departament">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="DataProject" EntitySet="DataProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DataProject_ParameterDetail_ImplementationModality" Association="Self.FK_DataProject_ParameterDetail_ImplementationModality">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="DataProject" EntitySet="DataProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DataProject_ParameterDetail_Municipality" Association="Self.FK_DataProject_ParameterDetail_Municipality">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="DataProject" EntitySet="DataProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DataProject_ParameterDetail_Office" Association="Self.FK_DataProject_ParameterDetail_Office">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="DataProject" EntitySet="DataProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DataProject_ParameterDetail_SubMunicipality" Association="Self.FK_DataProject_ParameterDetail_SubMunicipality">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="DataProject" EntitySet="DataProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DataProject_ParameterDetail_UnitTimeProjectDuration" Association="Self.FK_DataProject_ParameterDetail_UnitTimeProjectDuration">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="DataProject" EntitySet="DataProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Events_ParameterDetail_AccomodationType" Association="Self.FK_Events_ParameterDetail_AccomodationType">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="Events" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Events_Request" Association="Self.FK_Events_Request">
+      <End Role="Request" EntitySet="Request" />
+      <End Role="Events" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionAction_ParameterDetail_ActionFrame" Association="Self.FK_GeneralInformacionAction_ParameterDetail_ActionFrame">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationAction" EntitySet="GeneralInformationAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionAction_ParameterDetail_ActionType" Association="Self.FK_GeneralInformacionAction_ParameterDetail_ActionType">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationAction" EntitySet="GeneralInformationAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionAction_ParameterDetail_AssociatedAction" Association="Self.FK_GeneralInformacionAction_ParameterDetail_AssociatedAction">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationAction" EntitySet="GeneralInformationAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionAction_ParameterDetail_Author" Association="Self.FK_GeneralInformacionAction_ParameterDetail_Author">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationAction" EntitySet="GeneralInformationAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionAction_ParameterDetail_Beneficiary" Association="Self.FK_GeneralInformacionAction_ParameterDetail_Beneficiary">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationAction" EntitySet="GeneralInformationAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionAction_ParameterDetail_City" Association="Self.FK_GeneralInformacionAction_ParameterDetail_City">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationAction" EntitySet="GeneralInformationAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionAction_ParameterDetail_Institution" Association="Self.FK_GeneralInformacionAction_ParameterDetail_Institution">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationAction" EntitySet="GeneralInformationAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionAction_ParameterDetail_Office" Association="Self.FK_GeneralInformacionAction_ParameterDetail_Office">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationAction" EntitySet="GeneralInformationAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionAction_ParameterDetail_SpaceAction" Association="Self.FK_GeneralInformacionAction_ParameterDetail_SpaceAction">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationAction" EntitySet="GeneralInformationAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionAction_ParameterDetail_SubCategory" Association="Self.FK_GeneralInformacionAction_ParameterDetail_SubCategory">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationAction" EntitySet="GeneralInformationAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionAction_ParameterDetail_Unit" Association="Self.FK_GeneralInformacionAction_ParameterDetail_Unit">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationAction" EntitySet="GeneralInformationAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_Activity" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_Activity">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_Actor" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_Actor">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_AssociateEvent" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_AssociateEvent">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_Author" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_Author">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_CityEvent" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_CityEvent">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_EthnicComunity" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_EthnicComunity">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_EventClassification" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_EventClassification">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_EventMedia" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_EventMedia">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_EventStatus" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_EventStatus">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_EventType" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_EventType">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_FamilyType" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_FamilyType">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_Gender" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_Gender">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_Office" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_Office">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_PopulationType" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_PopulationType">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_Profile" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_Profile">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_ResidenceCity" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_ResidenceCity">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_Unit" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_Unit">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformacionRiskProfile_ParameterDetail_VictimizerGroup" Association="Self.FK_GeneralInformacionRiskProfile_ParameterDetail_VictimizerGroup">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformation_ParameterDetail_CityExpulsion" Association="Self.FK_GeneralInformation_ParameterDetail_CityExpulsion">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEmergency" EntitySet="GeneralInformationEmergency" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformation_ParameterDetail_CityReception" Association="Self.FK_GeneralInformation_ParameterDetail_CityReception">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEmergency" EntitySet="GeneralInformationEmergency" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformation_ParameterDetail_EmergencyCause" Association="Self.FK_GeneralInformation_ParameterDetail_EmergencyCause">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEmergency" EntitySet="GeneralInformationEmergency" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformation_ParameterDetail_EmergencyType" Association="Self.FK_GeneralInformation_ParameterDetail_EmergencyType">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEmergency" EntitySet="GeneralInformationEmergency" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformation_ParameterDetail_EthnicComunity" Association="Self.FK_GeneralInformation_ParameterDetail_EthnicComunity">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEmergency" EntitySet="GeneralInformationEmergency" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformation_ParameterDetail_EventStatus" Association="Self.FK_GeneralInformation_ParameterDetail_EventStatus">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEmergency" EntitySet="GeneralInformationEmergency" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformation_ParameterDetail_EventType" Association="Self.FK_GeneralInformation_ParameterDetail_EventType">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEmergency" EntitySet="GeneralInformationEmergency" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformation_ParameterDetail_Office" Association="Self.FK_GeneralInformation_ParameterDetail_Office">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEmergency" EntitySet="GeneralInformationEmergency" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformation_ParameterDetail_Unit" Association="Self.FK_GeneralInformation_ParameterDetail_Unit">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEmergency" EntitySet="GeneralInformationEmergency" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformation_ParameterDetail_VictimizerActor" Association="Self.FK_GeneralInformation_ParameterDetail_VictimizerActor">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEmergency" EntitySet="GeneralInformationEmergency" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformationActionUsers_GeneralInformationAction" Association="Self.FK_GeneralInformationActionUsers_GeneralInformationAction">
+      <End Role="GeneralInformationAction" EntitySet="GeneralInformationAction" />
+      <End Role="GeneralInformationActionUsers" EntitySet="GeneralInformationActionUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformationActionUsers_Users" Association="Self.FK_GeneralInformationActionUsers_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="GeneralInformationActionUsers" EntitySet="GeneralInformationActionUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformationEvent_ParameterDetail_Author" Association="Self.FK_GeneralInformationEvent_ParameterDetail_Author">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEvent" EntitySet="GeneralInformationEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformationEvent_ParameterDetail_Category" Association="Self.FK_GeneralInformationEvent_ParameterDetail_Category">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEvent" EntitySet="GeneralInformationEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformationEvent_ParameterDetail_City" Association="Self.FK_GeneralInformationEvent_ParameterDetail_City">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEvent" EntitySet="GeneralInformationEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformationEvent_ParameterDetail_InformationSource" Association="Self.FK_GeneralInformationEvent_ParameterDetail_InformationSource">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEvent" EntitySet="GeneralInformationEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformationEvent_ParameterDetail_Office" Association="Self.FK_GeneralInformationEvent_ParameterDetail_Office">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEvent" EntitySet="GeneralInformationEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformationEvent_ParameterDetail_SubCategory" Association="Self.FK_GeneralInformationEvent_ParameterDetail_SubCategory">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEvent" EntitySet="GeneralInformationEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformationEvent_ParameterDetail_Unit" Association="Self.FK_GeneralInformationEvent_ParameterDetail_Unit">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="GeneralInformationEvent" EntitySet="GeneralInformationEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformationEventUsers_GeneralInformationEvent" Association="Self.FK_GeneralInformationEventUsers_GeneralInformationEvent">
+      <End Role="GeneralInformationEvent" EntitySet="GeneralInformationEvent" />
+      <End Role="GeneralInformationEventUsers" EntitySet="GeneralInformationEventUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformationEventUsers_Users" Association="Self.FK_GeneralInformationEventUsers_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="GeneralInformationEventUsers" EntitySet="GeneralInformationEventUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformationRiskProfileUsers_GeneralInformationRiskProfile" Association="Self.FK_GeneralInformationRiskProfileUsers_GeneralInformationRiskProfile">
+      <End Role="GeneralInformationRiskProfile" EntitySet="GeneralInformationRiskProfile" />
+      <End Role="GeneralInformationRiskProfileUsers" EntitySet="GeneralInformationRiskProfileUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformationRiskProfileUsers_Users" Association="Self.FK_GeneralInformationRiskProfileUsers_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="GeneralInformationRiskProfileUsers" EntitySet="GeneralInformationRiskProfileUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformationUsers_GeneralInformation" Association="Self.FK_GeneralInformationUsers_GeneralInformation">
+      <End Role="GeneralInformationEmergency" EntitySet="GeneralInformationEmergency" />
+      <End Role="GeneralInformationEmergencyUsers" EntitySet="GeneralInformationEmergencyUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeneralInformationUsers_Users" Association="Self.FK_GeneralInformationUsers_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="GeneralInformationEmergencyUsers" EntitySet="GeneralInformationEmergencyUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Goods_ParameterDetail_UnitMeasure" Association="Self.FK_Goods_ParameterDetail_UnitMeasure">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="Goods" EntitySet="Goods" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Goods_Request" Association="Self.FK_Goods_Request">
+      <End Role="Request" EntitySet="Request" />
+      <End Role="Goods" EntitySet="Goods" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItineraryInformation_ParameterDetail_CityFrom" Association="Self.FK_ItineraryInformation_ParameterDetail_CityFrom">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="ItineraryInformation" EntitySet="ItineraryInformation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItineraryInformation_ParameterDetail_CityTo" Association="Self.FK_ItineraryInformation_ParameterDetail_CityTo">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="ItineraryInformation" EntitySet="ItineraryInformation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItineraryInformation_StaffInformation" Association="Self.FK_ItineraryInformation_StaffInformation">
+      <End Role="SatffInformation" EntitySet="SatffInformation" />
+      <End Role="ItineraryInformation" EntitySet="ItineraryInformation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModuleUser_Module" Association="Self.FK_ModuleUser_Module">
+      <End Role="Modules" EntitySet="Modules" />
+      <End Role="ModuleUser" EntitySet="ModuleUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModuleUser_User" Association="Self.FK_ModuleUser_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="ModuleUser" EntitySet="ModuleUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NationalPriorities_DataProject" Association="Self.FK_NationalPriorities_DataProject">
+      <End Role="DataProject" EntitySet="DataProject" />
+      <End Role="NationalPriorities" EntitySet="NationalPriorities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperationsModule_Module" Association="Self.FK_OperationsModule_Module">
+      <End Role="Modules" EntitySet="Modules" />
+      <End Role="OperationsModule" EntitySet="OperationsModule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperationsModule_Operations" Association="Self.FK_OperationsModule_Operations">
+      <End Role="Operations" EntitySet="Operations" />
+      <End Role="OperationsModule" EntitySet="OperationsModule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperationsModuleUser_OperationsModule" Association="Self.FK_OperationsModuleUser_OperationsModule">
+      <End Role="OperationsModule" EntitySet="OperationsModule" />
+      <End Role="OperationsModuleUser" EntitySet="OperationsModuleUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperationsModuleUser_User" Association="Self.FK_OperationsModuleUser_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="OperationsModuleUser" EntitySet="OperationsModuleUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParameterDetail_Parameter" Association="Self.FK_ParameterDetail_Parameter">
+      <End Role="Parameter" EntitySet="Parameter" />
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParameterDetail_ParameterDetail" Association="Self.FK_ParameterDetail_ParameterDetail">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="ParameterDetail1" EntitySet="ParameterDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PressData_ParameterDetail_CategoryPress" Association="Self.FK_PressData_ParameterDetail_CategoryPress">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="PressData" EntitySet="PressData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PressData_ParameterDetail_Departament" Association="Self.FK_PressData_ParameterDetail_Departament">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="PressData" EntitySet="PressData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PressData_ParameterDetail_Municipality" Association="Self.FK_PressData_ParameterDetail_Municipality">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="PressData" EntitySet="PressData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PressData_ParameterDetail_Office" Association="Self.FK_PressData_ParameterDetail_Office">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="PressData" EntitySet="PressData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PressData_ParameterDetail_SubCategoryPress" Association="Self.FK_PressData_ParameterDetail_SubCategoryPress">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="PressData" EntitySet="PressData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PressData_ParameterDetail_SubMunicipality" Association="Self.FK_PressData_ParameterDetail_SubMunicipality">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="PressData" EntitySet="PressData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PressData_ParameterDetail_Unit" Association="Self.FK_PressData_ParameterDetail_Unit">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="PressData" EntitySet="PressData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PT8_ParameterDetail_Author" Association="Self.FK_PT8_ParameterDetail_Author">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="PT8" EntitySet="PT8" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PT8_ParameterDetail_Office" Association="Self.FK_PT8_ParameterDetail_Office">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="PT8" EntitySet="PT8" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PT8_ParameterDetail_Unit" Association="Self.FK_PT8_ParameterDetail_Unit">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="PT8" EntitySet="PT8" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Request_ParameterDetail_RequestUnit" Association="Self.FK_Request_ParameterDetail_RequestUnit">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="Request" EntitySet="Request" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SatffInformation_ParameterDetail_TravelAgency" Association="Self.FK_SatffInformation_ParameterDetail_TravelAgency">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="SatffInformation" EntitySet="SatffInformation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SatffInformation_ParameterDetail_Unit" Association="Self.FK_SatffInformation_ParameterDetail_Unit">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="SatffInformation" EntitySet="SatffInformation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SatffInformation_PT8" Association="Self.FK_SatffInformation_PT8">
+      <End Role="PT8" EntitySet="PT8" />
+      <End Role="SatffInformation" EntitySet="SatffInformation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Services_ParameterDetail_ServiceType" Association="Self.FK_Services_ParameterDetail_ServiceType">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="Services" EntitySet="Services" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Services_Request" Association="Self.FK_Services_Request">
+      <End Role="Request" EntitySet="Request" />
+      <End Role="Services" EntitySet="Services" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SessionComponentesByModule_ComponentesByModule" Association="Self.FK_SessionComponentesByModule_ComponentesByModule">
+      <End Role="ComponentsByModule" EntitySet="ComponentsByModule" />
+      <End Role="SessionComponentsByModule" EntitySet="SessionComponentsByModule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SessionComponentesByModule_Session" Association="Self.FK_SessionComponentesByModule_Session">
+      <End Role="Sessions" EntitySet="Sessions" />
+      <End Role="SessionComponentsByModule" EntitySet="SessionComponentsByModule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sessions_ParameterDetail_ProcessGroup" Association="Self.FK_Sessions_ParameterDetail_ProcessGroup">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="Sessions" EntitySet="Sessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SessionTargetMailProcessed_SessionTargetMail" Association="Self.FK_SessionTargetMailProcessed_SessionTargetMail">
+      <End Role="SessionTargetMails" EntitySet="SessionTargetMails" />
+      <End Role="SessionTargetMailProcessed" EntitySet="SessionTargetMailProcessed" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SessionTargetMails_Session" Association="Self.FK_SessionTargetMails_Session">
+      <End Role="Sessions" EntitySet="Sessions" />
+      <End Role="SessionTargetMails" EntitySet="SessionTargetMails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StepsFlowModule_Module" Association="Self.FK_StepsFlowModule_Module">
+      <End Role="Modules" EntitySet="Modules" />
+      <End Role="StepsFlowModule" EntitySet="StepsFlowModule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StepsFlowModule_StepsFlow" Association="Self.FK_StepsFlowModule_StepsFlow">
+      <End Role="StepsFlow" EntitySet="StepsFlow" />
+      <End Role="StepsFlowModule" EntitySet="StepsFlowModule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StepsFlowModuleUser_StepsFlowModule" Association="Self.FK_StepsFlowModuleUser_StepsFlowModule">
+      <End Role="StepsFlowModule" EntitySet="StepsFlowModule" />
+      <End Role="StepsFlowModuleUser" EntitySet="StepsFlowModuleUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StepsFlowModuleUser_User" Association="Self.FK_StepsFlowModuleUser_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="StepsFlowModuleUser" EntitySet="StepsFlowModuleUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_ParameterDetail_Rol" Association="Self.FK_Users_ParameterDetail_Rol">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Weekly_ParameterDetail_Departament" Association="Self.FK_Weekly_ParameterDetail_Departament">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="Weekly" EntitySet="Weekly" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Weekly_ParameterDetail_Municipality" Association="Self.FK_Weekly_ParameterDetail_Municipality">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="Weekly" EntitySet="Weekly" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Weekly_ParameterDetail_WeeklyCharacteristic" Association="Self.FK_Weekly_ParameterDetail_WeeklyCharacteristic">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="Weekly" EntitySet="Weekly" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Weekly_ParameterDetail_WeeklySubcharacteristic" Association="Self.FK_Weekly_ParameterDetail_WeeklySubcharacteristic">
+      <End Role="ParameterDetail" EntitySet="ParameterDetail" />
+      <End Role="Weekly" EntitySet="Weekly" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Weekly_WeeklyRequest" Association="Self.FK_Weekly_WeeklyRequest">
+      <End Role="WeeklyRequest" EntitySet="WeeklyRequest" />
+      <End Role="Weekly" EntitySet="Weekly" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

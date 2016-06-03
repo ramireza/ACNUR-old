@@ -1,0 +1,970 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Acnur.App.Aplication</name>
+    </assembly>
+    <members>
+        <member name="T:Acnur.App.Aplication.Enumerators.ExceptionManager">
+            <summary>
+            Enumeración para especificar la capa en la cual se detecta una excepción generada por la aplicación.
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.ExceptionManager.NoDefinido">
+            <summary>
+            Valor no definido.
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.ExceptionManager.Presentacion">
+            <summary>
+            Excepción manejada en la capa de presentación.
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.ExceptionManager.Servicios">
+            <summary>
+            Excepción manejada en la capa de servicios.
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.ExceptionManager.Dominio">
+            <summary>
+            Excepción manejada en la capa de dominio.
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.ExceptionManager.Infraestructura">
+            <summary>
+            Excepción manejada en la capa de infraestructura.
+            </summary>
+        </member>
+        <member name="T:Acnur.App.Aplication.Enumerators.ExceptionHandlingPolitic">
+            <summary>
+            Defines the exception handling politics to use.
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.ExceptionHandlingPolitic.Propagate">
+            <summary>
+            Represents the propagation politic. 
+            This politic specifies that every exception will be passed to the caller without any transformation.
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.ExceptionHandlingPolitic.Wrap">
+            <summary>
+            Represents the wrap politic. 
+            This politic specifies that every exception will be wrapped inside another exception and then passed to the caller.
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.ExceptionHandlingPolitic.Replace">
+            <summary>
+            Represents the replacement politic. 
+            This politic specifies that every exception will be replaced for another exception; then the new exception will be passed to the caller.
+            </summary>
+            <remarks>
+            The original exception will be lost.
+            </remarks>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.AuditEnumerators.Ninguno">
+            <summary>
+            Enumerado para aquellos metodos que no se auditaran
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.AuditEnumerators.Add">
+            <summary>
+            Enumerado para auditar metodo de inserción
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.AuditEnumerators.Delete">
+            <summary>
+            Enumerado para auditar metodo de eliminación
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.AuditEnumerators.Update">
+            <summary>
+            Enumerado para auditar metodo de actualización
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.AuditEnumerators.CommitTransaction">
+            <summary>
+            Enumerado para auditar metodo de commit transaction
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeModule.Administration">
+            <summary>
+            The administration
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeModule.Purchase">
+            <summary>
+            The purchase
+            </summary>
+        </member>
+        <member name="T:Acnur.App.Aplication.Enumerators.TypeParameter">
+            <summary>
+            Enum TipoParametro
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Default">
+            <summary>
+            All
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Audit">
+            <summary>
+            The audit
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.State">
+            <summary>
+            The state
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.City">
+            <summary>
+            The city
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.AccommodationType">
+            <summary>
+            The accommodation type
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.ActionFrame">
+            <summary>
+            The action frame
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.ActionType">
+            <summary>
+            The action type
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Activity">
+            <summary>
+            The activity
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Actor">
+            <summary>
+            The actor
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.AssociatedAction">
+            <summary>
+            The associated action
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.AssociateEvent">
+            <summary>
+            The associate event
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Author">
+            <summary>
+            The author
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Beneficiary">
+            <summary>
+            The beneficiary
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Canceled">
+            <summary>
+            The canceled
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Category">
+            <summary>
+            The category
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.EmergencyCause">
+            <summary>
+            The emergency cause
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.EmergencyType">
+            <summary>
+            The emergency type
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.EthnicComunity">
+            <summary>
+            The ethnic comunity
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.EventClassification">
+            <summary>
+            The event classification
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.EventMedia">
+            <summary>
+            The event media
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.EventStatus">
+            <summary>
+            The event status
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.EventType">
+            <summary>
+            The event type
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.FamilyType">
+            <summary>
+            The family type
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Gender">
+            <summary>
+            The gender
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.InformationSource">
+            <summary>
+            The information source
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Institution">
+            <summary>
+            The institution
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Legalization">
+            <summary>
+            The legalization
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Office">
+            <summary>
+            The office
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.PopulationType">
+            <summary>
+            The population type
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Profile">
+            <summary>
+            The profile
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.ServiceType">
+            <summary>
+            The service type
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.SpaceAction">
+            <summary>
+            The space action
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.SubCategory">
+            <summary>
+            The sub category
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Title">
+            <summary>
+            The title
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.TravelAgency">
+            <summary>
+            The travel agency
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Unit">
+            <summary>
+            The unit
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.UnitMeasure">
+            <summary>
+            The unit measure
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.VictimizerActor">
+            <summary>
+            The victimizer actor
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.VictimizerGroup">
+            <summary>
+            The victimizer group
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.SubMunicipality">
+            <summary>
+            The sub municipality
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.UnitTime">
+            <summary>
+            The unit time
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.ImplementationModality">
+            <summary>
+            The implementation modality
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.CategoryPress">
+            <summary>
+            The category press
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.SubcategoryPress">
+            <summary>
+            The subcategory press
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.FocusRightsGroup">
+            <summary>
+            The focus rights group
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.FocusObjective">
+            <summary>
+            The focus objective
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.FocusImpactIndicatorOutput">
+            <summary>
+            The focus impact indicator output
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.MSRPRightsGroup">
+            <summary>
+            The MSRP rights group
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.MSRPObjective">
+            <summary>
+            The MSRP objective
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.MSRPOutput">
+            <summary>
+            The MSRP output
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Priority">
+            <summary>
+            The priority
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Strategy">
+            <summary>
+            The strategy
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.ImplementerCode">
+            <summary>
+            The implementer code
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.ImplementationMechanism">
+            <summary>
+            The implementation mechanism
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Site">
+            <summary>
+            The site
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.CostCentre">
+            <summary>
+            The cost centre
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.UnitProgramCicleAnnexC">
+            <summary>
+            The unit
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.AttachmentType">
+            <summary>
+            The attachment type
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.AttachmentCondition">
+            <summary>
+            The attachment condition
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.ProcessGroup">
+            <summary>
+            The process group
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.WeeklyCharacteristic">
+            <summary>
+            The weekly characteristic
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.WeeklySubCharacteristic">
+            <summary>
+            The weekly sub characteristic
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Roles">
+            <summary>
+            The roles
+            </summary>
+        </member>
+        <member name="T:Acnur.App.Aplication.Enumerators.TypeComponent">
+            <summary>
+            Enum TypePurchase
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeComponent.Request">
+            <summary>
+            The request
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeComponent.Goods">
+            <summary>
+            The goods
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeComponent.Events">
+            <summary>
+            The events
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeComponent.Services">
+            <summary>
+            The services
+            </summary>
+        </member>
+        <member name="M:Acnur.App.Aplication.Error.ManagerException.CrearDetalleError(System.Exception,System.String,System.String,System.String,Acnur.App.Aplication.Enumerators.ExceptionManager)">
+            <summary>
+            Crea objeto detalle error
+            </summary>
+            <param name="ex">Excepcion generada</param>
+            <param name="nombreObjeto">Objeto en donde se genero excepcion</param>
+            <param name="nombreMetodo">Nombre metodo en donde se genero excepcion</param>
+            <param name="usuario">Usuario que ejecuto la accion</param>
+            <param name="capaManejoExcepcion">Capa en la que se presento la excepcion</param>
+            <returns>DTO detalle error</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Error.ManagerException.RegistrarError(Acnur.App.Entities.DetailError)">
+            <summary>
+            Metodo que registra los errores generados en la aplicacion.
+            </summary>
+            <param name="infoError">Objeto que contiene la información del error que se va a registrar.</param>
+        </member>
+        <member name="M:Acnur.App.Aplication.Error.ManagerException.RegistraErrorBlockNotas(Acnur.App.Entities.DetailError)">
+            <summary>
+            Metodo para almacenar error en block de notas
+            </summary>
+            <param name="infoError">Objeto con detalle del error</param>
+        </member>
+        <member name="T:Acnur.App.Aplication.Error.ExceptionHandlingAttribute">
+            <summary>
+            A custom attribute for exception handling purposes under an Aspect Oriented Programming paradigm.
+            </summary>
+            <remarks>It applies only to methods.</remarks>
+        </member>
+        <member name="F:Acnur.App.Aplication.Error.ExceptionHandlingAttribute.politica">
+            <summary>
+            Represents the exception handling politic to apply while intercepting with this concern.
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Error.ExceptionHandlingAttribute.capaManejoExcepcion">
+            <summary>
+            Enumeración que indica la capa desde la caul se detecta la excepción.
+            </summary>
+        </member>
+        <member name="M:Acnur.App.Aplication.Error.ExceptionHandlingAttribute.#ctor(Acnur.App.Aplication.Enumerators.ExceptionHandlingPolitic)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Acnur.App.Aplication.Error.ExceptionHandlingAttribute"/> class.
+            </summary>
+            <param name="politic">The exception handling politic to follow.</param>
+        </member>
+        <member name="M:Acnur.App.Aplication.Error.ExceptionHandlingAttribute.#ctor(Acnur.App.Aplication.Enumerators.ExceptionManager)">
+            <summary>
+            Crea una uneva instancia de la clase <see cref="T:Acnur.App.Aplication.Error.ExceptionHandlingAttribute"/>.
+            </summary>
+            <param name="capaManejoExcepcion">Capa en la que se detecta la excepción.</param>
+        </member>
+        <member name="M:Acnur.App.Aplication.Error.ExceptionHandlingAttribute.OnException(PostSharp.Aspects.MethodExecutionArgs)">
+            <summary>
+            Metodo para capturar la excepción
+            </summary>
+            <param name="args">Argumentos de Ejecución</param>
+        </member>
+        <member name="M:Acnur.App.Aplication.Error.ExceptionHandlingAttribute.EstrategiaPropagacionError(PostSharp.Aspects.MethodExecutionArgs,Acnur.App.Entities.DetailError)">
+            <summary>
+            Metodo para realizar la propagación ó retorno del error.
+            </summary>
+            <param name="args">Argumentos de Ejecución</param>
+            <param name="detError">Objeto con traza del error</param>
+            <exception cref="T:System.ServiceModel.FaultException`1"></exception>
+        </member>
+        <member name="M:Acnur.App.Aplication.Error.ExceptionHandlingAttribute.ControlTrazaError(PostSharp.Aspects.MethodExecutionArgs,Acnur.App.Entities.DetailError@,Acnur.App.Entities.DetailError@)">
+            <summary>
+            Metodo para determinar si se sobreescribe o no el objeto que almacenara la traza del error
+            </summary>
+            <param name="args">Argumentos de Ejecución</param>
+            <param name="detError">Objeto con traza de error entrante</param>
+            <param name="detErrorPropagate">Objeto con traza de error original</param>
+        </member>
+        <member name="P:Acnur.App.Aplication.Error.ExceptionHandlingAttribute.CapaManejoExcepcion">
+            <summary>
+            Gets el valor de la enumeración que indica la capa desde la cual se detecta la excepción.
+            </summary>
+            <value>Capa desde la cual se detecta la excepción.</value>
+        </member>
+        <member name="P:Acnur.App.Aplication.Error.ExceptionHandlingAttribute.Politic">
+            <summary>
+            Gets the specified exception handling politic.
+            </summary>
+            <value>Returns the politic to use when handling exceptions represented as a <see cref="T:Acnur.App.Aplication.Enumerators.ExceptionHandlingPolitic"/>.</value>
+        </member>
+        <member name="T:Acnur.App.Aplication.Error.INotificationError">
+            <summary>
+            Interface que define el método para notificar el error en la capa de presentación.
+            </summary>
+        </member>
+        <member name="M:Acnur.App.Aplication.Error.INotificationError.MostrarMensajeError(Acnur.App.Entities.DetailError)">
+            <summary>
+            Método que despliega el mensaje de error en la capa de presentación.
+            </summary>
+            <param name="mensajeError">Mensaje de error que se va a desplegar en la capa de presentación.</param>
+        </member>
+        <member name="F:Acnur.App.Aplication.Security.Access.SesionSeguridadUsuario">
+            <summary>
+            Código interno de la session de usuario
+            </summary>
+        </member>
+        <member name="M:Acnur.App.Aplication.Security.Access.Usuario">
+            <summary>
+            Funcion para retornar el usuario de la sesion actual
+            </summary>
+            <returns>El usaurio completo de la sesion actual</returns>
+        </member>
+        <member name="T:Acnur.App.Aplication.Utilities">
+            <summary>
+            Clase utilitaria
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Utilities.ValorDefecto">
+            <summary>
+            The valor defecto
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Utilities.ValorCero">
+            <summary>
+            Constante para el valor cero
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Utilities.FormatoDecimalDos">
+            <summary>
+            Formato para 2 decimales
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Utilities.FormatoDecimalPesos">
+            <summary>
+            Constante publica apara el formato de pesos con decimales
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Utilities.FormatoFecha">
+            <summary>
+            Cadena de formato de fechas
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Utilities.FechaMinima">
+            <summary>
+            Constante para la fecha minima
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Utilities.FechaMaxima">
+            <summary>
+            Constante para la fecha máxima
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Utilities.ExpresionValidacionFormatoFecha">
+            <summary>
+            Expresión Formato Fecha
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Utilities._mappings">
+            <summary>
+            Cadenas de tipos usando la extensión de los archivos
+            </summary>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.TraerTipoMime(System.String)">
+            <summary>
+            Trae el tipo mime de una extensión
+            </summary>
+            <param name="extension">Cadena de la extensión .bmp .pdf etc</param>
+            <returns>Retorna el tipo mime o binario si no encuentra el tipo asociado a la extensión</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.CalculaFecha(System.String)">
+            <summary>
+            Método que devuelve un objeto de tipo DateTime a partir de una fecha en formato texto.
+            </summary>
+            <param name="fecha">Fecha que se va a convertir.</param>
+            <returns>Objeto que representa la fecha en formato texto.</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.DiferenciaFechasMeses(System.DateTime,System.DateTime)">
+            <summary>
+            Retorna la diferencia de dos fechas en meses
+            </summary>
+            <param name="fecha1">Fecha inicio del rango</param>
+            <param name="fecha2">Fecha fin del rango</param>
+            <returns>Valor absoluto de la diferencia en meses</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.Convertir``1(Acnur.App.Entities.ParameterDetail)">
+            <summary>
+            Convierte un DetalleBasica en un enum
+            </summary>
+            <typeparam name="TEnumerado">Tipo de enum</typeparam>
+            <param name="parametro">Registro de la tabla detalle basica</param>
+            <returns>Retorna una enumeracion</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.ValorIdParameterDetail``1(System.Collections.Generic.List{Acnur.App.Entities.ParameterDetail},``0)">
+            <summary>
+            Retorna el id de un detalle parametro de una lista de TabParameterDetail
+            que corresponde a la enumeracion
+            </summary>
+            <typeparam name="TEnumerado">Enumeracion deseada</typeparam>
+            <param name="parametros">Lista de parametros</param>
+            <param name="enumerado">Enumeracion con el valor por defecto</param>
+            <returns>Retorna el IdParameterDetail de la lista que corresponde</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.ObtenerTipoParametro(Acnur.App.Entities.ParameterDetail)">
+            <summary>
+            Convierte de un ParameterDetail cual es el tipo de parametro
+            al que pertenece
+            </summary>
+            <param name="parametro">Objeto de detalle Parameter</param>
+            <returns>Retorna el tipo de parametro</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.ObtenerTipoParametro(Acnur.App.Entities.Parameter)">
+            <summary>
+            Convierte de un parametro cual es el tipo de parametro
+            al que pertenece
+            </summary>
+            <param name="parametro">Objeto de Parameter</param>
+            <returns>Retorna el tipo de parametro</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.SeleccionarValorXDefectoDDL``1(DevExpress.XtraEditors.ComboBoxEdit,System.Collections.Generic.List{Acnur.App.Entities.ParameterDetail},``0,System.Boolean,System.Boolean)">
+            <summary>
+            Selecciona un valor por defecto de un enumerado en la lista
+            </summary>
+            <typeparam name="TEnumerado">Tipo anonimo de enumerados</typeparam>
+            <param name="lista">Dropdownlist o ComboBox</param>
+            <param name="parametros">Lista de ParameterDetail</param>
+            <param name="enumerado">Enumerado del valor por defecto</param>
+            <param name="llenar">Si desea incluir el llenado del combobox</param>
+            <param name="itemSeleccioneOpcion">Opcion para incluir el item seleccione dentro del combo</param>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.SeleccionarValorXDefectoDDLId(DevExpress.XtraEditors.ComboBoxEdit,System.Collections.Generic.List{Acnur.App.Entities.ParameterDetail},System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Selecciona un vvalor por defecto de un enumerado en la lista
+            </summary>
+            <param name="lista">Dropdownlist o ComboBox</param>
+            <param name="parametros">Lista de ParameterDetail</param>
+            <param name="identificadorLlave">Llave de valor por defecto</param>
+            <param name="llenar">Si desea incluir el llenado del combobox</param>
+            <param name="itemSeleccioneOpcion">Opcion para incluir el item seleccione dentro del combo</param>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.SeleccionarValorXDefectoDDLId(DevExpress.XtraEditors.ComboBoxEdit,System.Collections.Generic.List{Acnur.App.Entities.ParameterDetail},System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Selecciona un vvalor por defecto de un enumerado en la lista
+            </summary>
+            <param name="lista">Dropdownlist o ComboBox</param>
+            <param name="parametros">Lista de ParameterDetail</param>
+            <param name="identificadorLlave">Llave de valor por defecto</param>
+            <param name="llenar">Si desea incluir el llenado del combobox</param>
+            <param name="itemSeleccioneOpcion">Opcion para incluir el item seleccione dentro del combo</param>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.LlenarLista(DevExpress.XtraEditors.ComboBoxEdit,System.Collections.Generic.List{Acnur.App.Entities.ParameterDetail})">
+            <summary>
+            Llena un dropdownlist (combobox) con una lista de parametros
+            </summary>
+            <param name="lista">Dropdownlist o ComboBox</param>
+            <param name="parametros">Lista de ParameterDetail</param>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.LlenarLista(DevExpress.XtraEditors.ComboBoxEdit,System.Collections.Generic.List{Acnur.App.Entities.Parameter})">
+            <summary>
+            Llena un ComboBox con la lista de parámetros editables
+            </summary>
+            <param name="lista">Dropdownlist o ComboBox</param>
+            <param name="parametros">Lista de Parameter</param>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.LlenarListaOrdinal(DevExpress.XtraEditors.ComboBoxEdit,System.Collections.Generic.List{Acnur.App.Entities.ParameterDetail})">
+            <summary>
+            Llena un dropdownlist (combobox) con una lista de parametros y el codigo es el ordinal
+            </summary>
+            <param name="lista">Dropdownlist o ComboBox</param>
+            <param name="parametros">Lista de ParameterDetail</param>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.ObtenerCadenaDeFecha(System.Nullable{System.DateTime})">
+            <summary>
+            Método que devuelve la cadena que representa la fecha especificada.
+            </summary>
+            <param name="fecha">Objeto fecha que se va a convertir.</param>
+            <returns>Cadena que representa la fecha especificada.</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.CalcularEdadAnios(System.DateTime,System.DateTime)">
+            <summary>
+            Calcula la edad en años
+            </summary>
+            <param name="fechaNacimiento">Fecha de nacimiento</param>
+            <param name="fechaCalculo">Fecha de calculo</param>
+            <returns>Un entero con la edad en años</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.ObtenerNombreMes(System.Int32)">
+            <summary>
+            Método que devuelve el nombre del mes asociado a un número de mes (1 a 13).
+            </summary>
+            <param name="numeroMes">Número del mes en el rango de 1 a 13.</param>
+            <returns>Nombre del mes asociado a un número de mes (1 a 13).</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.Serializar(System.Object)">
+            <summary>
+            Método para serializar un objeto
+            </summary>
+            <param name="objeto">Objeto a serializar</param>
+            <returns>Cadena XMl de objeto</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.Deserialize(System.Byte[],System.Type)">
+            <summary>
+            Método para deserializar arreglo de bytes dado
+            </summary>
+            <param name="objetoSerializado">Objeto serializado</param>
+            <param name="nuevoTipo">Tipo de objeto a devolver</param>
+            <returns>Obejo deserializado</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.SerializarXML(System.Object)">
+            <summary>
+            Método que serializa objeto enviado
+            </summary>
+            <param name="objObjeto">Objeto a serializar</param>
+            <returns>Arreglo de Bytes</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.DesSerializarXML(System.Byte[])">
+            <summary>
+            Método para deserializar arreglo de bytes dado
+            </summary>
+            <param name="objetoSerializado">Objeto serializado</param>
+            <returns>Cadena string DesSerializada</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.LimpiarPropBytePropAgregacion(System.Object)">
+            <summary>
+            Método que elimina arreglo de bytes de un objeto y agregaciones
+            </summary>
+            <param name="objeto">Objeto a eliminar propiedades con arreglo de bytes</param>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.AgregarCeros(System.Int32)">
+            <summary>
+            Método para agregar ceros a un string
+            </summary>
+            <param name="cantidad">Cantidad de ceros a agregar</param>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.ObtenerDireccionIP">
+            <summary>
+            Permite obtener la IP del cliente que realiza la solicitud.
+            </summary>
+            <returns>Dirección IP.</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.ObtenerUsuarioWindows">
+            <summary>
+            Permite obtener el Usurio de Windows
+            </summary>
+            <returns>Dirección IP.</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.PropiedadesPorTipo(System.Type,System.Type)">
+            <summary>
+            Retorna las propiedadesinfo de un tipo para un tipo
+            </summary>
+            <param name="origen">Tipo que tiene propriedades de un tipo repetidas</param>
+            <param name="propiedadBusqueda">Tipo a buscar en la propiedad</param>
+            <returns>Lista de propiedades info encontradas con el tipo propiedadBusqueda</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.SonIguales(System.Object,System.Object,System.String[])">
+            <summary>
+            Método que compara dos objetos
+            </summary>
+            <param name="objetoUno">Objeto uno</param>
+            <param name="objetoDos">Objeto dos</param>
+            <param name="propiedadesOmitir">The propiedades omitir.</param>
+            <returns>Valor bool que indica si son o no iguales los objetos pasados</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.Logear(System.String)">
+            <summary>
+            Escribe en archivo de log el texto deseado
+            </summary>
+            <param name="texto">Texto a escribir</param>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.ItemSeleccioneOpcion(System.String)">
+            <summary>
+            Retorna el item de seleecion por defecto
+            </summary>
+            <param name="descripcion">Descripción opcional si debe mostrar inicialmente algo diferente a (-Seleccionar-)</param>
+            <returns>Un listitem inicial</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.Copiar(System.Object)">
+            <summary>
+            Método para Clonar un objeto
+            </summary>
+            <param name="from">Objeto con origen de datos</param>
+            <returns>Objeto clonado</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.Copiar(System.Object,System.Object)">
+            <summary>
+            Método para clonar por referencia
+            </summary>
+            <param name="from">Objeto Origen</param>
+            <param name="result">Objeto Destino</param>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.GetValueProperty(System.String,System.Object)">
+            <summary>
+            Método que obtiene el valor de una propiedad dada para un objeto tipo object
+            </summary>
+            <param name="propiedad">Nombre de la propiedad a obtener valor</param>
+            <param name="objSearch">Obejto del cual se quiere obtener el valor</param>
+            <returns>Valor de la propiedad indicada</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.RetornarPropiedades``1(``0)">
+            <summary>
+            Retorna los valores de las propiedades de una  entidad
+            </summary>
+            <typeparam name="T">Tipo entidad generica</typeparam>
+            <param name="clase">Entidad o clase</param>
+            <returns>Una cadena con los valores del objeto</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.SerializarJson``1(``0)">
+            <summary>
+            Método que realiza la serialización de un objeto en una cadena de caracteres en formato JSON
+            </summary>
+            <typeparam name="T">Tipo del objeto a serializar</typeparam>
+            <param name="objetoASerializar">Objeto a serializar</param>
+            <returns>Cadena que representa el objeto serializado en formato JSON</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.DeserializarJson``1(System.String)">
+            <summary>
+            Método que deserializa una cadena en fomrato JSON a un objeto del tipo especificado
+            </summary>
+            <typeparam name="T">Tipo del objeto a deserializar</typeparam>
+            <param name="objetoSerializado">Cadena en formato JSON que contiene los datos de un objeto serializado</param>
+            <returns>Objeto deserializado.</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.AsignarMayusculaPrimeraLetraPalabra(System.String)">
+            <summary>
+            Método que deja en mayuscula la primera letra de una palabra dentro de una frase.
+            </summary>
+            <param name="entrada">Cadena de entrada.</param>
+            <returns>Cadena de salida.</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.RetornarMaximoString(System.String)">
+            <summary>
+            Retorna el máximo de caracteres permitido. Para este caso van a ser 4000 caracteres
+            </summary>
+            <param name="entrada">cadena de texto</param>
+            <returns>cadena de texto con el límite de 4000 caracteres</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.ListaMesesAnio(System.Web.UI.WebControls.DropDownList@)">
+            <summary>
+            Listas de meses del año.
+            </summary>
+            <param name="ddlMonth">DropDownList que se quiere llenar</param>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.ListaAnios(System.Web.UI.WebControls.DropDownList@,System.Int32)">
+            <summary>
+            Listas de los años con el año actual desde el anio de inicio.
+            </summary>
+            <param name="ddlAnio">The DDL año.</param>
+            <param name="anoInicio">The ano inicio.</param>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.ConvertirListaTabla``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Convierte una lista de cualquiertipo a tabla
+            </summary>
+            <typeparam name="T">Tipo de dato de la lista</typeparam>
+            <param name="data">Datos de la lista</param>
+            <returns>Retorna un datatable con la información de la tabla</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.CrearCsvDeLista``1(System.Collections.Generic.IList{``0},System.String,System.String)">
+            <summary>
+            Crears the CSV de lista.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list">The list.</param>
+            <param name="include">The include.</param>
+            <param name="exclude">The exclude.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.GetSelectedProperties(System.Reflection.PropertyInfo[],System.String,System.String)">
+            <summary>
+            Gets the selected properties.
+            </summary>
+            <param name="props">The props.</param>
+            <param name="include">The include.</param>
+            <param name="exclude">The exclude.</param>
+            <returns>List&lt;PropertyInfo&gt;.</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.GetSimpleTypeName``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Gets the name of the simple type.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list">The list.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.EsNumerico(System.Object)">
+            <summary>
+            Determina si es un número
+            </summary>
+            <param name="valor">The valor.</param>
+            <returns><c>true</c> if the specified valor is numeric; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.GetItemComboBox(DevExpress.XtraEditors.ComboBoxEdit,System.Int32)">
+            <summary>
+            Gets the item ComboBox.
+            </summary>
+            <param name="cmb">The CMB.</param>
+            <param name="value">The value.</param>
+            <returns>ListItem.</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.ValidationRuleNotEmpty">
+            <summary>
+            Nots the empty rule.
+            </summary>
+            <returns>Validation Rule Base.</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.ValidationRuleBetween(System.Int32,System.Int32)">
+            <summary>
+            Values the between.
+            </summary>
+            <param name="ValueStart">The value start.</param>
+            <param name="ValueEnd">The value end.</param>
+            <returns>Validation Rule Base.</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.ValidationRuleSelectCombo">
+            <summary>
+            Rules the select combo.
+            </summary>
+            <returns>ValidationRuleBase.</returns>
+        </member>
+        <member name="M:Acnur.App.Aplication.Utilities.ValidationRemoveRule(DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider,System.Windows.Forms.Control)">
+            <summary>
+            Validations the remove rule.
+            </summary>
+            <param name="validator">The validator.</param>
+            <param name="control">The control.</param>
+        </member>
+        <member name="P:Acnur.App.Aplication.Utilities.Ceros">
+            <summary>
+            Cadena de ceros utilizada en la funcion recursiva Agregar Ceros
+            </summary>
+            <value>The ceros.</value>
+        </member>
+    </members>
+</doc>

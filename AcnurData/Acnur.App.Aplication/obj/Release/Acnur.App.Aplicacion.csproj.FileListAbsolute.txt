@@ -1,0 +1,11 @@
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\bin\Release\Acnur.App.Aplicacion.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\bin\Release\Acnur.App.Aplicacion.pdb
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\bin\Release\Acnur.App.Entidades.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\bin\Release\PostSharp.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\bin\Release\Acnur.App.Entidades.pdb
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\bin\Release\PostSharp.xml
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\bin\Release\Acnur.App.Aplicacion.pssym
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\obj\Release\Acnur.App.Aplicacion.csprojResolveAssemblyReference.cache
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\obj\Release\Acnur.App.Aplicacion.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\obj\Release\Acnur.App.Aplicacion.pdb
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Aplicacion\obj\Release\Acnur.App.Aplicacion.dll.postsharp

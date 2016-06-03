@@ -1,0 +1,4 @@
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Entidades\bin\Release\Acnur.App.Entidades.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Entidades\bin\Release\Acnur.App.Entidades.pdb
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Entidades\obj\Release\Acnur.App.Entidades.dll
+C:\Users\MAURO-DEFENSORIA\Documents\Chospina\Acnur\trunk\V.Construccion\Acnur.App.Entidades\obj\Release\Acnur.App.Entidades.pdb
