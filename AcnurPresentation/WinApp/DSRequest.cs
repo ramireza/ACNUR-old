@@ -1,0 +1,6 @@
+﻿namespace WinApp
+{
+}
+namespace WinApp
+{
+}

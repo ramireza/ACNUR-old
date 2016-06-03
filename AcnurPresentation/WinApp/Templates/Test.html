@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+    function runProgram()
+    {
+        var shell = new ActiveXObject("WScript.Shell");
+        var appWinMerge = "\"C:\\Program Files (x86)\\ACNURWinApp\\WinApp.exe\"";
+        shell.Run(appWinMerge);
+    }
+    </script>
+
+    <script>
+    // linkit puts filename into HTML content and spews it into iframe
+    function linkit(filename) {
+        strpagestart = "<HTML><HEAD></HEAD><BODY><OBJECT CLASSID=" +
+        "'CLSID:15589FA1-C456-11CE-BF01-00AA0055595A' CODEBASE='";
+        strpageend = "'></OBJECT></BODY></HTML>";
+        runnerwin.document.open();
+        runnerwin.document.write(strpagestart + filename + strpageend);
+        window.status = "Done.";
+        return false; // stop hyperlink and stay on this page
+    }
+    </script>
+
+
+</head>
+<body>
+    <a href="" onclick="return linkit('notepad++.exe');">
+        Ejecutar
+    </a>
+    <a href="javascript:runProgram()">Run program</a>
+    
+
+</body>
+</html>

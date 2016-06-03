@@ -1,0 +1,71 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Documento sin título</title>
+</head>
+<body>
+    <table border="0" cellspacing="0" cellpadding="0" width="100%" bgcolor="#f4f4f4">
+        <tr>
+            <td valign="middle" align="center">
+                <table style="color: #424242; font: 12px/16px Tahoma, Arial, Helvetica, sans-serif;" width="560" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="color: #0055a6; line-height: 30px; text-align: center">
+                            <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <img src="http://dogtreatstation.com/images/LogoAcnur.jpg" alt="Aca va la imagen institucional de ACNUR. La imagen debe ser colocada en el hosting y colocar la url que abre esa imagen en el atributo src." />
+                            <br />
+                            <br />
+                            <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="middle" align="center" bgcolor="#ffffff">
+                            <table style="color: #424242; font: 14px/18px Tahoma, Arial, Helvetica, sans-serif;" width="520" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td style="color: #34a6dc; font: 24px/30px Tahoma, Arial, Helvetica, sans-serif;">
+                                        <br />
+                                        <singleline label="Title">{TITULO}</singleline>
+                                        <br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br />
+                                        <multiline label="Description" style="text-align: justify">{CONTENIDO}</multiline>
+                                        <br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br />
+                                        <br />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #424242; font-size: 11px; line-height: 18px; text-align: center">
+                            <br />
+                            Correo generado por el Sistema de información de ACNUR©
+                            <br />
+                            Alto Comisionado de las Naciones Unidas para los Refugiados<br />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        function runProgram() {
+            var shell = new ActiveXObject("WScript.Shell");
+            var appWinMerge = "\"C:\\Program Files (x86)\\ACNURWinApp\\WinApp.exe\"";
+            shell.Run(appWinMerge);
+        }
+    </script>
+</body>
+</html>

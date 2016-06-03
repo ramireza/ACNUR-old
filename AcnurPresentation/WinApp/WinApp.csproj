@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{31463C6E-65CE-4431-9A55-7E06236E826D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinApp</RootNamespace>
+    <AssemblyName>WinApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Program Files %28x86%29\ACNURWinApp\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>BE2531BBB86D8023E090DD4BAB79D76A7CD7422C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WinApp_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Map.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Mvvm.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrator\ControlParameterEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administrator\ControlParameterEdit.Designer.cs">
+      <DependentUpon>ControlParameterEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\FormParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\FormParameters.Designer.cs">
+      <DependentUpon>FormParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ControlFileUpLoad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlFileUpLoad.Designer.cs">
+      <DependentUpon>ControlFileUpLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UploadedFile.cs" />
+    <Compile Include="Controls\UploadHelper.cs" />
+    <Compile Include="DataSets\DSRequest.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSRequest.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\ControlRequestEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\ControlRequestEdit.Designer.cs">
+      <DependentUpon>ControlRequestEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\FormEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\FormEvents.Designer.cs">
+      <DependentUpon>FormEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\FormGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\FormGoods.Designer.cs">
+      <DependentUpon>FormGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\FormRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\FormRequest.Designer.cs">
+      <DependentUpon>FormRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\FormServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\FormServices.Designer.cs">
+      <DependentUpon>FormServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWelcome.Designer.cs">
+      <DependentUpon>FormWelcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Administrator\ControlParameterEdit.resx">
+      <DependentUpon>ControlParameterEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\FormParameters.resx">
+      <DependentUpon>FormParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ControlFileUpLoad.resx">
+      <DependentUpon>ControlFileUpLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\ControlRequestEdit.resx">
+      <DependentUpon>ControlRequestEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\FormEvents.resx">
+      <DependentUpon>FormEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\FormGoods.resx">
+      <DependentUpon>FormGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\FormRequest.resx">
+      <DependentUpon>FormRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\FormServices.resx">
+      <DependentUpon>FormServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWelcome.resx">
+      <DependentUpon>FormWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\DSRequest.xsc">
+      <DependentUpon>DSRequest.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DSRequest.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSRequest.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\DSRequest.xss">
+      <DependentUpon>DSRequest.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="WinApp_ClaveTemporal.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Calendar_16x16.png" />
+    <Content Include="Images\Drafts_16x16.png" />
+    <Content Include="Images\Inbox_16x16.png" />
+    <Content Include="Images\Mail_16x16.png" />
+    <Content Include="Images\Menu\Action.jpg" />
+    <Content Include="Images\Menu\Action.png" />
+    <Content Include="Images\Menu\Action1.jpg" />
+    <Content Include="Images\Menu\Action2.jpg" />
+    <Content Include="Images\Menu\Action3.jpg" />
+    <Content Include="Images\Menu\Action4.jpg" />
+    <Content Include="Images\Menu\Action5.jpg" />
+    <Content Include="Images\Menu\Admin.jpg" />
+    <Content Include="Images\Menu\Administration.gif" />
+    <Content Include="Images\Menu\Administration.jpg" />
+    <Content Include="Images\Menu\Administration.png" />
+    <Content Include="Images\Menu\Administration1.jpg" />
+    <Content Include="Images\Menu\Administration2.jpg" />
+    <Content Include="Images\Menu\Administration3.jpg" />
+    <Content Include="Images\Menu\Administration4.jpg" />
+    <Content Include="Images\Menu\Ayuda.jpg" />
+    <Content Include="Images\Menu\Cost.gif" />
+    <Content Include="Images\Menu\Cost.jpg" />
+    <Content Include="Images\Menu\Cost1.jpg" />
+    <Content Include="Images\Menu\Cost2.jpg" />
+    <Content Include="Images\Menu\Purchase-Request.jpg" />
+    <Content Include="Images\Menu\Purchase-Request.png" />
+    <Content Include="Images\Menu\Purchase-Request1.jpg" />
+    <Content Include="Images\Menu\Purchase-Request1.png" />
+    <Content Include="Images\Menu\Purchase-Request2.jpg" />
+    <Content Include="Images\Menu\Purchase-Request3.jpg" />
+    <Content Include="Images\Menu\Purchase-Request4.jpg" />
+    <Content Include="Images\Menu\Purchase-Request5.jpg" />
+    <Content Include="Images\Menu\Purchase-Request6.jpg" />
+    <Content Include="Images\Menu\Purchase.jpg" />
+    <Content Include="Images\Organizer_16x16.png" />
+    <Content Include="Images\Outbox_16x16.png" />
+    <Content Include="Images\Ribbon_AlignCenter_16x16.png" />
+    <Content Include="Images\Ribbon_AlignLeft_16x16.png" />
+    <Content Include="Images\Ribbon_AlignRight_16x16.png" />
+    <Content Include="Images\Ribbon_Bold_16x16.png" />
+    <Content Include="Images\Ribbon_Close_16x16.png" />
+    <Content Include="Images\Ribbon_Close_32x32.png" />
+    <Content Include="Images\Ribbon_Content_16x16.png" />
+    <Content Include="Images\Ribbon_Content_32x32.png" />
+    <Content Include="Images\Ribbon_Exit_16x16.png" />
+    <Content Include="Images\Ribbon_Exit_32x32.png" />
+    <Content Include="Images\Ribbon_Find_16x16.png" />
+    <Content Include="Images\Ribbon_Find_32x32.png" />
+    <Content Include="Images\Ribbon_Info_16x16.png" />
+    <Content Include="Images\Ribbon_Info_32x32.png" />
+    <Content Include="Images\Ribbon_Italic_16x16.png" />
+    <Content Include="Images\Ribbon_New_16x16.png" />
+    <Content Include="Images\Ribbon_New_32x32.png" />
+    <Content Include="Images\Ribbon_Open_16x16.png" />
+    <Content Include="Images\Ribbon_Open_32x32.png" />
+    <Content Include="Images\Ribbon_SaveAs_16x16.png" />
+    <Content Include="Images\Ribbon_SaveAs_32x32.png" />
+    <Content Include="Images\Ribbon_Save_16x16.png" />
+    <Content Include="Images\Ribbon_Save_32x32.png" />
+    <Content Include="Images\Ribbon_Underline_16x16.png" />
+    <Content Include="Images\Tasks_16x16.png" />
+    <Content Include="Images\Trash_16x16.png" />
+    <Content Include="Resources\Icono.ico" />
+    <None Include="Resources\LogoAcnur.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AcnurData\Acnur.App.Aplication\Acnur.App.Aplication.csproj">
+      <Project>{99d25534-8e14-4e67-b9ff-a8ebb2f56376}</Project>
+      <Name>Acnur.App.Aplication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AcnurData\Acnur.App.Entities\Acnur.App.Entities.csproj">
+      <Project>{cf6acec6-0de4-47eb-b63e-79e632509f78}</Project>
+      <Name>Acnur.App.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AcnurData\Acnur.App.Implementation\Acnur.App.Implementation.csproj">
+      <Project>{6194e5b3-2a4b-4498-a7b0-014fe0a8a687}</Project>
+      <Name>Acnur.App.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AcnurData\Acnur.App.Interfaces\Acnur.App.Interfaces.csproj">
+      <Project>{b5fb2339-4bbe-407b-80e9-26ad85c8c16c}</Project>
+      <Name>Acnur.App.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AcnurData\Acnur.App.Proxy\Acnur.App.Proxy.csproj">
+      <Project>{d59657c8-0f61-44be-88a1-51a1a53e6162}</Project>
+      <Name>Acnur.App.Proxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AcnurData\Acnur.App.Repository.Data\Acnur.App.Repository.Data.csproj">
+      <Project>{ab068da4-811b-427b-bc57-be93df15d409}</Project>
+      <Name>Acnur.App.Repository.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AcnurData\Acnur.App.Repository\Acnur.App.Repository.csproj">
+      <Project>{373f2394-5981-48d1-84dd-17797eb5a8ed}</Project>
+      <Name>Acnur.App.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

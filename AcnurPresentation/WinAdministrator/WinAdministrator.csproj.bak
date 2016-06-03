@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{318627FB-92E0-46D9-9970-BD5165EA850B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinAdministrator</RootNamespace>
+    <AssemblyName>WinAdministrator</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v15.2" />
+    <Reference Include="DevExpress.Data.v15.2" />
+    <Reference Include="DevExpress.Images.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Map.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Mvvm.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACNUREntitiesDataModel\ACNUREntitiesUnitOfWork.cs" />
+    <Compile Include="ACNUREntitiesDataModel\IACNUREntitiesUnitOfWork.cs" />
+    <Compile Include="ACNUREntitiesDataModel\UnitOfWorkSource.cs" />
+    <Compile Include="Common\CommonResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DataModel\DbExceptions.cs" />
+    <Compile Include="Common\DataModel\EntityFramework\DbExceptionsConverter.cs" />
+    <Compile Include="Common\DataModel\EntityFramework\DbReadOnlyRepository.cs" />
+    <Compile Include="Common\DataModel\EntityFramework\DbRepository.cs" />
+    <Compile Include="Common\DataModel\EntityFramework\DbUnitOfWork.cs" />
+    <Compile Include="Common\DataModel\EntityFramework\DbUnitOfWorkFactory.cs" />
+    <Compile Include="Common\DataModel\EntityState.cs" />
+    <Compile Include="Common\DataModel\IReadOnlyRepository.cs" />
+    <Compile Include="Common\DataModel\IRepository.cs" />
+    <Compile Include="Common\DataModel\IUnitOfWork.cs" />
+    <Compile Include="Common\DataModel\UnitOfWorkBase.cs" />
+    <Compile Include="Common\LayoutSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>LayoutSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Utils\DbExtensions.cs" />
+    <Compile Include="Common\Utils\ExpressionHelper.cs" />
+    <Compile Include="Common\ViewModel\AddRemoveDetailEntitiesViewModel.cs" />
+    <Compile Include="Common\ViewModel\AddRemoveJunctionDetailEntitiesViewModel.cs" />
+    <Compile Include="Common\ViewModel\CollectionViewModel.cs" />
+    <Compile Include="Common\ViewModel\DocumentManagerServiceExtensions.cs" />
+    <Compile Include="Common\ViewModel\DocumentsViewModel.cs" />
+    <Compile Include="Common\ViewModel\EntitiesViewModel.cs" />
+    <Compile Include="Common\ViewModel\ISingleObjectViewModel.cs" />
+    <Compile Include="Common\ViewModel\LookUpEntitiesViewModel.cs" />
+    <Compile Include="Common\ViewModel\Messages.cs" />
+    <Compile Include="Common\ViewModel\PeekCollectionViewModel.cs" />
+    <Compile Include="Common\ViewModel\PersistentLayoutHelper.cs" />
+    <Compile Include="Common\ViewModel\ReadOnlyCollectionViewModel.cs" />
+    <Compile Include="Common\ViewModel\SingleObjectViewModel.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ACNUREntitiesViewModel.cs" />
+    <Compile Include="ViewModels\ComponentsByModule\ComponentsByModuleCollectionViewModel.cs" />
+    <Compile Include="ViewModels\ComponentsByModule\ComponentsByModuleViewModel.cs" />
+    <Compile Include="ViewModels\Modules\ModulesCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Modules\ModulesViewModel.cs" />
+    <Compile Include="ViewModels\ModuleUser\ModuleUserCollectionViewModel.cs" />
+    <Compile Include="ViewModels\ModuleUser\ModuleUserViewModel.cs" />
+    <Compile Include="ViewModels\OperationsModuleUser\OperationsModuleUserCollectionViewModel.cs" />
+    <Compile Include="ViewModels\OperationsModuleUser\OperationsModuleUserViewModel.cs" />
+    <Compile Include="ViewModels\OperationsModule\OperationsModuleCollectionViewModel.cs" />
+    <Compile Include="ViewModels\OperationsModule\OperationsModuleViewModel.cs" />
+    <Compile Include="ViewModels\Operations\OperationsCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Operations\OperationsViewModel.cs" />
+    <Compile Include="ViewModels\ParameterDetail\ParameterDetailCollectionViewModel.cs" />
+    <Compile Include="ViewModels\ParameterDetail\ParameterDetailViewModel.cs" />
+    <Compile Include="ViewModels\Parameter\ParameterCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Parameter\ParameterViewModel.cs" />
+    <Compile Include="ViewModels\StepsFlowModuleUser\StepsFlowModuleUserCollectionViewModel.cs" />
+    <Compile Include="ViewModels\StepsFlowModuleUser\StepsFlowModuleUserViewModel.cs" />
+    <Compile Include="ViewModels\StepsFlowModule\StepsFlowModuleCollectionViewModel.cs" />
+    <Compile Include="ViewModels\StepsFlowModule\StepsFlowModuleViewModel.cs" />
+    <Compile Include="ViewModels\StepsFlow\StepsFlowCollectionViewModel.cs" />
+    <Compile Include="ViewModels\StepsFlow\StepsFlowViewModel.cs" />
+    <Compile Include="ViewModels\Users\UsersCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Users\UsersViewModel.cs" />
+    <Compile Include="Views\ACNUREntitiesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ACNUREntitiesView.designer.cs">
+      <DependentUpon>ACNUREntitiesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ComponentsByModule\ComponentsByModuleCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ComponentsByModule\ComponentsByModuleCollectionView.designer.cs">
+      <DependentUpon>ComponentsByModuleCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ComponentsByModule\ComponentsByModuleView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ComponentsByModule\ComponentsByModuleView.designer.cs">
+      <DependentUpon>ComponentsByModuleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Modules\ModulesCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Modules\ModulesCollectionView.designer.cs">
+      <DependentUpon>ModulesCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Modules\ModulesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Modules\ModulesView.designer.cs">
+      <DependentUpon>ModulesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModuleUser\ModuleUserCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ModuleUser\ModuleUserCollectionView.designer.cs">
+      <DependentUpon>ModuleUserCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModuleUser\ModuleUserView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ModuleUser\ModuleUserView.designer.cs">
+      <DependentUpon>ModuleUserView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OperationsModuleUser\OperationsModuleUserCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\OperationsModuleUser\OperationsModuleUserCollectionView.designer.cs">
+      <DependentUpon>OperationsModuleUserCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OperationsModuleUser\OperationsModuleUserView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\OperationsModuleUser\OperationsModuleUserView.designer.cs">
+      <DependentUpon>OperationsModuleUserView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OperationsModule\OperationsModuleCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\OperationsModule\OperationsModuleCollectionView.designer.cs">
+      <DependentUpon>OperationsModuleCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OperationsModule\OperationsModuleView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\OperationsModule\OperationsModuleView.designer.cs">
+      <DependentUpon>OperationsModuleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operations\OperationsCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Operations\OperationsCollectionView.designer.cs">
+      <DependentUpon>OperationsCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operations\OperationsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Operations\OperationsView.designer.cs">
+      <DependentUpon>OperationsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ParameterDetail\ParameterDetailCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ParameterDetail\ParameterDetailCollectionView.designer.cs">
+      <DependentUpon>ParameterDetailCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ParameterDetail\ParameterDetailView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ParameterDetail\ParameterDetailView.designer.cs">
+      <DependentUpon>ParameterDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Parameter\ParameterCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Parameter\ParameterCollectionView.designer.cs">
+      <DependentUpon>ParameterCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Parameter\ParameterView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Parameter\ParameterView.designer.cs">
+      <DependentUpon>ParameterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StepsFlowModuleUser\StepsFlowModuleUserCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StepsFlowModuleUser\StepsFlowModuleUserCollectionView.designer.cs">
+      <DependentUpon>StepsFlowModuleUserCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StepsFlowModuleUser\StepsFlowModuleUserView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StepsFlowModuleUser\StepsFlowModuleUserView.designer.cs">
+      <DependentUpon>StepsFlowModuleUserView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StepsFlowModule\StepsFlowModuleCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StepsFlowModule\StepsFlowModuleCollectionView.designer.cs">
+      <DependentUpon>StepsFlowModuleCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StepsFlowModule\StepsFlowModuleView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StepsFlowModule\StepsFlowModuleView.designer.cs">
+      <DependentUpon>StepsFlowModuleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StepsFlow\StepsFlowCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StepsFlow\StepsFlowCollectionView.designer.cs">
+      <DependentUpon>StepsFlowCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StepsFlow\StepsFlowView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StepsFlow\StepsFlowView.designer.cs">
+      <DependentUpon>StepsFlowView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Users\UsersCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Users\UsersCollectionView.designer.cs">
+      <DependentUpon>UsersCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Users\UsersView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Users\UsersView.designer.cs">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Common\CommonResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CommonResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\ACNUREntitiesView.resx">
+      <DependentUpon>ACNUREntitiesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ComponentsByModule\ComponentsByModuleCollectionView.resx">
+      <DependentUpon>ComponentsByModuleCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ComponentsByModule\ComponentsByModuleView.resx">
+      <DependentUpon>ComponentsByModuleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Modules\ModulesCollectionView.resx">
+      <DependentUpon>ModulesCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Modules\ModulesView.resx">
+      <DependentUpon>ModulesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ModuleUser\ModuleUserCollectionView.resx">
+      <DependentUpon>ModuleUserCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ModuleUser\ModuleUserView.resx">
+      <DependentUpon>ModuleUserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsModuleUser\OperationsModuleUserCollectionView.resx">
+      <DependentUpon>OperationsModuleUserCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsModuleUser\OperationsModuleUserView.resx">
+      <DependentUpon>OperationsModuleUserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsModule\OperationsModuleCollectionView.resx">
+      <DependentUpon>OperationsModuleCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OperationsModule\OperationsModuleView.resx">
+      <DependentUpon>OperationsModuleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Operations\OperationsCollectionView.resx">
+      <DependentUpon>OperationsCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Operations\OperationsView.resx">
+      <DependentUpon>OperationsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ParameterDetail\ParameterDetailCollectionView.resx">
+      <DependentUpon>ParameterDetailCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ParameterDetail\ParameterDetailView.resx">
+      <DependentUpon>ParameterDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Parameter\ParameterCollectionView.resx">
+      <DependentUpon>ParameterCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Parameter\ParameterView.resx">
+      <DependentUpon>ParameterView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StepsFlowModuleUser\StepsFlowModuleUserCollectionView.resx">
+      <DependentUpon>StepsFlowModuleUserCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StepsFlowModuleUser\StepsFlowModuleUserView.resx">
+      <DependentUpon>StepsFlowModuleUserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StepsFlowModule\StepsFlowModuleCollectionView.resx">
+      <DependentUpon>StepsFlowModuleCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StepsFlowModule\StepsFlowModuleView.resx">
+      <DependentUpon>StepsFlowModuleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StepsFlow\StepsFlowCollectionView.resx">
+      <DependentUpon>StepsFlowCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StepsFlow\StepsFlowView.resx">
+      <DependentUpon>StepsFlowView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Users\UsersCollectionView.resx">
+      <DependentUpon>UsersCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Users\UsersView.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Common\LayoutSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>LayoutSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AcnurData\Acnur.App.Entities\Acnur.App.Entities.csproj">
+      <Project>{cf6acec6-0de4-47eb-b63e-79e632509f78}</Project>
+      <Name>Acnur.App.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AcnurData\Acnur.App.Repository.Data\Acnur.App.Repository.Data.csproj">
+      <Project>{ab068da4-811b-427b-bc57-be93df15d409}</Project>
+      <Name>Acnur.App.Repository.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
