@@ -95,6 +95,11 @@
             The purchase
             </summary>
         </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeModule.Focus">
+            <summary>
+            The Focus
+            </summary>
+        </member>
         <member name="T:Acnur.App.Aplication.Enumerators.TypeParameter">
             <summary>
             Enum TipoParametro
@@ -110,12 +115,12 @@
             The audit
             </summary>
         </member>
-        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.State">
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Departamen">
             <summary>
             The state
             </summary>
         </member>
-        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.City">
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeParameter.Municipality">
             <summary>
             The city
             </summary>
@@ -415,9 +420,31 @@
             The roles
             </summary>
         </member>
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.TypeMonitoringTracking" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.CathegoryMonitoringTracking" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.SubcathegoryMonitoringTracking" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.TypeFinancialReport" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.CathegoryFinancialReport" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.SubCathegoryFinancialReport" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.TypeSummision" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.CathegorySummision" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.SubCathegorySummision" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.ReportTechnicalAssistance" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.Report4W" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.ReportPRR" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.ReportUNDAF" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.ReportForYearPlan" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.FocusPlanningYear" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.FocusPopulationGroup" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.FocusGoal" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.FocusType" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.FocusOutputGroup" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.FocusCostCenter" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.FocusImpactIndicatorOutputDescription" -->
+        <!-- Badly formed XML comment ignored for member "F:Acnur.App.Aplication.Enumerators.TypeParameter.FocusPerformanceIndicator" -->
         <member name="T:Acnur.App.Aplication.Enumerators.TypeComponent">
             <summary>
-            Enum TypePurchase
+            Enum Type
             </summary>
         </member>
         <member name="F:Acnur.App.Aplication.Enumerators.TypeComponent.Request">
@@ -438,6 +465,31 @@
         <member name="F:Acnur.App.Aplication.Enumerators.TypeComponent.Services">
             <summary>
             The services
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeComponent.Cycle">
+            <summary>
+            The Cycle
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeComponent.Focus">
+            <summary>
+            The Focus
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeComponent.AgreementAndFinancialReport">
+            <summary>
+            The Focus
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeComponent.MonitoringTracking">
+            <summary>
+            The Focus
+            </summary>
+        </member>
+        <member name="F:Acnur.App.Aplication.Enumerators.TypeComponent.Summision">
+            <summary>
+            The Project Summision
             </summary>
         </member>
         <member name="M:Acnur.App.Aplication.Error.ManagerException.CrearDetalleError(System.Exception,System.String,System.String,System.String,Acnur.App.Aplication.Enumerators.ExceptionManager)">

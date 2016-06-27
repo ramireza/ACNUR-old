@@ -129,7 +129,7 @@
             // 
             // GrvFiles
             // 
-            this.GrvFiles.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.GrvFiles.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[ ]{
             this.ColFileName,
             this.ColSize});
             this.GrvFiles.GridControl = this.GrcFiles;

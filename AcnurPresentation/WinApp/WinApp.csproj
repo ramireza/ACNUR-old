@@ -138,6 +138,19 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Programme\AnnexC\ImportExceltoDataGrid.cs" />
+    <Compile Include="Programme\AnnexC\FormFocus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Programme\AnnexC\FormFocus.Designer.cs">
+      <DependentUpon>FormFocus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Protection\FormCase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Protection\FormCase.Designer.cs">
+      <DependentUpon>FormCase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\ControlRequestEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -187,6 +200,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Programme\AnnexC\FormFocus.resx">
+      <DependentUpon>FormFocus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Protection\FormCase.resx">
+      <DependentUpon>FormCase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\ControlRequestEdit.resx">
       <DependentUpon>ControlRequestEdit.cs</DependentUpon>

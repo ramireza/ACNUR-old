@@ -192,6 +192,8 @@ D:\ACNUR\trunk\AcnurPresentation\WinApp\obj\Debug\WinApp.ControlParameterEdit.re
 D:\ACNUR\trunk\AcnurPresentation\WinApp\obj\Debug\WinApp.FormParameters.resources
 D:\ACNUR\trunk\AcnurPresentation\WinApp\obj\Debug\WinApp.ControlFileUpLoad.resources
 D:\ACNUR\trunk\AcnurPresentation\WinApp\obj\Debug\WinApp.FormMain.resources
+D:\ACNUR\trunk\AcnurPresentation\WinApp\obj\Debug\WinApp.FormFocus.resources
+D:\ACNUR\trunk\AcnurPresentation\WinApp\obj\Debug\WinApp.FormCase.resources
 D:\ACNUR\trunk\AcnurPresentation\WinApp\obj\Debug\WinApp.ControlRequestEdit.resources
 D:\ACNUR\trunk\AcnurPresentation\WinApp\obj\Debug\WinApp.FormEvents.resources
 D:\ACNUR\trunk\AcnurPresentation\WinApp\obj\Debug\WinApp.FormGoods.resources

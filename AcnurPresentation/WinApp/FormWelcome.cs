@@ -44,7 +44,11 @@ namespace WinApp
             get { return this.MemoDataPurchase.Text; }
             set { this.MemoDataPurchase.Text = value; }
         }
-
+        public string DataFocus
+        {
+            get { return this.MemoDataFocus.Text; }
+            set { this.MemoDataFocus.Text = value; }
+        }
         /// <summary>
         /// Gets or sets the data body.
         /// </summary>
@@ -84,7 +88,7 @@ namespace WinApp
                     this.DataBody = args[5].Replace("|", "<br>").Replace('_', ' ');
                 }
             }
-
+            
             try
             {
                 this.LoadMenu(args);
@@ -94,6 +98,7 @@ namespace WinApp
                 XtraMessageBox.Show(ex.Message);
             }
         }
+
 
         /// <summary>
         /// Loads the menu.
@@ -133,6 +138,10 @@ namespace WinApp
                     if (mod.ModuleName == TypeModule.Administration.ToString())
                     {
                         mod.Picture = Resources.MenuAdmin;
+                    }
+                    if (mod.ModuleName == TypeModule.Focus.ToString())
+                    {
+                        mod.Picture = Resources.MenuPurchase;
                     }
                 });
 
@@ -178,10 +187,27 @@ namespace WinApp
                         }
                     }
 
-                    //// Instanciamos el form request
+                   //// Instanciamos el form request
                     FormRequest request = new FormRequest(IdRequest);
                     request.ShowDialog();
                     this.DataPurchase += request.LoadBodyPurchase();
+                    break;
+
+                case TypeModule.Focus:
+
+                    //// Validamos si viene el GUID para poder extraer el id request
+                    int IdFocus = 0;
+                    if (!string.IsNullOrEmpty(Program.CurrentGUID))
+                    {
+                        using (CustomerSessionComponentsByModule client = new CustomerSessionComponentsByModule())
+                        {
+                            IdFocus = client.GetIdCycle(Program.CurrentGUID);
+                        }
+                    }
+                    //// Instanciamos el form request
+                    FormFocus focus = new FormFocus(IdFocus);
+                    focus.ShowDialog();
+                    this.DataFocus  += focus.LoadBodyFocus ();
                     break;
 
                 default:
@@ -270,10 +296,12 @@ namespace WinApp
             bool valid = false;
 
             if (string.IsNullOrEmpty(this.DataPurchase))
-                XtraMessageBox.Show("No information to be sent");
-            else
-                valid = true;
-
+            {
+                if (string.IsNullOrEmpty(this.DataFocus))
+                    XtraMessageBox.Show("No information to be sent");
+                else
+                    valid = true;
+            }
             return valid;
         }
 

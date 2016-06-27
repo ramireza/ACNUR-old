@@ -483,6 +483,10 @@ namespace WinApp
             this.ChkEdit.Checked = edit;
         }
 
+        /// <summary>
+        /// Carga todos los datos del request y de los hijos del mismo.
+        /// </summary>
+        /// <param name="idRequest"></param>
         public void LoadPurchase(int idRequest)
         {
             this.IdRequest = idRequest;
@@ -525,6 +529,7 @@ namespace WinApp
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void BtnOkGoods_Click(object sender, EventArgs e)
         {
+            
             //// Valida 
             bool ret = this.ValidationProviderEditGoods.Validate();
 
@@ -1415,5 +1420,10 @@ namespace WinApp
         }
 
         #endregion
+
+        private void BtnCancelRequest_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

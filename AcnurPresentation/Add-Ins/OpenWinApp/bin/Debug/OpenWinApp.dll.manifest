@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="OpenWinApp.dll" version="1.0.0.7" publicKeyToken="2b954c786ebbb174" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="OpenWinApp.dll" version="1.0.0.8" publicKeyToken="2b954c786ebbb174" language="neutral" processorArchitecture="msil" type="win32" />
   <description xmlns="urn:schemas-microsoft-com:asm.v1">OpenWinApp</description>
   <application />
   <entryPoint>
@@ -112,38 +112,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Aplication.dll" size="62057">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Aplication.dll" size="63081">
       <assemblyIdentity name="Acnur.App.Aplication" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HnjzbeEKWR0jUzKtgUaolmZ1qDt9E3tU96rd8xIKwys=</dsig:DigestValue>
+        <dsig:DigestValue>hPteWC6d2ghkPMvO1NfMp4xoQYEwS/d/Q82t22QW22A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Entities.dll" size="135680">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Entities.dll" size="173056">
       <assemblyIdentity name="Acnur.App.Entities" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FuORMnEQ28aPBiMBiAycbUMQiQbk0ouprF4tcErf9IM=</dsig:DigestValue>
+        <dsig:DigestValue>nUu3UDMo6FDwsEKIBF4rT7Id1HA4TRwvxDhSGwfTnrY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Implementation.dll" size="18432">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Implementation.dll" size="20992">
       <assemblyIdentity name="Acnur.App.Implementation" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cQuQOlphGQK9AIH6w+hIUDn+gvnPQaEEcMg5qfVja9k=</dsig:DigestValue>
+        <dsig:DigestValue>ki2JD1MmFOoqkqV8W6QeLVBoSRAl9PnTXIOZSr8DU94=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -155,19 +155,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4cj9otc9lAJi84GqFsKlw1UvzM3jYwL5CBBwW9+Tbyk=</dsig:DigestValue>
+        <dsig:DigestValue>Ae+M65HKpYkPaISrdlapuOuB/S1WBelwSqr1W30s+Og=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Proxy.dll" size="9823">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Proxy.dll" size="10847">
       <assemblyIdentity name="Acnur.App.Proxy" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>esj/PVcTtcI1FHphbRP6LGj8kQNtirHhgYYvKRXc8jI=</dsig:DigestValue>
+        <dsig:DigestValue>IEBK05hM0oNRMxpiHSUqA4/VFSkA9l5Yqpynl4/4JJ8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -179,19 +179,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qdgABgDx7+vMwPYWp2cNVF82K86TEGqhsfoJXYfRGqo=</dsig:DigestValue>
+        <dsig:DigestValue>X2VCov8pHKItoOYdhxDNQQU1QT4lYlWKEbPysSHr2II=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Repository.Data.dll" size="552960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Repository.Data.dll" size="670720">
       <assemblyIdentity name="Acnur.App.Repository.Data" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HwAZYl7mSOjqNd5y/LUVVsYV1xAMV4luza7tkGUVSQc=</dsig:DigestValue>
+        <dsig:DigestValue>5NH3A77xvdqjpdWFBgAyCUDET97OUCjo7P7izbzV3UA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -491,7 +491,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8UD0yduSRR4mLTT4WFcL66LdK/5EhIiCM2I3hvjDNd4=</dsig:DigestValue>
+        <dsig:DigestValue>Tr326kMO7eV3QEUORSMCYBsmsdl5MPqXXTShAGxHvN0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -530,4 +530,4 @@
       </vstov4:customizations>
     </vstav3:application>
   </vstav3:addIn>
-<publisherIdentity name="CN=MOSPINA\MAURO-DEFENSORIA" issuerKeyHash="e10e3246f62998b729846edf32f681ed9c5b6e78" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>avRkj7pwd+TyiDic9RcotAvtuatvc+31tVVPmcAesxo=</DigestValue></Reference></SignedInfo><SignatureValue>WGYWa2dpbs/GJTR4eFfD4+aFscsgzSwT64ehY2E7Lmrz60V6XMTOD7F5F3MFYLefsoTM4Es5rBN4UybUmBk4Vc5ZmKLRdvCMBk2KY0PUqwEBkufU7vHkrbYVgr9B5BS/xL2OtgWpPD1fGv+UpM9Ed6RDGKd7ltgw2LK2V28ZLLM=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>wLbhaV9vvj/R+qIbMeFfJlK6BAsr4WTjRNN2IvsOvP6CojuT6B3BFOeG721AMje2Kd4TlQoo5UZCN5lLyKhaLlo4VCFp3aJa3991sjNGc8JmgjCcpMIdPzDz7ZMhYNavfHFbAWKoTXPG+V87wAKt+1THhWaYflyYJb1HJKTv5qM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="1ab31ec0994f55b5f5ed736fabb9ed0bb42817f59c3888f2e47770ba8f64f46a" Description="" Url=""><as:assemblyIdentity name="OpenWinApp.dll" version="1.0.0.7" publicKeyToken="2b954c786ebbb174" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=MOSPINA\MAURO-DEFENSORIA</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>psyLL8vPfjviBkhf/6JdirsL7+J/ZBsC34bEyf8JxZk=</DigestValue></Reference></SignedInfo><SignatureValue>U9jJ1MPXkiQmUiZc0h7pHCtkzSOBLVU0i+fNaC8Njxc53BloBRmn+yXTbhm/GQVZE62b6UOVUeBRsQp9S3VK7m69QdkClvd7aIPPAYscA7ZV9sBy1MMmlzj6V57VrtJuDLhbI2tjD3jKydXt9BoEldfR32MmlECCigy02u6xH9c=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>wLbhaV9vvj/R+qIbMeFfJlK6BAsr4WTjRNN2IvsOvP6CojuT6B3BFOeG721AMje2Kd4TlQoo5UZCN5lLyKhaLlo4VCFp3aJa3991sjNGc8JmgjCcpMIdPzDz7ZMhYNavfHFbAWKoTXPG+V87wAKt+1THhWaYflyYJb1HJKTv5qM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB+TCCAWKgAwIBAgIQOehuObWvWIdDaxuciQXBkTANBgkqhkiG9w0BAQsFADA7MTkwNwYDVQQDHjAATQBPAFMAUABJAE4AQQBcAE0AQQBVAFIATwAtAEQARQBGAEUATgBTAE8AUgBJAEEwHhcNMTYwMjA1MTcxNDExWhcNMTcwMjA0MjMxNDExWjA7MTkwNwYDVQQDHjAATQBPAFMAUABJAE4AQQBcAE0AQQBVAFIATwAtAEQARQBGAEUATgBTAE8AUgBJAEEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMC24Wlfb74/0fqiGzHhXyZSugQLK+Fk40TTdiL7Drz+gqI7k+gdwRTnhu9tQDI3tineE5UKKOVGQjeZS8ioWi5aOFQhad2iWt/fdbIzRnPCZoIwnKTCHT8w8+2TIWDWr3xxWwFiqE1zxvlfO8ACrftUx4VmmH5cmCW9RySk7+ajAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAidoFPydOYRFk/WhSU3XtDDfafOSz40visjFSUlCZPSEE8kzsQKkcUX9c7vqFP3SqI3lMo3WBU0+X1odT9VLGy6ZukomBR6R1WHMm50J472zOuv1+eBx3NAObhZAta7cLWBNEyGttMiRsTqmTZGHuSmgUJJpxJipTSsQYq7DFN7I=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+<publisherIdentity name="CN=MOSPINA\MAURO-DEFENSORIA" issuerKeyHash="e10e3246f62998b729846edf32f681ed9c5b6e78" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>H4sVCfqt9tpPHdBS4F/1BwXTY7C7Yqw2EVahLHCYi3Y=</DigestValue></Reference></SignedInfo><SignatureValue>uD/wOcBxVIVYG892YCzGyKfN6XUcowuPHH+o6AKKP7sYY6tFRZoaVWVnNe1nYcI3OAQ8ePCCAoRfBKY38UewZWy+OvVextxyRcc2/v/4Qxmta0luMK4VRZ3CCR/2WBY7rzp5TWpKyBxM61yQ+dGMTrqjM38j51H6gPVtqc239C8=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>wLbhaV9vvj/R+qIbMeFfJlK6BAsr4WTjRNN2IvsOvP6CojuT6B3BFOeG721AMje2Kd4TlQoo5UZCN5lLyKhaLlo4VCFp3aJa3991sjNGc8JmgjCcpMIdPzDz7ZMhYNavfHFbAWKoTXPG+V87wAKt+1THhWaYflyYJb1HJKTv5qM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="768b98702ca1561136ac62bbb063d30507f55fe052d01d4fdaf6adfa09158b1f" Description="" Url=""><as:assemblyIdentity name="OpenWinApp.dll" version="1.0.0.8" publicKeyToken="2b954c786ebbb174" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=MOSPINA\MAURO-DEFENSORIA</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>UDtH/psG6uDKLSigrSP/87eHGsTJ7ZLhPLnZdS+WobE=</DigestValue></Reference></SignedInfo><SignatureValue>CBE8wy67zdt4kK2/2RpDqz9lC7NRperWbsJIjkVy9ogSojzlXaR21vSOwy6rrGrjlDAJP7kYKY9dmZQhT84PvfbiqcBua57fLbNa/wY6OZOmyyv/lMJ7ycZUXxdTvDVf9g3Xi8oRuyQFADo8dCWuHEA2GStzFqrASjH/TwK622M=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>wLbhaV9vvj/R+qIbMeFfJlK6BAsr4WTjRNN2IvsOvP6CojuT6B3BFOeG721AMje2Kd4TlQoo5UZCN5lLyKhaLlo4VCFp3aJa3991sjNGc8JmgjCcpMIdPzDz7ZMhYNavfHFbAWKoTXPG+V87wAKt+1THhWaYflyYJb1HJKTv5qM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB+TCCAWKgAwIBAgIQOehuObWvWIdDaxuciQXBkTANBgkqhkiG9w0BAQsFADA7MTkwNwYDVQQDHjAATQBPAFMAUABJAE4AQQBcAE0AQQBVAFIATwAtAEQARQBGAEUATgBTAE8AUgBJAEEwHhcNMTYwMjA1MTcxNDExWhcNMTcwMjA0MjMxNDExWjA7MTkwNwYDVQQDHjAATQBPAFMAUABJAE4AQQBcAE0AQQBVAFIATwAtAEQARQBGAEUATgBTAE8AUgBJAEEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMC24Wlfb74/0fqiGzHhXyZSugQLK+Fk40TTdiL7Drz+gqI7k+gdwRTnhu9tQDI3tineE5UKKOVGQjeZS8ioWi5aOFQhad2iWt/fdbIzRnPCZoIwnKTCHT8w8+2TIWDWr3xxWwFiqE1zxvlfO8ACrftUx4VmmH5cmCW9RySk7+ajAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAidoFPydOYRFk/WhSU3XtDDfafOSz40visjFSUlCZPSEE8kzsQKkcUX9c7vqFP3SqI3lMo3WBU0+X1odT9VLGy6ZukomBR6R1WHMm50J472zOuv1+eBx3NAObhZAta7cLWBNEyGttMiRsTqmTZGHuSmgUJJpxJipTSsQYq7DFN7I=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

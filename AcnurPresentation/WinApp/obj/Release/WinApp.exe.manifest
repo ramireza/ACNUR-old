@@ -142,38 +142,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Aplication.dll" size="60538">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Aplication.dll" size="61547">
       <assemblyIdentity name="Acnur.App.Aplication" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qX9BOeRi6lMrnL1XP056fwJpbobodUz1Hqmxf72sVwM=</dsig:DigestValue>
+        <dsig:DigestValue>F20ic0LCQZ8JehP9o2oDUiNJiyHwysb+2g3zqWSdcN0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Entities.dll" size="123904">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Entities.dll" size="158208">
       <assemblyIdentity name="Acnur.App.Entities" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FRp5X4VRSYcpmGFnp5WGiJLWZ3VQTxLl3FQzEtkmoCU=</dsig:DigestValue>
+        <dsig:DigestValue>4Ii19E5XctBV9BsWw0C2WE6kb5qXiI5UReg8/F9DPvM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Implementation.dll" size="17408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Implementation.dll" size="20480">
       <assemblyIdentity name="Acnur.App.Implementation" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZeoJ5EJ/dUvukrGQ+hMIePZoKn3Fwm6GZM4tAbdWKEU=</dsig:DigestValue>
+        <dsig:DigestValue>kCYNr+c3j8fJ11QSdOh/E0Tong3Cn5JZpxetb2Mx3LI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -185,43 +185,43 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IZuVwmkgGB3PDjh4oSEUiNPc4MzCuYkxLpfzhc5TJl4=</dsig:DigestValue>
+        <dsig:DigestValue>WBICbyy6IufW0E3L8NeUlMlJX58jjh/e0OKNa5qPvWg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Proxy.dll" size="9840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Proxy.dll" size="10337">
       <assemblyIdentity name="Acnur.App.Proxy" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PuVUPtToFzjSPLPr5SyE0R5QTAC7N648+zPIstUd7O0=</dsig:DigestValue>
+        <dsig:DigestValue>V4x5TWEo9u4CFA4XtMR6rIQXqe8dxhl++veCK8TUwMg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Repository.dll" size="31354">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Repository.dll" size="31339">
       <assemblyIdentity name="Acnur.App.Repository" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>q8PNYApAGic6QN+rZlrXb6Xl8BUCu65RaZLdKnhsSCo=</dsig:DigestValue>
+        <dsig:DigestValue>p8AoM+vs9zSpsqJ3gjQ3KFBn6a10ZEisaOmlatS7qls=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Repository.Data.dll" size="539136">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Acnur.App.Repository.Data.dll" size="653824">
       <assemblyIdentity name="Acnur.App.Repository.Data" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AXfD5DEq0fVzHxD+5bEHrxGLdXI5u027DN/mChlyY7o=</dsig:DigestValue>
+        <dsig:DigestValue>nBDXCv5mGjD3a8ukV+K/dv7WgnO5pHdwfCbpZqhosRo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1030,14 +1030,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WinApp.exe" size="452096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WinApp.exe" size="548352">
       <assemblyIdentity name="WinApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TDkHwA51VmILLRcyiWaDaD58GwTu7yYmjKPwQj0+ilQ=</dsig:DigestValue>
+        <dsig:DigestValue>Ar2ilgD5/OTX6V7IbnXgetJCuKMCKivhHMYe9Vta/SA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1614,7 +1614,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>pJWIhl/rD4kKdeDYKMUxUULyfqkpqkWGwKX7h5N5KmM=</dsig:DigestValue>
+      <dsig:DigestValue>4sBzuo//TpeVX3HvNlySUlklpSg0YBCNBEGzxYMeSaU=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

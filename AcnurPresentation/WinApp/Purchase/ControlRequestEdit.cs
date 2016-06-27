@@ -103,7 +103,7 @@ namespace WinApp
         /// <summary>
         /// Edits the request.
         /// </summary>
-        /// <param name="edit">if set to <c>true</c> [edit].</param>
+        /// <param name="edit">if set to <c>true</c> [edit.</param>
         private void EditRequest(bool edit)
         {
             FormRequest frm = new FormRequest(0);
@@ -115,7 +115,7 @@ namespace WinApp
         /// <summary>
         /// Edits the goods.
         /// </summary>
-        /// <param name="edit">if set to <c>true</c> [edit].</param>
+        /// <param name="edit">if set to <c>true</c> [edit.</param>
         /// <param name="rowIndex">Index of the row.</param>
         private void EditGoods(bool edit, int rowIndex)
         {
@@ -130,7 +130,7 @@ namespace WinApp
         /// <summary>
         /// Edits the events.
         /// </summary>
-        /// <param name="edit">if set to <c>true</c> [edit].</param>
+        /// <param name="edit">if set to <c>true</c> [edit.</param>
         /// <param name="rowIndex">Index of the row.</param>
         private void EditEvents(bool edit, int rowIndex)
         {
@@ -145,7 +145,7 @@ namespace WinApp
         /// <summary>
         /// Edits the services.
         /// </summary>
-        /// <param name="edit">if set to <c>true</c> [edit].</param>
+        /// <param name="edit">if set to <c>true</c> [edit.</param>
         /// <param name="rowIndex">Index of the row.</param>
         private void EditServices(bool edit, int rowIndex)
         {

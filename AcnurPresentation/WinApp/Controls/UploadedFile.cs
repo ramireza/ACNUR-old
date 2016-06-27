@@ -121,7 +121,7 @@ namespace WinApp
         /// Gets the content.
         /// </summary>
         /// <param name="fileContent">Content of the file.</param>
-        /// <returns>System.Byte[].</returns>
+        /// <returns>System.Byte[.</returns>
         private byte[] GetContent(FileStream fileContent)
         {
             byte[] result = new byte[FileSize];

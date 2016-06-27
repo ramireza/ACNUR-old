@@ -92,9 +92,9 @@ namespace WinApp
         }
 
         /// <summary>
-        /// Determines whether [is executing application].
+        /// Determines whether [is executing application.
         /// </summary>
-        /// <returns><c>true</c> if [is executing application]; otherwise, <c>false</c>.</returns>
+        /// <returns><c>true</c> if [is executing application; otherwise, <c>false</c>.</returns>
         private static bool IsExecutingApplication()
         {
             //// Proceso actual

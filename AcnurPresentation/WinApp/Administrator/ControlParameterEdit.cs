@@ -68,7 +68,7 @@ namespace WinApp
         /// <summary>
         /// Edits the record.
         /// </summary>
-        /// <param name="edit">if set to <c>true</c> [edit].</param>
+        /// <param name="edit">if set to <c>true</c> [edit.</param>
         /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
         private void EditRecord(bool edit)
         {

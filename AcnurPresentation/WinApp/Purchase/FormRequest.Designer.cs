@@ -1299,7 +1299,7 @@
             this.TabPrincipal.Controls.Add(this.TabGoods);
             this.TabPrincipal.Controls.Add(this.TabServices);
             this.TabPrincipal.Controls.Add(this.TabEvents);
-            this.TabPrincipal.Location = new System.Drawing.Point(12, 12);
+            this.TabPrincipal.Location = new System.Drawing.Point(19, 12);
             this.TabPrincipal.Name = "TabPrincipal";
             this.TabPrincipal.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.TabRequest,
@@ -1323,7 +1323,7 @@
             this.TabRequest.Controls.Add(this.BtnCancelRequest);
             this.TabRequest.Controls.Add(this.BtnOkRequest);
             this.TabRequest.Name = "TabRequest";
-            this.TabRequest.Size = new System.Drawing.Size(957, 715);
+            this.TabRequest.Size = new System.Drawing.Size(963, 717);
             // 
             // LblDataPurchase
             // 
@@ -1342,7 +1342,7 @@
             this.RIEdit,
             this.RIDelete,
             this.RIEditDelete});
-            this.GrcPurchase.Size = new System.Drawing.Size(931, 200);
+            this.GrcPurchase.Size = new System.Drawing.Size(929, 200);
             this.GrcPurchase.TabIndex = 11;
             this.GrcPurchase.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GrvPurchase});
@@ -1591,6 +1591,7 @@
             this.BtnCancelRequest.Size = new System.Drawing.Size(75, 30);
             this.BtnCancelRequest.TabIndex = 13;
             this.BtnCancelRequest.Text = "&Cancel";
+            this.BtnCancelRequest.Click += new System.EventHandler(this.BtnCancelRequest_Click);
             // 
             // BtnOkRequest
             // 
@@ -2126,7 +2127,7 @@
             this.TabEvents.Caption = "Events";
             this.TabEvents.Controls.Add(this.GroupEvent);
             this.TabEvents.Name = "TabEvents";
-            this.TabEvents.Size = new System.Drawing.Size(957, 715);
+            this.TabEvents.Size = new System.Drawing.Size(963, 717);
             // 
             // GroupEvent
             // 

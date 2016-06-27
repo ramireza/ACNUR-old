@@ -202,7 +202,7 @@
             this.GrvServices.Appearance.HeaderPanel.Options.UseTextOptions = true;
             this.GrvServices.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.GrvServices.ColumnPanelRowHeight = 0;
-            this.GrvServices.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.GrvServices.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[ ]{
             this.ColIdService,
             this.ColIdRequestServices,
             this.ColContext,

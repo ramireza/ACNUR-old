@@ -65,7 +65,7 @@ namespace WinApp
         }
 
         /// <summary>
-        /// Called when [current file changed].
+        /// Called when [current file changed.
         /// </summary>
         private void OnCurrentFileChanged()
         {

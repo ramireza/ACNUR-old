@@ -43,12 +43,14 @@
             this.CmbProcessGroup = new DevExpress.XtraEditors.ComboBoxEdit();
             this.LblGUID = new DevExpress.XtraEditors.LabelControl();
             this.ValidationProviderWelcome = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
+            this.MemoDataFocus = new DevExpress.XtraEditors.MemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.GrcMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CrvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RiPictureMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MemoDataPurchase.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbProcessGroup.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValidationProviderWelcome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MemoDataFocus.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // LookAndFeel
@@ -77,7 +79,7 @@
             this.CrvMenu.Appearance.CardCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.CrvMenu.CardCaptionFormat = "{1}";
             this.CrvMenu.CardWidth = 300;
-            this.CrvMenu.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.CrvMenu.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[]{
             this.ColName,
             this.ColImageMenu});
             this.CrvMenu.FocusedCardTopFieldIndex = 0;
@@ -172,6 +174,14 @@
             // 
             this.ValidationProviderWelcome.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Manual;
             // 
+            // MemoDataFocus
+            // 
+            this.MemoDataFocus.Location = new System.Drawing.Point(25, 378);
+            this.MemoDataFocus.Name = "MemoDataFocus";
+            this.MemoDataFocus.Size = new System.Drawing.Size(11, 10);
+            this.MemoDataFocus.TabIndex = 8;
+            this.MemoDataFocus.Visible = false;
+            // 
             // FormWelcome
             // 
             this.AllowDrop = true;
@@ -183,6 +193,7 @@
             this.Controls.Add(this.BtnFinalize);
             this.Controls.Add(this.CmbProcessGroup);
             this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.MemoDataFocus);
             this.Controls.Add(this.MemoDataPurchase);
             this.Controls.Add(this.GrcMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -198,6 +209,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MemoDataPurchase.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmbProcessGroup.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValidationProviderWelcome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MemoDataFocus.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,5 +229,6 @@
         private DevExpress.XtraEditors.ComboBoxEdit CmbProcessGroup;
         private DevExpress.XtraEditors.LabelControl LblGUID;
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider ValidationProviderWelcome;
+        private DevExpress.XtraEditors.MemoEdit MemoDataFocus;
     }
 }
